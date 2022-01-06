@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const server = require('express').Router();
 const {Publicaciones} = require('../db');
-const publicaciones = require('../models/publicaciones');
 
 app.use(express.json());
 
@@ -20,14 +19,19 @@ server.post('', async(req, res) => {
     contenido: contenido
   }
     })
-    res.status(200).send('Publicación creada con éxito')
+.then((publicacion) => {
+    res.json(publicacion)
 })
+.catch(err => console.log(err))
+});
+
+
 
 server.get('', (req, res, next)=>{
     Publicaciones.findAll()
     .then(publicaciones =>{
         if(publicaciones.length > 0){
-            res.status(200).json(activities)
+            res.status(200).json(publicaciones)
         }
         else{
             res.status(404).send('No hay publicaciones')
