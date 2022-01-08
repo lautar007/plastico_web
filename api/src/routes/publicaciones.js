@@ -9,14 +9,16 @@ server.post('', async(req, res) => {
     let {
         titulo,
         fecha,
-        contenido
+        contenido,
+        categoria
     } = req.body;
     await Publicaciones.findOrCreate({
         where: { titulo: titulo },
   defaults: {
     titulo: titulo,
     fecha: fecha,
-    contenido: contenido
+    contenido: contenido,
+    categoria: categoria
   }
     })
 .then((publicacion) => {

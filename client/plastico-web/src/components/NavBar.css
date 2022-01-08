@@ -1,0 +1,15 @@
+.NB-fondo{
+    background-color: rgb(65,67,87);
+    padding: 5px 0px;
+}
+
+.cont-logo{
+    display: flex;
+    justify-content:left;
+}
+
+.logo{
+    margin-left: 5%;
+    width: 75px;
+    height: 75px;
+}
