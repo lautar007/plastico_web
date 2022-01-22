@@ -10,6 +10,7 @@ server.post('', async(req, res) => {
         titulo,
         fecha,
         contenido,
+        imagen,
         categoria
     } = req.body;
     await Publicaciones.findOrCreate({
@@ -18,6 +19,7 @@ server.post('', async(req, res) => {
     titulo: titulo,
     fecha: fecha,
     contenido: contenido,
+    imagen: imagen,
     categoria: categoria
   }
     })

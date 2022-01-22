@@ -16,6 +16,10 @@ module.exports = (sequelize) => {
         type: DataTypes.TEXT,
         allowNull: false
     },
+    imagen: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
     categoria: {
         type: DataTypes.ENUM('comercial', 'artistico', 'noticia'),
         allowNull: false

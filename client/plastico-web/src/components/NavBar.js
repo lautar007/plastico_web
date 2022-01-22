@@ -10,6 +10,17 @@ export default function NavBar () {
                 <Link className="logo" to= '/'>
                     <img className="logo" src="https://i.pinimg.com/564x/ec/31/5d/ec315d88a480b81f255fa9c8bbfca518.jpg"></img>
                 </Link>
+                <div>
+                    <Link to = '/manifest'>
+                       <button className="boton-mani">Manifiesto</button>
+                    </Link>
+                    <Link to = '/blog'>
+                       <button className="boton-blog">Blog</button>
+                    </Link>
+                    <Link to = '/admin'>
+                       <button className="boton-admin">Administración</button>
+                    </Link>
+                </div>
             </div>
         </div>
     )
