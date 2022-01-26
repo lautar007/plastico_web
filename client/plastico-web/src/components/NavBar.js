@@ -7,9 +7,12 @@ export default function NavBar () {
     return (
         <div className="NB-fondo">
             <div className="cont-logo">
+               <div className="logo-titulo"> 
                 <Link className="logo" to= '/'>
                     <img className="logo" src="https://i.pinimg.com/564x/ec/31/5d/ec315d88a480b81f255fa9c8bbfca518.jpg"></img>
                 </Link>
+                <h1 className="pri-titulo">Plástico Estudio.</h1>
+                </div>
                 <div>
                     <Link to = '/manifest'>
                        <button className="boton-mani">Manifiesto</button>

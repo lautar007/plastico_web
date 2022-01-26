@@ -9,7 +9,7 @@
 }
 
 .NB-fondo{
-    background-color: rgb(65,67,87);
+    background-color: black;
     padding: 5px 0px;
 }
 
@@ -18,10 +18,23 @@
     justify-content:space-between;
 }
 
+.logo-titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40%;
+    padding-left: 1%;
+}
+
 .logo{
     margin-left: 5%;
     width: 75px;
     height: 75px;
+    border-radius: 50%;
+}
+
+.pri-titulo{
+    color:white;
 }
 
 .boton-mani{
@@ -35,7 +48,7 @@
     transition: 250ms;
 }
 .boton-mani:hover{
-    background-color: rgb(65,67,87);
+    background-color: black;
     border-style: solid;
     border-color:rgb(69, 195, 116);
     border-width: 3px;
@@ -53,7 +66,7 @@
     transition: 250ms;
 }
 .boton-blog:hover{
-    background-color: rgb(65,67,87);
+    background-color: black;
     border-style: solid;
     border-color:rgb(2,145,236);
     border-width: 3px;
@@ -72,7 +85,7 @@
     transition: 250ms;
 }
 .boton-admin:hover{
-    background-color: rgb(65,67,87);
+    background-color: black;
     border-style: solid;
     border-color: rgb(233, 225, 51);
     border-width: 3px;
