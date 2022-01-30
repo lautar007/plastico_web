@@ -2,7 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import {useDispatch, useSelector} from 'react-redux';
 import { Link } from "react-router-dom";
-import './Admin.css'
+import './Admin.css';
+import ToDo from "./ToDo";
 
 export default function Admin(){
 
@@ -31,7 +32,7 @@ export default function Admin(){
             nombre = 'Lautaro Robin'
         }
         return(
-            <h2>Hola {nombre}! Esta es la página de administradores</h2>
+            <h2 className="text-contraseña">Hola {nombre}! Esta es la página de administradores</h2>
         )
     }
 
@@ -39,28 +40,38 @@ export default function Admin(){
         <div className="fondo-admin">
             {
                 entrada !== 'lauchita' && entrada !== 'choripan' && entrada !== 'simio'?
-                <div>
-                    <h3>Coloque la contraseña:</h3>
-                    <input
-                    onChange={(e) => handleInputChange(e)}
-                    type='text'
-                    placeholder="contraseña aquí"
-                    /> 
-                    <button onClick={(e) => handleSubmit(e)}>Entrar</button>
+                <div className="cont-img-input">
+                    <div className="contraseña">
+                        <h2 className="admins">Administradores</h2> 
+                    </div>
+                    <div className="cont-contraseña">
+                        <h3 className="text-contraseña">Coloque la contraseña:</h3>
+                        <input
+                        onChange={(e) => handleInputChange(e)}
+                        type='text'
+                        placeholder="contraseña aquí"
+                        /> 
+                        <button className="btn-contraseña" onClick={(e) => handleSubmit(e)}>Entrar</button>
+                        {
+                        entrada !== 'false' && entrada !== 'lauchita' && entrada !== 'choripan' && entrada !== 'simio' ?
+                        <h3 className="text-contraseña">Constraseña incorrecta, vuelva a intentar</h3>
+                        :
+                        null
+                        }
+                    </div>
                 </div>
-                :
-                null
-            }
-            {
-                entrada !== 'false' && entrada !== 'lauchita' && entrada !== 'choripan' && entrada !== 'simio' ?
-                <h2>Constraseña incorrecta, vuelva a intentar</h2>
                 :
                 null
             }
             {
                 entrada === 'lauchita' || entrada === 'choripan' || entrada === 'simio' ?
                 <div>
-                    {nombres()}
+                    <div>
+                        {nombres()}
+                    </div>
+                    <div>
+                        <ToDo/>
+                    </div>    
                 </div>
                 :
                 null
