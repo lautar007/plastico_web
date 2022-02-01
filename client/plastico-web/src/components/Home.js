@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './LandingPage.css'
 
-export default function LandingPage(){
+export default function Home(){
     return (
         <div className="estructure">
             <div className="artistic">
                 <Link className="link" to='/artistic'>
-                <h1 className="artistic-tit">Artistic</h1>
+                <h1 className="artistic-tit">Artsy</h1>
                 </Link>
             </div>
             <div className="comercial">

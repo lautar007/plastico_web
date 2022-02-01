@@ -1,0 +1,11 @@
+#fadeIn{
+    animation-name: fade;
+    animation-duration: 12s;
+}
+@keyframes fade {
+    0%{ background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/df26df106607267.5f937ed55a849.jpg');}
+    25%{ background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/e14da590032199.5e0a9157a7fc8.jpg');}
+    50%{ background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/13d57a117432653.6075c3a242eaf.jpg');}
+    75%{ background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/f8924190399035.5e163f58d72bb.jpg');}
+    100%{ background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/df26df106607267.5f937ed55a849.jpg');}
+}
