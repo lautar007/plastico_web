@@ -3,29 +3,21 @@ const { DataTypes, ENUM } = require('sequelize');
 // Luego le injectamos la conexion a sequelize.
 module.exports = (sequelize) => {
   // defino el modelo
-  sequelize.define('publicaciones', {
-    titulo:{
+  sequelize.define('candidatos', {
+    nombre:{
         type: DataTypes.STRING,
         allowNull: false
     },
-    fecha:{
+    edad:{
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    mail: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    contenido:{
-        type: DataTypes.TEXT,
-        allowNull: false
-    },
-    imagen: {
+    telefono: {
         type: DataTypes.STRING,
-        allowNull: true
-    },
-    categoria: {
-        type: DataTypes.ENUM('comercial', 'artistico', 'noticia'),
-        allowNull: false
-    },
-    galeria:{
-        type: DataTypes.ARRAY(DataTypes.TEXT),
         allowNull: true
     }
 },

@@ -11,7 +11,8 @@ server.post('', async(req, res) => {
         fecha,
         contenido,
         imagen,
-        categoria
+        categoria,
+        galeria
     } = req.body;
     await Publicaciones.findOrCreate({
         where: { titulo: titulo },
@@ -20,7 +21,8 @@ server.post('', async(req, res) => {
     fecha: fecha,
     contenido: contenido,
     imagen: imagen,
-    categoria: categoria
+    categoria: categoria,
+    galeria: galeria
   }
     })
 .then((publicacion) => {
@@ -41,6 +43,16 @@ server.get('', (req, res, next)=>{
             res.status(404).send('No hay publicaciones')
         }
     })
+})
+
+server.delete('', async(req, res, next)=>{
+    let {titulo} = req.body;
+    await Publicaciones.destroy({where:{titulo: titulo}})   
+    .then((publicacion)=>{
+        res.send('publicación eliminada');
+        res.json(publicacion)
+    })
+    .catch(err => console.log(err))
 })
 
 module.exports = server

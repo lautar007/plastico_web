@@ -3,30 +3,22 @@ const { DataTypes, ENUM } = require('sequelize');
 // Luego le injectamos la conexion a sequelize.
 module.exports = (sequelize) => {
   // defino el modelo
-  sequelize.define('publicaciones', {
-    titulo:{
-        type: DataTypes.STRING,
-        allowNull: false
-    },
+  sequelize.define('tareas', {
     fecha:{
         type: DataTypes.STRING,
         allowNull: false
     },
-    contenido:{
-        type: DataTypes.TEXT,
-        allowNull: false
-    },
-    imagen: {
+    hora:{
         type: DataTypes.STRING,
         allowNull: true
     },
-    categoria: {
-        type: DataTypes.ENUM('comercial', 'artistico', 'noticia'),
+    tarea: {
+        type: DataTypes.STRING,
         allowNull: false
     },
-    galeria:{
-        type: DataTypes.ARRAY(DataTypes.TEXT),
-        allowNull: true
+    estado: {
+        type: DataTypes.ENUM('pendiente', 'terminado'),
+        allowNull: false
     }
 },
 {

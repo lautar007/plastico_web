@@ -1,11 +1,98 @@
+@font-face{
+    font-family: 'Slenco-Black';
+    src:url('../fonts/Slenco-Black\ demo.otf')
+}
+
 #fadeIn{
+    height: 700px;
     animation-name: fade;
-    animation-duration: 12s;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
 }
 @keyframes fade {
-    0%{ background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/df26df106607267.5f937ed55a849.jpg');}
-    25%{ background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/e14da590032199.5e0a9157a7fc8.jpg');}
-    50%{ background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/13d57a117432653.6075c3a242eaf.jpg');}
-    75%{ background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/f8924190399035.5e163f58d72bb.jpg');}
-    100%{ background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/df26df106607267.5f937ed55a849.jpg');}
+    0%{ 
+        background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/df26df106607267.5f937ed55a849.jpg');
+        background-size: cover;
+        background-position-y: -100px;
+    }
+    20%{
+        background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/df26df106607267.5f937ed55a849.jpg');
+        background-size: cover;
+        background-position-y: -500px;
+    }
+
+
+    25%{ background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/e14da590032199.5e0a9157a7fc8.jpg');
+         background-size: cover;
+         background-position-y: -500px;
+    }
+    45%{
+        background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/e14da590032199.5e0a9157a7fc8.jpg');
+         background-size: cover;
+         background-position-y: -100px;
+    }
+
+
+    50%{ background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/13d57a117432653.6075c3a242eaf.jpg');
+         background-size: cover;
+         background-position-y: -100px;
+    }
+    70%{
+        background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/13d57a117432653.6075c3a242eaf.jpg');
+        background-size: cover;
+        background-position-y: -700px;
+    }
+
+
+    75%{ background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/f8924190399035.5e163f58d72bb.jpg');
+        background-size: cover;
+    }
+    95%{ background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/f8924190399035.5e163f58d72bb.jpg');
+        background-size: cover;
+        background-position-y: -100px;
+    }
+
+    100%{ 
+        background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/df26df106607267.5f937ed55a849.jpg');
+        background-size: cover;
+        background-position-y: -100px;
+    }
+}
+
+#plastic{
+    display: flex;
+    justify-content: initial;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+#titulo1{
+    color: white;
+    background-color:black;
+    width: 500px;
+    height: 80px;
+    border-radius: 25px;
+
+}
+
+#enterB{
+    display: flex;
+    justify-content: end;
+    padding-right: 100px;
+    padding-top: 450px;
+}
+
+#buttonE{
+    color: white;
+    font-family: 'Slenco-Black';
+    font-size: 20px;
+    background-color:black;
+    width: 100px;
+    height: 50px;
+    border-radius: 25px;
+    transition:500ms;
+}
+#buttonE:hover{
+    color:black;
+    background-color:white;
 }

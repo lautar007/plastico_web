@@ -5,7 +5,14 @@ import './Landing.css';
 export default function Landing (){
     return(
         <div id="fadeIn">
-            <h1>Este es el landing</h1>
+            <div id="plastic">
+                <h1 id="titulo1">Plástico Estudio</h1>
+            </div>
+            <div id="enterB">
+                <Link to='/home'>
+                  <button id="buttonE">Entrar</button>
+                </Link>
+            </div>
         </div>
     )
 }
