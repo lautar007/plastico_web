@@ -40,4 +40,13 @@ server.get('', (req, res, next)=>{
     })
 })
 
+server.delete('', async(req, res, next)=>{
+    let {tarea} = req.body;
+    await Tareas.destroy({where:{tarea: tarea}})   
+    .then(
+        res.send('tarea eliminada')
+    )
+    .catch(err => console.log(err))
+})
+
 module.exports = server

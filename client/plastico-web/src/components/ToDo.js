@@ -1,22 +1,25 @@
 import React from 'react';
-import { useState} from "react";
+import { useState, useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteToDo, postToDo } from '../actions/actions';
+import { postTarea, getTareas, deleteTarea } from '../actions/actions';
+import './ToDo.css';
 
 export default function ToDo (){
 
     const dispatch = useDispatch();
+    const list = useSelector((state)=> state.Tareas)
 
-    const list = useSelector((state)=> state.ToDo)
-    console.log(list)
+    useEffect(()=>{
+        dispatch(getTareas()); 
+    }, [dispatch]);
+
 
     const [input, setInput] = useState(
         {
             fecha:'',
             hora:'',
             tarea:'',
-            admin:'',
-            hecho: false,
+            estado: 'pendiente'
         }
     )
 
@@ -29,14 +32,14 @@ export default function ToDo (){
 
     function handleSubmit(e){
         e.preventDefault();
-        console.log(input);
-        dispatch(postToDo(input));
-        //document.reload()
+        dispatch(postTarea(input));
+        window.location.reload();
     }
 
     function handleDelete(e){
         e.preventDefault();
-        dispatch(deleteToDo(e.target.value))
+        dispatch(deleteTarea(e.target.value));
+        window.location.reload();
     }
 
     return(
@@ -73,37 +76,30 @@ export default function ToDo (){
                       onChange={(e)=> handleChange(e)}
                     />
 
-                    <label>¿Quien la debe cumplir?:</label>
-                    <input
-                      type = 'text'
-                      value={input.admin}
-                      name = 'admin'
-                      onChange={(e)=> handleChange(e)}
-                    />
-
                     <button onClick={(e) => handleSubmit(e)}>Crear Tarea</button>
                 </form>
             </div>
             {
                 list && list.map((el)=>{
-                    let estado = 'terminado';
-                    if(el.hecho === false){
-                        estado = 'pendiente'
-                    };
-
                     return(
-                        <div key={el.fecha}>
-                            <h6>Fecha:</h6>
-                            <p>{el.fecha}</p>
-                            <h6>Hora:</h6>
-                            <p>{el.hora}</p>
-                            <h6>Tarea:</h6>
-                            <p>{el.tarea}</p>
-                            <h6>Responsable:</h6>
-                            <p>{el.admin}</p>
-                            <h6>Estado:</h6>
-                            <p>{estado}</p>
-                            <button value={el.tarea} onClick={(e) => handleDelete(e)}>Eliminar tarea</button>
+                        <div key={el.id} className='cont-tarea'>
+                            <div>
+                                <h6>Fecha:</h6>
+                                <p>{el.fecha}</p>
+                            </div>
+                            <div>
+                                <h6>Hora:</h6>
+                                <p>{el.hora}</p>
+                            </div>
+                            <div>
+                                <h6>Tarea:</h6>
+                                <p>{el.tarea}</p>
+                            </div>
+                            <div>
+                                <h6>Estado:</h6>
+                                <button>{el.estado}</button>
+                            </div>
+                            <button value={el.tarea} onClick={(e)=> handleDelete(e)}>Eliminar tarea</button>
                         </div>
                     )
                 })

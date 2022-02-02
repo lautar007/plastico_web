@@ -4,7 +4,7 @@ const { Router } = require('express');
 
 const publicaciones = require('./publicaciones');
 const tareas = require('./tareas');
-//const candidatos = require('./candidatos');
+const candidatos = require('./candidatos');
 
 const router = Router();
 
@@ -13,7 +13,7 @@ const router = Router();
 
 router.use('/publicaciones', publicaciones);
 router.use('/tareas', tareas);
-//router.use('/candidatos', candidatos);
+router.use('/candidatos', candidatos);
 
 
 

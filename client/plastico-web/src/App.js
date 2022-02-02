@@ -9,6 +9,7 @@ import Blog from './components/Blog';
 import Form from './components/Form';
 import Home from './components/Home';
 import Landing from './components/Landing';
+import ToDo from './components/ToDo';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route exact path = '/admin' element = {<div><NavBar/><Admin/></div>}/>
         <Route exact path = '/blog' element = {<div><NavBar/><Blog/></div>}/>
         <Route exact path = '/form' element = {<div><NavBar/><Form/></div>}/>
+        <Route exact path = '/plasticos' element ={<div><NavBar/><ToDo/></div>}/>
       </Routes>
     </div>
     </BrowserRouter>

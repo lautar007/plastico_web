@@ -1,24 +1,20 @@
 
 
 const initialState = {
-    ToDo:[],
+    Tareas:[],
 }
 
 function rootReducer(state = initialState, action){
     switch(action.type){
-        case 'POST_TO_DO':
-            initialState.ToDo.push(action.payload)
+        case 'GET_TAREAS':
             return{
                 ...state,
+                Tareas: action.payload
             }
-        
-        case 'DELETE_TO_DO':
-            let filterToDo = initialState.ToDo.filter(el => el.tarea !== action.payload);
-            console.log(filterToDo)
+        case 'DELTE_TAREA':
             return{
-                ...state,
-                Todo: filterToDo
-            }    
+                ...state
+            }
         default:
             return state;
     }

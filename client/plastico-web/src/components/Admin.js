@@ -70,7 +70,9 @@ export default function Admin(){
                         {nombres()}
                     </div>
                     <div>
-                        <ToDo/>
+                        <Link to='/plasticos'>
+                        <button className="btn-contraseña">Listita de Tareas</button>
+                        </Link>
                     </div>    
                 </div>
                 :
