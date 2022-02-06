@@ -1,0 +1,32 @@
+#titulo-form{
+    color: rgb(23, 221, 66);
+    padding: 15px 0px;
+}
+
+#cont-formPost{
+    color: rgb(23, 221, 66);
+    background-color: black;
+    margin: 0px 50px;
+    padding: 15px 10px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color:rgb(23, 221, 66)
+}
+
+#form-post{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#input-post{
+    border-radius: 15px;
+    width: 33%;
+    margin-left: 33%;
+}
+#input-postC{
+    border-radius: 15px;
+    width: 55%;
+    height: 100px;
+    margin-left: 22%;
+}

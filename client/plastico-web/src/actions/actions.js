@@ -30,3 +30,21 @@ export function deleteTarea(tarea){
         .catch(err => alert(err))
     }
 }
+
+export function postPublicacion(payload){
+    return async function (dispatch){
+        const data = await axios({
+            method: "POST",
+            data: {
+                titulo: payload.titulo,
+                fecha: payload.fecha,
+                contenido: payload.contenido,
+                imagen: payload.imagen,
+                categoria: payload.categoria,
+                galeria: payload.galeria
+            },
+            url: ruta + '/publicaciones'
+        })
+        return data;
+    }
+}

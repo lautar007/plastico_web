@@ -8,6 +8,11 @@
     src:url('../fonts/Slenco-Black\ demo.otf')
 }
 
+@font-face{
+    font-family: 'The-Next-Font';
+    src:url('../fonts/TheNextFont.ttf')
+}
+
 .NB-fondo{
     background-color: black;
     padding: 5px 0px;
@@ -44,15 +49,15 @@
     margin-right: 5px;
     width:100px;
     height: 60px;
-    background-color: rgb(69, 195, 116);
+    background-color: rgb(23, 221, 66);;
     transition: 250ms;
 }
 .boton-mani:hover{
     background-color: black;
     border-style: solid;
-    border-color:rgb(69, 195, 116);
+    border-color:rgb(23, 221, 66);;
     border-width: 3px;
-    color:rgb(69, 195, 116);
+    color:rgb(23, 221, 66);;
 }
 
 .boton-blog{

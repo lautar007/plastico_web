@@ -8,6 +8,11 @@
     src:url('../fonts/Muro.otf')
 }
 
+@font-face{
+    font-family: 'The-Next-Font';
+    src:url('../fonts/TheNextFont.ttf')
+}
+
 .link{
   text-decoration: none;  
 }
@@ -71,8 +76,8 @@
 }
 
 h1{
-    font-family: 'Muro';
-    font-size: 60px;
+    font-family: 'The-Next-Font';
+    font-size: 50px;
     color:black;
     margin: 0px
 }

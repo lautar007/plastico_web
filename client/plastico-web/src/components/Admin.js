@@ -71,7 +71,10 @@ export default function Admin(){
                     </div>
                     <div>
                         <Link to='/plasticos'>
-                        <button className="btn-contraseña">Listita de Tareas</button>
+                        <button className="btn-listita">Listita de Tareas</button>
+                        </Link>
+                        <Link to='/form'>
+                        <button className="btn-form">Nueva Publicación</button>
                         </Link>
                     </div>    
                 </div>

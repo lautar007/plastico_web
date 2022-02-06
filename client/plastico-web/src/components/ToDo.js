@@ -32,8 +32,13 @@ export default function ToDo (){
 
     function handleSubmit(e){
         e.preventDefault();
+        if(input.fecha === '' || input.hora === '' || input.tarea === ''){
+            alert('debe rellenar todos los campos')
+        }
+        else{
         dispatch(postTarea(input));
         window.location.reload();
+        }
     }
 
     function handleDelete(e){
@@ -45,64 +50,75 @@ export default function ToDo (){
     return(
         <div>
             <div>
-                <h1>Lista de Tareas</h1>
+                <h1 id='titulo-tareas'>Lista de Tareas</h1>
             </div>
-            <div>
-                <h2>Crear una nueva tarea:</h2>
-            </div>
-            <div>
-                <form>
-                    <label>Fecha:</label>
-                    <input
-                      type = 'date'
-                      value={input.fecha}
-                      name = 'fecha'
-                      onChange={(e)=> handleChange(e)}
-                    />
+            <div id='cont-form-tareas'>
+                <div>
+                    <h2>Crear una nueva tarea:</h2>
+                </div>
+                <div>
+                    <form id='form-tareas'>
+                        <label id='labels'>Fecha:</label>
+                        <input
+                          id='inputs'
+                          type = 'date'
+                          value={input.fecha}
+                          name = 'fecha'
+                          onChange={(e)=> handleChange(e)}
+                        />
 
-                    <label>Hora:</label>
-                    <input
-                      type = 'text'
-                      value={input.hora}
-                      name = 'hora'
-                      onChange={(e)=> handleChange(e)}
-                    />
+                        <label id='labels'>Hora:</label>
+                        <input
+                          id='inputs'
+                          type = 'text'
+                          value={input.hora}
+                          name = 'hora'
+                          onChange={(e)=> handleChange(e)}
+                        />
 
-                    <label>Tarea:</label>
-                    <input
-                      type = 'text'
-                      value={input.tarea}
-                      name = 'tarea'
-                      onChange={(e)=> handleChange(e)}
-                    />
+                        <label id='labels'>Tarea:</label>
+                        <input
+                          id='input-tarea'
+                          type = 'text'
+                          value={input.tarea}
+                          name = 'tarea'
+                          onChange={(e)=> handleChange(e)}
+                        />
 
-                    <button onClick={(e) => handleSubmit(e)}>Crear Tarea</button>
-                </form>
-            </div>
+                        <button id='B-crear-tarea' onClick={(e) => handleSubmit(e)}>Crear Tarea</button>
+                    </form>
+                </div>
+            </div>    
             {
-                list && list.map((el)=>{
+                list.length > 0 ? list.map((el)=>{
+                    let idPendiente = ''
+                    if(el.estado === 'pendiente'){
+                        idPendiente = 'B-estado'
+                    }
                     return(
                         <div key={el.id} className='cont-tarea'>
                             <div>
-                                <h6>Fecha:</h6>
-                                <p>{el.fecha}</p>
+                                <h4 id='label2'>Fecha:</h4>
+                                <p id='data'>{el.fecha}</p>
                             </div>
                             <div>
-                                <h6>Hora:</h6>
-                                <p>{el.hora}</p>
+                                <h4 id='label2'>Hora:</h4>
+                                <p id='data'>{el.hora}</p>
                             </div>
                             <div>
-                                <h6>Tarea:</h6>
-                                <p>{el.tarea}</p>
+                                <h4 id='label2'>Tarea:</h4>
+                                <p id='data-tarea'>{el.tarea}</p>
                             </div>
                             <div>
-                                <h6>Estado:</h6>
-                                <button>{el.estado}</button>
+                                <h4 id='label2'>Estado:</h4>
+                                <button id={idPendiente}>{el.estado}</button>
                             </div>
-                            <button value={el.tarea} onClick={(e)=> handleDelete(e)}>Eliminar tarea</button>
+                            <button id = 'B-delete' value={el.tarea} onClick={(e)=> handleDelete(e)}>Eliminar tarea</button>
                         </div>
                     )
                 })
+                :
+                <h1 id='titulo-tareas'>Aún no hay tareas. Create una!!</h1>
             }
         </div>
     )

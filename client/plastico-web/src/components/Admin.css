@@ -36,6 +36,7 @@
 
 .text-contraseña{
     font-family: 'Slenco-Black';
+    color: white;
 }
 
 .btn-contraseña{
@@ -57,4 +58,46 @@
     border-color:rgb(202,0,0);
     border-width: 3px;
     color:rgb(202,0,0);
+}
+
+.btn-listita{
+    font-family: 'Slenco-Black';
+    font-size: 18px;
+    margin-top: 8px;
+    margin-right: 5px;
+    margin-left: 15px;
+    width:175px;
+    height: 100px;
+    background-color: rgb(233, 35, 35);
+    transition: 250ms;
+    border-color: rgb(19, 19, 19);
+    border-radius: 20px;
+}
+.btn-listita:hover{
+    background-color: black;
+    border-style: solid;
+    border-color:rgb(202,0,0);
+    border-width: 3px;
+    color:rgb(202,0,0);
+}
+
+.btn-form{
+    font-family: 'Slenco-Black';
+    font-size: 18px;
+    margin-top: 8px;
+    margin-right: 5px;
+    margin-left: 15px;
+    width:175px;
+    height: 100px;
+    background-color: rgb(23, 221, 66);;
+    transition: 250ms;
+    border-color: rgb(19, 19, 19);
+    border-radius: 20px;
+}
+.btn-form:hover{
+    background-color: black;
+    border-style: solid;
+    border-color:rgb(23, 221, 66);
+    border-width: 3px;
+    color:rgb(23, 221, 66);;
 }
