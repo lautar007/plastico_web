@@ -1,7 +1,10 @@
 
 
 const initialState = {
-    Tareas:[],
+    Tareas: [],
+    Artistico: [],
+    Comercial: [],
+    Noticia: [],
 }
 
 function rootReducer(state = initialState, action){
@@ -14,6 +17,16 @@ function rootReducer(state = initialState, action){
         case 'DELTE_TAREA':
             return{
                 ...state
+            }
+        case 'GET_PUBLICACIONES':
+            let artistico = action.payload.filter(pub => pub.categoria === 'artistico');
+            let comercial = action.payload.filter(pub => pub.categoria === 'comercial');
+            let noticia = action.payload.filter(pub => pub.categoria === 'noticia');
+            return{
+                ...state,
+                Artistico: artistico,
+                Comercial: comercial,
+                Noticia: noticia
             }
         default:
             return state;

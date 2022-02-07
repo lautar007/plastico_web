@@ -1,0 +1,5 @@
+.cont-cards{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}

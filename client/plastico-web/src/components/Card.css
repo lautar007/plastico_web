@@ -1,0 +1,36 @@
+.img-container {
+    width: 400px;
+    height: 600px;
+    position: relative; 
+    border-style: solid;
+    border-color: black;
+    border-width: 15px;
+  }
+
+  .img-container img{
+    width: 400px;
+    height: 600px;
+    position: relative; 
+  }
+  
+  .img-container h2 {
+    margin: auto;  
+    color: #fff;
+    text-align: center;
+    
+    line-height: 600px; /* igual height de la imagen */
+    
+    background: #000;
+    transition: opacity .4s linear;
+    cursor: pointer;  
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  .img-container:hover h2 {
+    opacity: .75;  
+  }

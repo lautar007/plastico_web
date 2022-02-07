@@ -10,6 +10,7 @@ import Form from './components/Form';
 import Home from './components/Home';
 import Landing from './components/Landing';
 import ToDo from './components/ToDo';
+import Card from './components/Card';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route exact path = '/blog' element = {<div><NavBar/><Blog/></div>}/>
         <Route exact path = '/form' element = {<div><NavBar/><Form/></div>}/>
         <Route exact path = '/plasticos' element ={<div><NavBar/><ToDo/></div>}/>
+        <Route exact path = '/card' element ={<div><NavBar/><Card/></div>}/>
       </Routes>
     </div>
     </BrowserRouter>

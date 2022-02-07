@@ -48,6 +48,7 @@ export default function Form() {
         } else {
         console.log(input);
         dispatch(postPublicacion(input))
+        alert('La publicación se creó correctamente')
         }
     }
  
@@ -145,7 +146,7 @@ export default function Form() {
                           onChange={(e)=> handleGaleria(e)}
                         />
 
-                    <button onClick={(e)=> handleSubmitPost(e)} >Crear Post</button>
+                    <button id="btn-crear" onClick={(e)=> handleSubmitPost(e)} >Crear Post</button>
                 </form>
             </div>
         </div>
