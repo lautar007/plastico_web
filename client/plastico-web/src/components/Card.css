@@ -1,3 +1,9 @@
+
+@font-face{
+  font-family: 'Slenco-Black';
+  src:url('../fonts/Slenco-Black\ demo.otf')
+}
+
 .img-container {
     width: 400px;
     height: 600px;
@@ -17,6 +23,7 @@
     margin: auto;  
     color: #fff;
     text-align: center;
+    font-family: 'Slenco-Black';
     
     line-height: 600px; /* igual height de la imagen */
     
@@ -32,5 +39,29 @@
   }
   
   .img-container:hover h2 {
+    opacity: .75;  
+  }
+
+  .img-container h3 {
+    margin: auto;  
+    padding-top: 50px;
+    color: #fff;
+    text-align:center;
+    font-family: 'Slenco-Black';
+    
+    line-height: 600px; /* igual height de la imagen */
+    
+    background: #000;
+    transition: opacity .4s linear;
+    cursor: pointer;  
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  .img-container:hover h3 {
     opacity: .75;  
   }

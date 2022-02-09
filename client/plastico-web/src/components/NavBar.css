@@ -9,6 +9,11 @@
 }
 
 @font-face{
+    font-family: 'Extreme';
+    src:url('../fonts/Extreme.ttf')
+}
+
+@font-face{
     font-family: 'The-Next-Font';
     src:url('../fonts/TheNextFont.ttf')
 }

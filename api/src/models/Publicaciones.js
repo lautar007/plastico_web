@@ -27,6 +27,10 @@ module.exports = (sequelize) => {
     galeria:{
         type: DataTypes.ARRAY(DataTypes.TEXT),
         allowNull: true
+    },
+    subtitulo:{
+        type: DataTypes.STRING,
+        allowNull: true
     }
 },
 {

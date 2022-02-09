@@ -31,6 +31,7 @@ export default function Artistic(){
                                 titulo={el.titulo}
                                 imagen={el.imagen}
                                 id={el.id}
+                                subtitulo={el.subtitulo}
                                 />
                             </div>
                         )

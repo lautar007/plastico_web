@@ -13,6 +13,22 @@
     src:url('../fonts/TheNextFont.ttf')
 }
 
+@font-face{
+    font-family: 'Extreme';
+    src:url('../fonts/Extreme.ttf')
+}
+
+@font-face{
+    font-family: 'Heading';
+    src:url('../fonts/Heading-Pro-ExtraBold-trial.ttf')
+}
+
+@font-face{
+    font-family: 'Newspaper';
+    src:url('../fonts/Newspaper.ttf')
+}
+
+
 .link{
   text-decoration: none;  
 }

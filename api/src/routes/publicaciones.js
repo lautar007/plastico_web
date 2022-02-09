@@ -12,7 +12,8 @@ server.post('', async(req, res) => {
         contenido,
         imagen,
         categoria,
-        galeria
+        galeria,
+        subtitulo
     } = req.body;
     await Publicaciones.findOrCreate({
         where: { titulo: titulo },
@@ -22,7 +23,8 @@ server.post('', async(req, res) => {
     contenido: contenido,
     imagen: imagen,
     categoria: categoria,
-    galeria: galeria
+    galeria: galeria,
+    subtitulo: subtitulo
   }
     })
 .then((publicacion) => {

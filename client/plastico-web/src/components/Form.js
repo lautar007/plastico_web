@@ -17,7 +17,8 @@ export default function Form() {
         contenido: '',
         imagen:'',
         categoria:'',
-        galeria:[]
+        galeria:[],
+        subtitulo:''
     })
 
     function handleChange(e){
@@ -64,6 +65,15 @@ export default function Form() {
                           type = 'text'
                           name = 'titulo'
                           placeholder="Título de la publicación"
+                          onChange={(e)=> handleChange(e)}
+                        />
+
+                        <label id='labels'>Subtítulo:</label>
+                        <input
+                          id='input-post'
+                          type = 'text'
+                          name = 'subtitulo'
+                          placeholder="Subtítulo de la publicación"
                           onChange={(e)=> handleChange(e)}
                         />
 

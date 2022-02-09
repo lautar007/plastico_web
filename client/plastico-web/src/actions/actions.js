@@ -41,7 +41,8 @@ export function postPublicacion(payload){
                 contenido: payload.contenido,
                 imagen: payload.imagen,
                 categoria: payload.categoria,
-                galeria: payload.galeria
+                galeria: payload.galeria,
+                subtitulo: payload.subtitulo
             },
             url: ruta + '/publicaciones'
         })
