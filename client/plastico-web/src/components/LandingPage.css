@@ -3,10 +3,6 @@
     src:url('../fonts/Slenco-Black\ demo.otf')
 }
 
-@font-face{
-    font-family: 'Muro';
-    src:url('../fonts/Muro.otf')
-}
 
 @font-face{
     font-family: 'The-Next-Font';
@@ -14,19 +10,10 @@
 }
 
 @font-face{
-    font-family: 'Extreme';
-    src:url('../fonts/Extreme.ttf')
+    font-family: 'Baron';
+    src:url('../fonts/Baron\ Neue.otf')
 }
 
-@font-face{
-    font-family: 'Heading';
-    src:url('../fonts/Heading-Pro-ExtraBold-trial.ttf')
-}
-
-@font-face{
-    font-family: 'Newspaper';
-    src:url('../fonts/Newspaper.ttf')
-}
 
 
 .link{
@@ -92,7 +79,7 @@
 }
 
 h1{
-    font-family: 'The-Next-Font';
+    font-family: 'Baron';
     font-size: 50px;
     color:white;
     margin: 0px;

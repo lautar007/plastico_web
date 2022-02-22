@@ -59,3 +59,13 @@ export function getPublicaciones(){
         })
     }
 }
+
+export function getPublicacion(id){
+    return async function(dispatch){
+        var json = await axios.get(ruta + '/publicaciones/' + id);
+        return dispatch({
+            type: 'GET_PUBLICACION',
+            payload: json.data
+        })
+    }
+}

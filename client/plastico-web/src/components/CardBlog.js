@@ -1,7 +1,7 @@
 import React from "react";
 import './CardBlog.css';
 
-export default function CardBlog({titulo, imagen, id, subtitulo, contenido, fecha, galeria}){
+export default function CardBlog({titulo, imagen, subtitulo, contenido, fecha, galeria}){
 
     const parrafos = contenido.split('\n');
 

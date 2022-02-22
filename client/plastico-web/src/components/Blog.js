@@ -3,6 +3,7 @@ import { useState, useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getPublicaciones } from "../actions/actions";
 import CardBlog from "./CardBlog";
+import { Link } from "react-router-dom";
 
 export default function Blog () {
 
@@ -34,7 +35,9 @@ export default function Blog () {
                         return(
                         <div key={Math.random()}>
                         <hr/>
+                        <Link id="link" to={'/blog/' + el.id}>
                         <p id="tit-menu" key={el.id}>- {el.fecha}| {el.titulo.slice(0, 15)}...</p>
+                        </Link>
                         </div>
                     )})}
                     </div>

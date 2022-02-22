@@ -5,6 +5,7 @@ const initialState = {
     Artistico: [],
     Comercial: [],
     Noticia: [],
+    Publicacion:{}
 }
 
 function rootReducer(state = initialState, action){
@@ -28,6 +29,12 @@ function rootReducer(state = initialState, action){
                 Comercial: comercial,
                 Noticia: noticia
             }
+            case 'GET_PUBLICACION':
+                return{
+                    ...state,
+                    Publicacion: action.payload
+                }
+
         default:
             return state;
     }

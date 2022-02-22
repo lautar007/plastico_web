@@ -63,15 +63,13 @@
     display: flex;
     justify-content: initial;
     padding-top: 50px;
-    padding-left: 50px;
+    padding-left: 150px;
 }
 
-#titulo1{
-    color: white;
-    background-color:black;
-    width: 500px;
-    height: 80px;
-    border-radius: 25px;
+#land-logo{
+    width: 200px;
+    height: 200px;
+    border-radius: 150px;
     padding-top: 15px;
 
 }
@@ -80,7 +78,7 @@
     display: flex;
     justify-content: end;
     padding-right: 100px;
-    padding-top: 450px;
+    padding-top: 300px;
 }
 
 #buttonE{

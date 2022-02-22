@@ -9,9 +9,9 @@ export default function NavBar () {
             <div className="cont-logo">
                <div className="logo-titulo"> 
                 <Link className="logo" to= '/'>
-                    <img className="logo" src="https://i.pinimg.com/564x/ec/31/5d/ec315d88a480b81f255fa9c8bbfca518.jpg"></img>
+                    <img className="logo" src="https://i.pinimg.com/564x/a7/34/46/a73446345a4c441921f6d44eb270bcfd.jpg"></img>
                 </Link>
-                <h1 className="pri-titulo">Plástico Estudio.</h1>
+                <h1 className="pri-titulo">plástico Estudio.</h1>
                 </div>
                 <div>
                     <Link to = '/manifest'>

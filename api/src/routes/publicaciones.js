@@ -5,6 +5,7 @@ const {Publicaciones} = require('../db');
 
 app.use(express.json());
 
+
 server.post('', async(req, res) => {
     let {
         titulo,
@@ -44,6 +45,14 @@ server.get('', (req, res, next)=>{
         else{
             res.status(404).send('No hay publicaciones')
         }
+    })
+})
+
+server.get('/:id', async(req, res) =>{
+    const {id} = req.params;
+    Publicaciones.findOne({where:{id: id}})
+    .then(publicacion =>{
+            res.status(200).json(publicacion)
     })
 })
 

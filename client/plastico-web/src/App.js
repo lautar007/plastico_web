@@ -11,6 +11,7 @@ import Home from './components/Home';
 import Landing from './components/Landing';
 import ToDo from './components/ToDo';
 import CardBlog from './components/CardBlog';
+import NewsDetail from './components/NewsDetail';
 
 
 
@@ -29,6 +30,7 @@ function App() {
         <Route exact path = '/form' element = {<div><NavBar/><Form/></div>}/>
         <Route exact path = '/plasticos' element ={<div><NavBar/><ToDo/></div>}/>
         <Route exact path = '/card' element ={<div><NavBar/><CardBlog/></div>}/>
+        <Route exact path = '/blog/:id' element = {<NewsDetail/>}/>
       </Routes>
     </div>
     </BrowserRouter>
