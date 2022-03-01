@@ -110,3 +110,16 @@ body{
     background-color: rgb(233, 35, 35);
     color:black;
 }
+
+#img-adminPost{
+    border-radius: 25px;
+    object-fit: cover;
+    margin-top: 20px;
+    width: 75px;
+    height: 75px;
+}
+
+#admin-tit{
+    color:rgb(233, 35, 35);
+    margin: 20px;
+}

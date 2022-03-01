@@ -14,6 +14,15 @@
     src:url('../fonts/Baron\ Neue.otf')
 }
 
+.logo1{
+    top: 20px;
+    left: 30px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: absolute;   
+}
+
 
 
 .link{
@@ -27,17 +36,18 @@
 }
 
 .artistic{
-    background-image: url('https://i.pinimg.com/originals/b8/fd/53/b8fd53427350cbfdeb75130d25db152a.jpg');
+    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/aa954f90405997.5e1669db9f38c.jpg');
     background-size: cover;
+    background-position-y: -200px;
     width: 50%;
     display: flex;
     justify-content: center;
 }
 
 .artistic-tit{
-    margin-top: 100px;
-    margin-bottom: 500px;
-    background-color: black;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    background-color: transparent;
     color: white;
     width: 450px;
     height: 75px;
@@ -45,25 +55,26 @@
     transition: 300ms;
 }
 .artistic-tit:hover{
-    color:black;
-    background-color: white;
+    color:rgb(2,145,236);
+    background-color: transparent;
     border-style: solid;
-    border-color: black;
+    border-color: rgb(2,145,236);
     border-width: 5px;
 }
 
 .comercial{
-    background-image: url('https://i.pinimg.com/originals/d1/79/53/d17953b2889f689af7ab84728b7f6ee5.jpg');
+    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/a9244d117867111.607e1da1e21ca.png');
     background-size: cover;
     width: 50%;
+    height: 700px;
     display: flex;
     justify-content: center;
 }
 
 .comercial-tit{
-    margin-top: 100px;
-    margin-bottom: 500px;
-    background-color: black;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    background-color: transparent;
     color: white;
     width: 450px;
     height: 75px;
@@ -71,10 +82,10 @@
     transition: 300ms;
 }
 .comercial-tit:hover{
-    color:black;
-    background-color: white;
+    color:rgb(233, 35, 35);;
+    background-color: transparent;
     border-style: solid;
-    border-color: black;
+    border-color: rgb(233, 35, 35);;
     border-width: 5px;
 }
 
@@ -84,4 +95,43 @@ h1{
     color:white;
     margin: 0px;
     padding: 10px 0px;
+}
+
+.menu{
+    top: 20px;
+    right: 30px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    object-fit: fill;
+}
+.content-menu{
+    position: absolute;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    top: 50px;
+    right: 150px; 
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow:  -20px 20px 60px #000000;
+}
+.content-menu button{
+    background-color: black;
+    font-family: 'Slenco-Black';
+    color: rgb(23, 221, 66);
+    cursor: pointer;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: solid thin;
+    font-size: 25px;
+    transition: 500ms;
+}
+.content-menu button:hover{
+    color: black;
+    background-color: rgb(23, 221, 66);
+    border-radius: 15px;
 }

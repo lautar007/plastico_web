@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getPublicacion} from "../actions/actions";
 
-export default function NewsDetail({ imagen, subtitulo, contenido, fecha, galeria}){
+export default function NewsDetail(){
 
     let {id} = useParams();
     

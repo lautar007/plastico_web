@@ -31,6 +31,18 @@ export function deleteTarea(tarea){
     }
 }
 
+export function deletePost(titulo){
+    return async function(dispatch){
+        const data = await axios({
+            method: "DELETE",
+            data:{titulo: titulo},
+            url: ruta + '/publicaciones',
+        })
+        .then(resultado => dispatch({type: 'DELETE_POST', payload:resultado}))
+        .catch(err => alert(err))
+    }
+}
+
 export function postPublicacion(payload){
     return async function (dispatch){
         const data = await axios({

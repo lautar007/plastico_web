@@ -1,0 +1,68 @@
+.contPost{
+    display: flex;
+    flex-direction: row;
+}
+
+hr{
+    color: white
+}
+
+#img-post{
+    width: 40%;
+    height: auto;
+    border-right: solid black 15px; 
+    border-bottom: solid black 15px;
+}
+
+#contPostInfo{
+    padding: 5px 20px;
+}
+#contPostInfo h2{
+    color: rgb(233, 35, 35);
+    font-family: 'Slenco-Black';
+}
+#contPostInfo p{
+    color: white;
+    text-align: justify;
+}
+#contPostInfo p1{
+    display: flex;
+    flex-direction: row;
+    color: rgb(143, 143, 143);
+    justify-content: initial;
+}
+
+.B-volver{
+    font-family: 'Slenco-Black';
+    font-size: 18px;
+    margin-top: 8px;
+    margin-right: 5px;
+    margin-left: 15px;
+    width:100px;
+    height: 50px;
+    background-color: rgb(233, 35, 35);
+    transition: 250ms;
+    border-color: black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.B-volver:hover{
+    background-color: black;
+    border-style: solid;
+    border-color:rgb(202,0,0);
+    border-width: 3px;
+    color:rgb(202,0,0);
+}
+
+.cont-galeria-post{
+    background-color: black;
+    padding: 10px;
+    margin: 20px 0px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+.cont-galeria-post h2{
+    color: rgb(233, 35, 35);
+    font-family: 'Slenco-Black';
+}

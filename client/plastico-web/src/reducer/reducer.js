@@ -15,7 +15,11 @@ function rootReducer(state = initialState, action){
                 ...state,
                 Tareas: action.payload
             }
-        case 'DELTE_TAREA':
+        case 'DELETE_TAREA':
+            return{
+                ...state
+            }
+        case 'DELETE_POST':
             return{
                 ...state
             }

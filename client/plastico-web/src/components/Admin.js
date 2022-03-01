@@ -76,6 +76,9 @@ export default function Admin(){
                         <Link to='/form'>
                         <button className="btn-form">Nueva Publicación</button>
                         </Link>
+                        <Link to = '/adminPost'>
+                        <button className="btn-admin">Administrar publicaciones</button>
+                        </Link>
                     </div>    
                 </div>
                 :

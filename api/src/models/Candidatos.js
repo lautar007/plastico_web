@@ -19,6 +19,14 @@ module.exports = (sequelize) => {
     telefono: {
         type: DataTypes.STRING,
         allowNull: true
+    },
+    newsletter:{
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+    },
+    pasantia: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
     }
 },
 {

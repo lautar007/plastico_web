@@ -12,6 +12,8 @@ import Landing from './components/Landing';
 import ToDo from './components/ToDo';
 import CardBlog from './components/CardBlog';
 import NewsDetail from './components/NewsDetail';
+import PostDetail from './components/PostDetail';
+import PostAdmin from './components/PostAdmin';
 
 
 
@@ -21,8 +23,9 @@ function App() {
     <div className="App">
       <Routes>
         <Route exact path = '/' element = {<Landing/>}/>
-        <Route exact path = '/home' element = {<div><NavBar/><Home/></div>}/>
+        <Route exact path = '/home' element = {<div><Home/></div>}/>
         <Route exact path = '/artistic' element = {<div><NavBar/><Artistic/></div>}/>
+        <Route exact path = '/artistic/:id' element ={<div><NavBar/><PostDetail/></div>}/>
         <Route exact path = '/comercial' element = {<div><NavBar/><Comercial/></div>}/>
         <Route exact path = '/manifest' element = {<div><NavBar/><Manifest/></div>}/>
         <Route exact path = '/admin' element = {<div><NavBar/><Admin/></div>}/>
@@ -31,6 +34,7 @@ function App() {
         <Route exact path = '/plasticos' element ={<div><NavBar/><ToDo/></div>}/>
         <Route exact path = '/card' element ={<div><NavBar/><CardBlog/></div>}/>
         <Route exact path = '/blog/:id' element = {<NewsDetail/>}/>
+        <Route exact path = '/adminPost' element = {<div><NavBar/><PostAdmin/></div>}/>
       </Routes>
     </div>
     </BrowserRouter>
