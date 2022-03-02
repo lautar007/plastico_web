@@ -92,7 +92,7 @@ export function postCandidatos(payload){
                 mail: payload.mail,
                 telefono: payload.telefono,
                 newsletter: payload.newsletter,
-                pasantia: payload.pasantía
+                pasantia: payload.pasantia
             },
             url: ruta + '/candidatos'
         })

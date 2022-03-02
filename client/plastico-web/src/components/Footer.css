@@ -74,8 +74,106 @@
 #cont-pasantia{
     display: flex;
     flex-direction: column;
+    margin-right: 2%;
+    width: 20%;
 }
-#cont-pasantia h2{
+#cont-pasantia button{
     color: white;
     font-family: 'Slenco-Black';
+    margin-top: 45%;
+    background: none;
+    font-size: 20px;
+    width: fit-content;
+    transition: 500ms;
+}
+#cont-pasantia button:hover{
+    color:rgb(23, 221, 66);
+}
+#cont-pasantia p{
+    color: white;
+    width: 75%;
+    margin-left: 10%;
+    font-size: 13px;
+}
+
+
+.vent-pasantia{
+    background-color: black;
+    position: absolute;
+    bottom: -150px;
+    left: 10%;
+    width: 70%;
+    height: fit-content;
+    padding-bottom: 25px;
+    border-radius: 50px;
+    border:solid thin rgb(23, 221, 66);
+    box-shadow: 0px 2px 50px 19px rgba(0,0,0,0.88);
+-webkit-box-shadow: 0px 2px 50px 19px rgba(0,0,0,0.88);
+-moz-box-shadow: 0px 2px 50px 19px rgba(0,0,0,0.88);
+}
+.vent-pasantia h2{
+    color:rgb(23, 221, 66);
+    font-family: 'Slenco-Black';
+}
+.nombre-edad{
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.nombre-edad p{
+    margin: 0 5px 0 25px;
+    color: white;
+}
+.p-edad{
+    width: 5%;
+}
+.enviar-pas{
+    font-family: 'Slenco-Black';
+    font-size: 18px;
+    margin-top: 8px;
+    margin-right: 5px;
+    margin-left: 15px;
+    width:100px;
+    height: 50px;
+    background-color: rgb(23, 221, 66);
+    transition: 250ms;
+    border-color: black;
+    border-radius: 20px;
+}
+.enviar-pas:hover{
+    background-color: black;
+    border-style: solid;
+    border-color:rgb(23, 221, 66);
+    border-width: 3px;
+    color:rgb(23, 221, 66);
+}
+.volver-pas{
+    font-family: 'Slenco-Black';
+    font-size: 18px;
+    margin-top: 8px;
+    margin-right: 5px;
+    margin-left: 15px;
+    width:100px;
+    height: 50px;
+    background-color: rgb(233, 35, 35);
+    transition: 250ms;
+    border-color: black;
+    border-radius: 20px;
+}
+.volver-pas:hover{
+    background-color: black;
+    border-style: solid;
+    border-color:rgb(202,0,0);
+    border-width: 3px;
+    color:rgb(202,0,0);
+}
+
+
+.derechos{
+    font-size: 10px;
+    color: white;
+    text-align: left;
+    margin-left: 25px;
 }
