@@ -14,6 +14,7 @@ import CardBlog from './components/CardBlog';
 import NewsDetail from './components/NewsDetail';
 import PostDetail from './components/PostDetail';
 import PostAdmin from './components/PostAdmin';
+import Footer from './components/Footer';
 
 
 
@@ -23,7 +24,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route exact path = '/' element = {<Landing/>}/>
-        <Route exact path = '/home' element = {<div><Home/></div>}/>
+        <Route exact path = '/home' element = {<div><Home/><Footer/></div>}/>
         <Route exact path = '/artistic' element = {<div><NavBar/><Artistic/></div>}/>
         <Route exact path = '/artistic/:id' element ={<div><NavBar/><PostDetail/></div>}/>
         <Route exact path = '/comercial' element = {<div><NavBar/><Comercial/></div>}/>

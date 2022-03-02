@@ -10,7 +10,9 @@ server.post('', async(req, res) => {
         nombre,
         edad,
         mail,
-        telefono
+        telefono,
+        newsletter,
+        pasantia
     } = req.body;
     await Candidatos.findOrCreate({
         where: { nombre: nombre },
@@ -18,7 +20,9 @@ server.post('', async(req, res) => {
     nombre: nombre,
     edad: edad,
     mail: mail,
-    telefono: telefono
+    telefono: telefono,
+    newsletter: newsletter,
+    pasantia: pasantia
   }
     })
 .then((candidato) => {

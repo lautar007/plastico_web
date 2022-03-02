@@ -1,0 +1,81 @@
+#cont-Footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+
+
+#cont-redes{
+    display: flex;
+    flex-direction: column;
+    padding-right: 25px;
+    border-right: solid thin white;
+}
+#cont-redes h2{
+    color: white;
+    font-family: 'Slenco-Black';
+}
+#cont-ig{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+}
+#cont-ig a{
+    color: white;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+#logo-ig{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+
+
+
+
+
+#cont-newsletter{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+    border-right: solid thin white;
+    padding: 0px 55px;
+}
+#cont-newsletter h2{
+    color: white;
+    font-family: 'Slenco-Black';
+}
+#cont-newsletter h4{
+    color: white;
+    font-family: 'Slenco-Black';
+}
+#cont-newsletter p{
+    padding: 0;
+    color: white;
+}
+#cont-newsletter button{
+    margin: 25px 0px;
+}
+#news-nombre{
+    width: 50%;
+    margin-left: 25%;
+}
+
+
+
+
+
+
+#cont-pasantia{
+    display: flex;
+    flex-direction: column;
+}
+#cont-pasantia h2{
+    color: white;
+    font-family: 'Slenco-Black';
+}

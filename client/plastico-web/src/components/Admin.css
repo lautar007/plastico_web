@@ -15,12 +15,12 @@
     background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/1eb25b90032199.5e0a9157a87b5.jpg');
     background-size:cover;
     width:75%;
-    background-position-y: -200px;
+    height: 600px;
 }
 
 .admins{
     margin-top: 30px;
-    margin-bottom: 570px;
+    margin-bottom: 100px;
     font-family: 'Slenco-Black';
     font-size: 40px;
 }

@@ -81,3 +81,21 @@ export function getPublicacion(id){
         })
     }
 }
+
+export function postCandidatos(payload){
+    return async function (dispatch){
+        const data = await axios({
+            method: 'POST',
+            data:{
+                nombre: payload.nombre,
+                edad: payload.edad,
+                mail: payload.mail,
+                telefono: payload.telefono,
+                newsletter: payload.newsletter,
+                pasantia: payload.pasantía
+            },
+            url: ruta + '/candidatos'
+        })
+        return data;
+    }
+}
