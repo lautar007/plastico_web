@@ -99,3 +99,25 @@ export function postCandidatos(payload){
         return data;
     }
 }
+
+export function getPasantes(){
+    return async function(dispatch){
+        var json = await axios.get(ruta +'/candidatos');
+        return dispatch({
+            type: 'GET_PASANTES',
+            payload: json.data
+        })
+    }
+}
+
+export function deletePasante(nombre){
+    return async function(dispatch){
+        const data = await axios({
+            method: "DELETE",
+            data:{nombre: nombre},
+            url: ruta + '/candidatos',
+        })
+        .then(resultado => dispatch({type: 'DELETE_PASANTE', payload:resultado}))
+        .catch(err => alert(err))
+    }
+}

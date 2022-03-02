@@ -60,12 +60,15 @@
     color:rgb(202,0,0);
 }
 
+.cont-botonesAdmin{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
 .btn-listita{
     font-family: 'Slenco-Black';
     font-size: 18px;
-    margin-top: 8px;
-    margin-right: 5px;
-    margin-left: 15px;
     width:175px;
     height: 100px;
     background-color: rgb(233, 225, 51);
@@ -84,9 +87,6 @@
 .btn-form{
     font-family: 'Slenco-Black';
     font-size: 18px;
-    margin-top: 8px;
-    margin-right: 5px;
-    margin-left: 15px;
     width:175px;
     height: 100px;
     background-color: rgb(23, 221, 66);;
@@ -105,10 +105,7 @@
 .btn-admin{
     font-family: 'Slenco-Black';
     font-size: 18px;
-    position: relative;
-    top: -8px;
-    margin-right: 5px;
-    margin-left: 15px;
+    margin-top: 0 ;
     width:175px;
     height: 100px;
     background-color: rgb(233, 35, 35);
@@ -119,7 +116,25 @@
 .btn-admin:hover{
     background-color: black;
     border-style: solid;
-    border-color:rgb(233, 35, 35);
+    border-color: rgb(233, 35, 35); 
     border-width: 3px;
     color:rgb(233, 35, 35);
+}
+
+.btn-pasSub{
+    font-family: 'Slenco-Black';
+    font-size: 18px;
+    width:175px;
+    height: 100px;
+    background-color: rgb(2,145,236);
+    transition: 250ms;
+    border-color: rgb(19, 19, 19);
+    border-radius: 20px;
+}
+.btn-pasSub:hover{
+    background-color: black;
+    border-style: solid;
+    border-color:rgb(2,145,236);
+    border-width: 3px;
+    color:rgb(2,145,236);
 }

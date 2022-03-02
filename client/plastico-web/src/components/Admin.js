@@ -69,7 +69,7 @@ export default function Admin(){
                     <div>
                         {nombres()}
                     </div>
-                    <div>
+                    <div className="cont-botonesAdmin">
                         <Link to='/plasticos'>
                         <button className="btn-listita">Listita de Tareas</button>
                         </Link>
@@ -78,6 +78,9 @@ export default function Admin(){
                         </Link>
                         <Link to = '/adminPost'>
                         <button className="btn-admin">Administrar publicaciones</button>
+                        </Link>
+                        <Link to = '/pasantias'>
+                        <button className='btn-pasSub'>Pasantías y Subscripciones</button>
                         </Link>
                     </div>    
                 </div>

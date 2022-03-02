@@ -1,0 +1,86 @@
+.tit-pas{
+    color: rgb(2,145,236);
+}
+
+.cont-newsSub{
+
+}
+.cont-newsSub h2{
+    color: white;
+    font-family: 'Slenco-Black';
+}
+
+.cont-pasantes{
+
+}
+.cont-pasantes h2{
+    color: white;
+    font-family: 'Slenco-Black';
+}
+
+.sub-list{
+    display: grid;
+    grid-template-columns: 30% 50% 7%;
+    justify-content: left;
+    background-color: black;
+    border-top: solid thin rgb(2,145,236);
+    height: fit-content;
+    padding-left: 10%;
+}
+.sub-list button{
+    height:30px;
+    margin-top: 12px;
+    cursor: pointer;
+    background-color: rgb(2,145,236);
+    color: black;
+    border-color: black;
+    transition: 500ms;
+}
+.sub-list button:hover{
+    background-color: black;
+    color: rgb(2,145,236);
+    border-color: rgb(2,145,236);
+}
+
+.item{
+ display: flex;
+ flex-direction: row;
+ 
+}
+.item h3{
+    color: white;
+    height: 20px;
+    font-size: 16px;
+    margin-right: 2%;
+}
+.item p{
+    color:white;
+    height: 20px;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+
+.sub-list2{
+    display: grid;
+    grid-template-columns: 25% 12% 20% 30% 7%;
+    justify-content: left;
+    background-color: black;
+    border-top: solid thin rgb(2,145,236);
+    height: fit-content;
+    padding-left: 5%;
+}
+.sub-list2 button{
+    height:30px;
+    margin-top: 12px;
+    cursor: pointer;
+    background-color: rgb(2,145,236);
+    color: black;
+    border-color: black;
+    transition: 500ms;
+}
+.sub-list2 button:hover{
+    background-color: black;
+    color: rgb(2,145,236);
+    border-color: rgb(2,145,236);
+}

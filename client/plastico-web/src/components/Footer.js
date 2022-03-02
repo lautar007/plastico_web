@@ -119,6 +119,7 @@ export default function Footer(){
               </div>
           </div>
           <hr/>
+          <p className="derechos">Este portal web fue diseñado y desarrollado por Lautaro Nuñez. Si quieres que desarrolle tu web, envía un email a 'kautarol@gmail.com'</p>
           <p className="derechos">Las imágenes y publicaciones de este portal web están protegidas por derechos de autor.</p>
           <p className="derechos">Plastico Estudio | Todos los derechos reservados © | 2022</p>
           <div>

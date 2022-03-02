@@ -15,6 +15,7 @@ import NewsDetail from './components/NewsDetail';
 import PostDetail from './components/PostDetail';
 import PostAdmin from './components/PostAdmin';
 import Footer from './components/Footer';
+import Pasantias from './components/Pasantias';
 
 
 
@@ -36,6 +37,7 @@ function App() {
         <Route exact path = '/card' element ={<div><NavBar/><CardBlog/></div>}/>
         <Route exact path = '/blog/:id' element = {<NewsDetail/>}/>
         <Route exact path = '/adminPost' element = {<div><NavBar/><PostAdmin/></div>}/>
+        <Route exact path = '/pasantias' element = {<div><NavBar/><Pasantias/></div>}/>
       </Routes>
     </div>
     </BrowserRouter>
