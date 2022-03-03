@@ -2,11 +2,13 @@ import React from "react";
 import { useState, useEffect } from "react";
 import {useDispatch, useSelector} from 'react-redux';
 import { Link } from "react-router-dom";
+import { deletePortada, postPortada } from "../actions/actions";
 import './Admin.css';
 import ToDo from "./ToDo";
 
 export default function Admin(){
-
+    
+    const dispatch = useDispatch();
     const [contraseña, setContraseña] = useState('false')
     const [entrada, setEntrada] = useState('false')
 
@@ -35,6 +37,36 @@ export default function Admin(){
             <h2 className="text-contraseña">Hola {nombre}! Esta es la página de administradores</h2>
         )
     }
+
+    //---------------------------------
+
+    const [input, setInput] = useState({
+        imagenA: '',
+        imagenB: ''
+    })
+
+    function handleChange(e){
+        e.preventDefault();
+        setInput({
+            ...input,
+            [e.target.name]: e.target.value 
+        });
+        console.log(input);
+    }
+
+    function handlePortada(e){
+        e.preventDefault();
+        if(input.imagenA.length > 5 && input.imagenB.length > 5){
+        //dispatch(deletePortada());
+        dispatch(postPortada(input));
+        alert('La portada se ha configurado con éxito.')
+        }
+        else{
+            alert('Debe colocarse ambas imágenes para poder realizar la configuración.')
+        }
+    }
+
+    //---------------------------------
 
     return(
         <div className="fondo-admin">
@@ -82,7 +114,28 @@ export default function Admin(){
                         <Link to = '/pasantias'>
                         <button className='btn-pasSub'>Pasantías y Subscripciones</button>
                         </Link>
-                    </div>    
+                    </div>  
+                    <div className="cont-portada">
+                        <h1>Cambiar imágenes de portada</h1>
+                        <h3>Esta sección sirve para cambiar las imágenes que aparecen como portada de las secciones 'ARTSY' y 'COMERCIAL' en el Home.</h3>
+                        <div className="input-portada">
+                            <p>Tapa de Artsy</p>
+                            <input
+                            placeholder="URL de la imagen"
+                            name="imagenA"
+                            onChange={(e) => handleChange(e)}
+                            />
+                        </div>
+                        <div className="input-portada">
+                            <p>Tapa de Comercial</p>
+                            <input
+                            placeholder="URL de la imagen"
+                            name="imagenB"
+                            onChange={(e) => handleChange(e)}
+                            />
+                        </div>
+                        <button className="btn-contraseña" onClick={(e)=> handlePortada(e)}>Configurar</button>
+                    </div>      
                 </div>
                 :
                 null

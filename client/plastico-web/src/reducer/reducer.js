@@ -6,7 +6,8 @@ const initialState = {
     Comercial: [],
     Noticia: [],
     Publicacion:{},
-    Candidatos: []
+    Candidatos: [],
+    Portada: []
 }
 
 function rootReducer(state = initialState, action){
@@ -47,6 +48,11 @@ function rootReducer(state = initialState, action){
         case 'DELETE_PASANTE':
             return{
                 ...state
+            }
+        case 'GET_PORTADA':
+            return{
+                ...state,
+                Portada: action.payload
             }
 
         default:

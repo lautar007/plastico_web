@@ -5,6 +5,7 @@ const { Router } = require('express');
 const publicaciones = require('./publicaciones');
 const tareas = require('./tareas');
 const candidatos = require('./candidatos');
+const portada = require('./portada');
 
 const router = Router();
 
@@ -14,6 +15,7 @@ const router = Router();
 router.use('/publicaciones', publicaciones);
 router.use('/tareas', tareas);
 router.use('/candidatos', candidatos);
+router.use('/portada', portada);
 
 
 

@@ -121,3 +121,38 @@ export function deletePasante(nombre){
         .catch(err => alert(err))
     }
 }
+
+export function deletePortada(){
+    return async function(dispatch){
+        const data = await axios({
+            method: "DELETE",
+            url: ruta + '/portada',
+        })
+        .then(resultado => dispatch({type: 'DELETE_PORTADA', payload:resultado}))
+        .catch(err => alert(err))
+    }
+}
+
+export function postPortada(payload){
+    return async function (dispatch){
+        const data = await axios({
+            method: 'POST',
+            data:{
+                imagenA: payload.imagenA,
+                imagenB: payload.imagenB
+            },
+            url: ruta + '/portada'
+        })
+        return data;
+    }
+}
+
+export function getPortada(){
+    return async function(dispatch){
+        var json = await axios.get(ruta +'/portada');
+        return dispatch({
+            type: 'GET_PORTADA',
+            payload: json.data
+        })
+    }
+}

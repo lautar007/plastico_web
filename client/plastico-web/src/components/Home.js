@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './LandingPage.css'
-import { useState } from "react";
+import './LandingPage.css';
+import { useState} from "react";
 
 export default function Home(){
 

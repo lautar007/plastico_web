@@ -138,3 +138,32 @@ justify-content: space-around;
     border-width: 3px;
     color:rgb(2,145,236);
 }
+
+.cont-portada{
+    background-color: black;
+    margin: 50px 5%;
+    padding: 20px 0px;
+}
+.cont-portada h1{
+    font-size: 22px;
+}
+.cont-portada h3{
+    color: white;
+    font-family: 'Slenco-Black';
+    margin: 10px 15%;
+    text-align: center;
+}
+
+.input-portada{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.input-portada p{
+    color: white;
+    margin: 0px 2% 0px 10%;
+}
+.input-portada input{
+    height: 20px;
+    width: 60%;
+}
