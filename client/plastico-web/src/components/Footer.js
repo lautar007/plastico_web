@@ -95,7 +95,14 @@ export default function Footer(){
                       <img id="logo-ig" src="https://i.pinimg.com/564x/2f/7f/90/2f7f90949b9a9cd2cc221adb39d39b7d.jpg"/>
                       <a href='https://www.instagram.com/plastico.estudio/?hl=es'>@plastico.estudio</a>
                   </div>
-
+                  <div id="cont-ig">
+                      <img id="logo-ig" src="https://i.pinimg.com/564x/05/fe/ff/05feffdcf71f9c7171faa8fec852c256.jpg"/>
+                      <a>plasticoestudiocreativo@gmail.com</a>
+                  </div>
+                  <div id="cont-ig">
+                      <img id="logo-igB" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyfRA4kobPZT6hrUVOnFH4VDFfwC6S9P4L5s2OHG1YAWkhIYEKoEyaqavIe43qUuOVsmE&usqp=CAU"/>
+                      <a href="https://www.behance.net/plasticoplastico">PLÁSTICO</a>
+                  </div>
               </div>
               <div id="cont-newsletter">
                   <h2>Subscribite al Newsletter</h2>

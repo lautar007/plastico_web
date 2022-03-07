@@ -1,7 +1,7 @@
 #cont-Footer{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 
@@ -34,7 +34,12 @@
     width: 50px;
     border-radius: 50px;
 }
-
+#logo-igB{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    
+}
 
 
 
@@ -43,7 +48,6 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 25px;
-    border-right: solid thin white;
     padding: 0px 55px;
 }
 #cont-newsletter h2{
@@ -76,14 +80,14 @@
     flex-direction: column;
     margin-right: 2%;
     width: 20%;
+    justify-content: center;
 }
 #cont-pasantia button{
     color: white;
     font-family: 'Slenco-Black';
-    margin-top: 45%;
     background: none;
     font-size: 20px;
-    width: fit-content;
+    width: 75%;
     transition: 500ms;
 }
 #cont-pasantia button:hover{
@@ -92,7 +96,6 @@
 #cont-pasantia p{
     color: white;
     width: 75%;
-    margin-left: 10%;
     font-size: 13px;
 }
 
