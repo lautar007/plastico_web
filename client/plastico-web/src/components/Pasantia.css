@@ -1,18 +1,35 @@
+@media screen and (max-width: 900px){
+    .tit-pas{
+        font-size: 40px !important;
+    }
+    .sub-list{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .sub-list2{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .sub-list button{
+        width: 50% !important;
+        margin: 10px auto !important;
+    }
+    .sub-list2 button{
+        width: 50% !important;
+        margin: 10px auto !important;
+    }
+}
+
 .tit-pas{
     color: rgb(2,145,236);
 }
 
-.cont-newsSub{
 
-}
 .cont-newsSub h2{
     color: white;
     font-family: 'Slenco-Black';
 }
 
-.cont-pasantes{
-
-}
 .cont-pasantes h2{
     color: white;
     font-family: 'Slenco-Black';

@@ -3,6 +3,26 @@
     src:url('../fonts/Slenco-Black\ demo.otf')
 }
 
+@media screen and (max-width: 900px){
+    .cont-img-input{
+        flex-direction: column !important;
+    }
+    .contraseña{
+        width: 100% !important;
+        height: 300px !important;
+    }
+    .admins{
+        font-size: 25px !important;
+    }
+    .input-portada{
+        flex-direction: column !important;
+    }
+    .input-portada input{
+        width: 90% !important;
+        margin-left: 4% !important;
+    }
+}
+
 .cont-img-input{
     display:flex;
     flex-direction: row;
@@ -166,4 +186,23 @@ justify-content: space-around;
 .input-portada input{
     height: 20px;
     width: 60%;
+}
+.btn-portada{
+    font-family: 'Slenco-Black';
+    font-size: 18px;
+    margin-right: 5px;
+    margin-left: 15px;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(233, 35, 35);
+    transition: 250ms;
+    border-color: black;
+    border-radius: 20px;
+}
+.btn-portada:hover{
+    background-color: black;
+    border-style: solid;
+    border-color: rgb(233, 35, 35); 
+    border-width: 3px;
+    color:rgb(233, 35, 35);
 }

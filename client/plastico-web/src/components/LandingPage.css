@@ -14,6 +14,37 @@
     src:url('../fonts/Baron\ Neue.otf')
 }
 
+@media screen and (max-width: 900px){
+    .estructure{
+        flex-direction: column !important;
+    }
+    .artistic{
+        width: 100% !important;
+        height: 50vh !important;
+        justify-content: flex-start !important;
+    }
+    .artistic-tit{
+        width: 30vh !important;
+        margin-top: 125px !important;
+    }
+    
+    .comercial{
+        width: 100% !important;
+        height: 50vh !important;
+        justify-content: flex-start !important;
+        
+    }
+    .comercial-tit{
+        width: 30vh !important;
+        margin-top: 125px !important;
+        margin-left: 5vh;
+    }
+
+    .content-menu{
+        top: 100px !important;
+    }
+}
+
 .logo1{
     top: 20px;
     left: 30px;
@@ -36,7 +67,6 @@
 }
 
 .artistic{
-    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/aa954f90405997.5e1669db9f38c.jpg');
     background-size: cover;
     width: 50%;
     display: flex;
@@ -62,7 +92,6 @@
 }
 
 .comercial{
-    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/a9244d117867111.607e1da1e21ca.png');
     background-size: cover;
     width: 50%;
     height: 700px;

@@ -4,6 +4,15 @@
   src:url('../fonts/Slenco-Black\ demo.otf')
 }
 
+@media screen and (max-width: 900px){
+  .img-container{
+    width: 90% !important;
+  }
+  .img-container img{
+    width: 98% !important;
+  }
+}
+
 .img-container {
     width: 400px;
     height: 600px;

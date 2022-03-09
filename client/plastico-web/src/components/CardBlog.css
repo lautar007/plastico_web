@@ -3,6 +3,34 @@
     src:url('../fonts/Heading-Pro-ExtraBold-trial.ttf')
 }
 
+@media screen and (max-width: 900px){
+    .contAll-blog{
+        flex-direction: column !important;
+    }
+    .menu-blog{
+        position: relative !important;
+        margin: auto !important;
+        display: block !important;
+    }
+    #cont-blog{
+        margin: 100px auto 25px auto  !important;
+        top: 5000px !important;
+
+    }
+    #cont-img-blog{
+        flex-direction: column !important;
+    }
+    #img-blog{
+        width: 300px !important;
+        height: 300px !important;
+        margin-left: 15px !important;
+    }
+    #subt-blog{
+        width: 300px !important;
+        height: 100px !important;
+    }
+}
+
 #cont-blog{
     margin: 25px 15% 25px 0%;
     padding:18px 20px;
@@ -33,7 +61,7 @@
     width: 400px;
     height: 400px;
     object-fit:contain;
-    margin: 15px 0px;
+    margin: 0px 0px;
     
 }
 #subt-blog{

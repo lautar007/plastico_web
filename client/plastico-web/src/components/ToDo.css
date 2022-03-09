@@ -3,6 +3,47 @@
     src:url('../fonts/Slenco-Black\ demo.otf')
 }
 
+@media screen and (max-width: 900px){
+    #form-tareas{
+        flex-direction: column !important;
+    }
+    #inputs{
+        display: block !important;
+        margin: auto !important;
+    }
+    .cont-tarea{
+        flex-direction: column !important;
+    }
+    #data-tarea{
+        height: fit-content !important;
+        width: 80% !important;
+        margin: auto !important;
+    }
+    #data{
+        height: fit-content !important;
+        width: 80% !important;
+        margin: auto !important;
+    }
+    #input-tarea{
+        width: 90% !important;
+        margin: auto
+    }
+    #B-crear-tarea{
+        margin: 15px auto !important;
+        
+    }
+    #B-delete{
+        width: 80% !important;
+        margin: 25px auto 15px auto !important;
+    }
+    #img-adminPost{
+        display: block !important;
+        margin: 25px auto 0 auto !important;
+    }
+    #admin-tit{
+       font-size: 40px !important;
+    }
+}
 
 body{
     background-color:  rgb(19, 19, 19);
@@ -79,20 +120,6 @@ body{
     width: 450px;
     font-weight: bold;
     font-size: 18px;
-}
-#B-estado{
-    border-radius: 15px;
-    border-style: solid;
-    border-color: black;
-    background-color: rgb(2,145,236);;
-    color: black;
-    font-family: 'Slenco-Black';
-    font-size: 18px;
-    transition:300ms;
-}
-#B-estado:hover{
-    background-color: rgb(23, 221, 66);;
-    color:black;
 }
 #B-delete{
     height: 30px;

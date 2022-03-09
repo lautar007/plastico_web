@@ -21,7 +21,7 @@ export default function Landing (){
               <div id="plastic">
                   <img id="land-logo" src = {LOGO}/>
               </div>
-              <div id="enterB">
+              <div id="enterB"> 
                   <Link to='/home'>
                     <button id="buttonE">Entrar</button>
                   </Link>

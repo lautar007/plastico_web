@@ -91,10 +91,6 @@ export default function ToDo (){
             </div>    
             {
                 list.length > 0 ? list.map((el)=>{
-                    let idPendiente = ''
-                    if(el.estado === 'pendiente'){
-                        idPendiente = 'B-estado'
-                    }
                     return(
                         <div key={el.id} className='cont-tarea'>
                             <div>
@@ -109,16 +105,15 @@ export default function ToDo (){
                                 <h4 id='label2'>Tarea:</h4>
                                 <p id='data-tarea'>{el.tarea}</p>
                             </div>
-                            <div>
-                                <h4 id='label2'>Estado:</h4>
-                                <button id={idPendiente}>{el.estado}</button>
-                            </div>
                             <button id = 'B-delete' value={el.tarea} onClick={(e)=> handleDelete(e)}>Eliminar tarea</button>
                         </div>
                     )
                 })
                 :
+                <div>
                 <h1 id='titulo-tareas'>Aún no hay tareas. Create una!!</h1>
+                <h2 id='titulo-tareas'>Si acabas de crear y no aparece, refresca la página</h2>
+                </div>
             }
         </div>
     )

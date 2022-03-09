@@ -1,3 +1,10 @@
+@media screen and (max-width: 900px){
+    #input-post{
+        width: 90% !important;
+        margin: auto !important;
+    }
+}
+
 #titulo-form{
     color: rgb(23, 221, 66);
     padding: 15px 0px;

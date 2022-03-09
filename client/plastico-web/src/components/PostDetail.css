@@ -1,3 +1,17 @@
+@media screen and (max-width: 900px){
+    .contPost{
+        flex-direction: column !important;
+    }
+    #img-post{
+        display: block;
+        margin: auto;
+        border-left: solid black 15px;
+    }
+    .cont-galeria-post{
+        flex-direction: column !important;
+    }
+}
+
 .contPost{
     display: flex;
     flex-direction: row;

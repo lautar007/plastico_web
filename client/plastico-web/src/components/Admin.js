@@ -4,7 +4,6 @@ import {useDispatch, useSelector} from 'react-redux';
 import { Link } from "react-router-dom";
 import { deletePortada, postPortada } from "../actions/actions";
 import './Admin.css';
-import ToDo from "./ToDo";
 
 export default function Admin(){
     
@@ -54,11 +53,17 @@ export default function Admin(){
         console.log(input);
     }
 
+    function borrarPortada(e){
+        e.preventDefault();
+        dispatch(deletePortada());
+        alert('Portada borrada, presione CONFIGURAR')
+    }
+
     function handlePortada(e){
         e.preventDefault();
         if(input.imagenA.length > 5 && input.imagenB.length > 5){
-        //dispatch(deletePortada());
         dispatch(postPortada(input));
+        //dispatch(postPortada({imagenA: 'simito', imagenB: 'natalinch'}))
         alert('La portada se ha configurado con éxito.')
         }
         else{
@@ -117,7 +122,7 @@ export default function Admin(){
                     </div>  
                     <div className="cont-portada">
                         <h1>Cambiar imágenes de portada</h1>
-                        <h3>Esta sección sirve para cambiar las imágenes que aparecen como portada de las secciones 'ARTSY' y 'COMERCIAL' en el Home.</h3>
+                        <h3>Cambie las imágenes de portada para las secciones 'ARTSY' y 'COMERCIAL' en el Home. Primero BORRE LA ENTERIOR y luego configure las nuevas portadas</h3>
                         <div className="input-portada">
                             <p>Tapa de Artsy</p>
                             <input
@@ -134,7 +139,8 @@ export default function Admin(){
                             onChange={(e) => handleChange(e)}
                             />
                         </div>
-                        <button className="btn-contraseña" onClick={(e)=> handlePortada(e)}>Configurar</button>
+                        <button className="btn-portada" onClick={(e)=> borrarPortada(e)}>Borrar Portada</button>
+                        <button className="btn-portada" onClick={(e)=> handlePortada(e)}>Configurar</button>
                     </div>      
                 </div>
                 :

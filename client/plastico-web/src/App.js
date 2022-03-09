@@ -35,7 +35,7 @@ function App() {
         <Route exact path = '/form' element = {<div><NavBar/><Form/></div>}/>
         <Route exact path = '/plasticos' element ={<div><NavBar/><ToDo/></div>}/>
         <Route exact path = '/card' element ={<div><NavBar/><CardBlog/></div>}/>
-        <Route exact path = '/blog/:id' element = {<NewsDetail/>}/>
+        <Route exact path = '/blog/:id' element = {<div><NavBar/><NewsDetail/></div>}/>
         <Route exact path = '/adminPost' element = {<div><NavBar/><PostAdmin/></div>}/>
         <Route exact path = '/pasantias' element = {<div><NavBar/><Pasantias/></div>}/>
       </Routes>
