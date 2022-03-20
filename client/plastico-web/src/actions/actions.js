@@ -1,9 +1,8 @@
 import axios from 'axios';
-const ruta = 'http://localhost:3001'
 
 export function postTarea(payload){
     return async function (dispatch){
-        const data = await axios.post(ruta +'/tareas', payload);
+        const data = await axios.post('/tareas', payload);
         return data;
     }
 }
@@ -11,7 +10,7 @@ export function postTarea(payload){
 
 export function getTareas(){
     return async function(dispatch){
-        var json = await axios.get(ruta +'/tareas');
+        var json = await axios.get('/tareas');
         return dispatch({
             type: 'GET_TAREAS',
             payload: json.data
@@ -24,7 +23,7 @@ export function deleteTarea(tarea){
         const data = await axios({
             method: "DELETE",
             data:{tarea: tarea},
-            url: ruta + '/tareas',
+            url: '/tareas',
         })
         .then(resultado => dispatch({type: 'DELETE_TAREA', payload:resultado}))
         .catch(err => alert(err))
@@ -36,7 +35,7 @@ export function deletePost(titulo){
         const data = await axios({
             method: "DELETE",
             data:{titulo: titulo},
-            url: ruta + '/publicaciones',
+            url: '/publicaciones',
         })
         .then(resultado => dispatch({type: 'DELETE_POST', payload:resultado}))
         .catch(err => alert(err))
@@ -56,7 +55,7 @@ export function postPublicacion(payload){
                 galeria: payload.galeria,
                 subtitulo: payload.subtitulo
             },
-            url: ruta + '/publicaciones'
+            url: '/publicaciones'
         })
         return data;
     }
@@ -64,7 +63,7 @@ export function postPublicacion(payload){
 
 export function getPublicaciones(){
     return async function(dispatch){
-        var json = await axios.get(ruta +'/publicaciones');
+        var json = await axios.get('/publicaciones');
         return dispatch({
             type: 'GET_PUBLICACIONES',
             payload: json.data
@@ -74,7 +73,7 @@ export function getPublicaciones(){
 
 export function getPublicacion(id){
     return async function(dispatch){
-        var json = await axios.get(ruta + '/publicaciones/' + id);
+        var json = await axios.get('/publicaciones/' + id);
         return dispatch({
             type: 'GET_PUBLICACION',
             payload: json.data
@@ -94,7 +93,7 @@ export function postCandidatos(payload){
                 newsletter: payload.newsletter,
                 pasantia: payload.pasantia
             },
-            url: ruta + '/candidatos'
+            url:'/candidatos'
         })
         return data;
     }
@@ -102,7 +101,7 @@ export function postCandidatos(payload){
 
 export function getPasantes(){
     return async function(dispatch){
-        var json = await axios.get(ruta +'/candidatos');
+        var json = await axios.get('/candidatos');
         return dispatch({
             type: 'GET_PASANTES',
             payload: json.data
@@ -115,7 +114,7 @@ export function deletePasante(nombre){
         const data = await axios({
             method: "DELETE",
             data:{nombre: nombre},
-            url: ruta + '/candidatos',
+            url: '/candidatos',
         })
         .then(resultado => dispatch({type: 'DELETE_PASANTE', payload:resultado}))
         .catch(err => alert(err))
@@ -126,7 +125,7 @@ export function deletePortada(){
     return async function(dispatch){
         const data = await axios({
             method: "DELETE",
-            url: ruta + '/portada',
+            url:'/portada',
         })
         .then(resultado => dispatch({type: 'DELETE_PORTADA', payload:resultado}))
         .catch(err => alert(err))
@@ -141,7 +140,7 @@ export function postPortada(payload){
                 imagenA: payload.imagenA,
                 imagenB: payload.imagenB
             },
-            url: ruta + '/portada'
+            url:'/portada'
         })
         return data;
     }
@@ -149,7 +148,7 @@ export function postPortada(payload){
 
 export function getPortada(){
     return async function(dispatch){
-        var json = await axios.get(ruta +'/portada');
+        var json = await axios.get('/portada');
         return dispatch({
             type: 'GET_PORTADA',
             payload: json.data
