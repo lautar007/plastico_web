@@ -10,7 +10,7 @@
 }
 
 #fadeIn{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: absolute;
     top: 0px;
@@ -75,12 +75,12 @@
 #plastic{
     display: flex;
     justify-content: initial;
-    padding-left: 100px;
+    padding-left: 30px;
 }
 
 #land-logo{
     width: 200px;
-    height: 250px;
+    height: 270px;
     border-radius: 150px;
     padding-top: 15px;
 
