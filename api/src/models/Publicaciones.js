@@ -21,7 +21,7 @@ module.exports = (sequelize) => {
         allowNull: true
     },
     categoria: {
-        type: DataTypes.ARRAY(DataTypes.TEXT),
+        type: DataTypes.ENUM('comercial', 'artistico', 'noticia'),
         allowNull: false
     },
     galeria:{

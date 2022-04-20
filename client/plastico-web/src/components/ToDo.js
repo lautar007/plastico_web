@@ -37,7 +37,7 @@ export default function ToDo (){
         }
         else{
         dispatch(postTarea(input));
-        window.location.reload();
+        (window.location.reload());
         }
     }
 
