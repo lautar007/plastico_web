@@ -16,6 +16,7 @@ import PostDetail from './components/PostDetail';
 import PostAdmin from './components/PostAdmin';
 import Footer from './components/Footer';
 import Pasantias from './components/Pasantias';
+import Staff from './components/Staff';
 
 
 
@@ -38,6 +39,7 @@ function App() {
         <Route exact path = '/blog/:id' element = {<div><NavBar/><NewsDetail/></div>}/>
         <Route exact path = '/adminPost' element = {<div><NavBar/><PostAdmin/></div>}/>
         <Route exact path = '/pasantias' element = {<div><NavBar/><Pasantias/></div>}/>
+        <Route exact path = '/staff' element = {<div><NavBar/><Staff/></div>}/>
       </Routes>
     </div>
     </BrowserRouter>

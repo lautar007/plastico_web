@@ -58,7 +58,7 @@ export default function Home(){
                     <img className="logo1" src={"https://i.pinimg.com/564x/a7/34/46/a73446345a4c441921f6d44eb270bcfd.jpg"}></img>
                 </Link>
                     <Link className="link" to='/artistic'>
-                    <h1 className="artistic-tit">Artsy</h1>
+                    <h1 className="artistic-tit">ART</h1>
                     </Link>
                 </div>
                 <div className="comercial" style={{backgroundImage: `url(${portadaCom})`}}>
@@ -78,8 +78,8 @@ export default function Home(){
                         <Link to='/blog'>
                         <button>Blog</button>
                         </Link>
-                        <Link to='/admin'>
-                        <button>Administración</button>
+                        <Link to='/staff'>
+                        <button>Quienes Somos</button>
                         </Link>
                     </div>
                     :

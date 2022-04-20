@@ -35,8 +35,8 @@ export default function NavBar () {
                         <Link to='/blog'>
                         <button>Blog</button>
                         </Link>
-                        <Link to='/admin'>
-                        <button>Administración</button>
+                        <Link to='/staff'>
+                        <button>Quienes Somos</button>
                         </Link>
                     </div>
                     :

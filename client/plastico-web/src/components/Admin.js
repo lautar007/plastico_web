@@ -122,7 +122,7 @@ export default function Admin(){
                     </div>  
                     <div className="cont-portada">
                         <h1>Cambiar imágenes de portada</h1>
-                        <h3>Cambie las imágenes de portada para las secciones 'ARTSY' y 'COMERCIAL' en el Home. Primero BORRE LA ENTERIOR y luego configure las nuevas portadas</h3>
+                        <h3>Cambie las imágenes de portada para las secciones 'ART' y 'COMERCIAL' en el Home. Primero BORRE LA ENTERIOR y luego configure las nuevas portadas</h3>
                         <div className="input-portada">
                             <p>Tapa de Artsy</p>
                             <input

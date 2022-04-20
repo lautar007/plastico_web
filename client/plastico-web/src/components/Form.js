@@ -16,7 +16,7 @@ export default function Form() {
         fecha: fecha,
         contenido: '',
         imagen:'',
-        categoria:'',
+        categoria:[],
         galeria:[],
         subtitulo:''
     })
@@ -37,9 +37,19 @@ export default function Form() {
         if(e.target.checked){
             setInput({
                 ...input,
-                categoria: e.target.value
+                categoria: [e.target.value]
             })
+            console.log(input.categoria)
         }
+    }
+
+    function handleSubCheck(e){
+      if(e.target.checked === false && input.categoria.includes(e.target.value)){
+        input.categoria = input.categoria.filter((i) => { return i !== e.target.value});
+      }
+      if(e.target.checked && !input.categoria.includes(e.target.value)){
+        input.categoria.push(e.target.value)
+      }
     }
 
     function handleSubmitPost(e){
@@ -125,6 +135,103 @@ export default function Form() {
                   />
                 </div> 
               </div>
+
+
+              {
+                input.categoria[0] === 'artistico' ? 
+
+                <div>
+                  <label id='labels'>Subcategorias Artísticas:</label>
+              <div id="check-cat">
+                <div>
+                  <label>Estilismo</label> 
+                  <input
+                    type='checkbox'
+                    name="Estilismo"
+                    value="estilismo"
+                    onChange={(e)=> handleSubCheck(e)}
+                  /> 
+                </div>
+                <div>
+                  <label>Dirección de Arte</label>
+                  <input
+                    type='checkbox'
+                    name="Direccion de Arte"
+                    value="direccion de arte"
+                    onChange={(e)=> handleSubCheck(e)}
+                    />
+                </div>
+                <div> 
+                  <label>Producción Fotográfica y de Video</label>
+                  <input
+                    type='checkbox'
+                    name="Produccion Fotográfica y de Video"
+                    value="produccion fotografica y de video"
+                    onChange={(e)=> handleSubCheck(e)}
+                  />
+                </div> 
+                <div> 
+                  <label>Postproducción Digital</label>
+                  <input
+                    type='checkbox'
+                    name="Postproduccion Digital"
+                    value="postproducción digital"
+                    onChange={(e)=> handleSubCheck(e)}
+                  />
+                </div> 
+                <div> 
+                  <label>Dirección Creativa</label>
+                  <input
+                    type='checkbox'
+                    name="Dirección Creativa"
+                    value="dirección creativa"
+                    onChange={(e)=> handleSubCheck(e)}
+                  />
+                </div> 
+              </div>
+                </div>
+                :
+                null
+              }
+
+              {
+                input.categoria[0] === 'comercial' ?
+                <div>
+                  <label id='labels'>Subcategorias Comerciales:</label>
+              <div id="check-cat">
+                <div>
+                  <label>Foto Producto</label> 
+                  <input
+                    type='checkbox'
+                    name="Foto Producto"
+                    value="foto producto"
+                    onChange={(e)=> handleSubCheck(e)}
+                  /> 
+                </div>
+                <div>
+                  <label>Diseño Gráfico & Branding</label>
+                  <input
+                    type='checkbox'
+                    name="Diseño Grafico & Branding"
+                    value="diseño grafico & branding"
+                    onChange={(e)=> handleSubCheck(e)}
+                    />
+                </div>
+                <div> 
+                  <label>Postproducción Digital / Motion Graphics</label>
+                  <input
+                    type='checkbox'
+                    name="Postproduccion Digital / Motion Graphics"
+                    value="postproduccion digital / motion graphics"
+                    onChange={(e)=> handleSubCheck(e)}
+                  />
+                </div> 
+              </div>
+                </div>
+                :
+                null
+              }
+
 
               <label id='labels'>imagenes de galería:</label>
               <input
