@@ -44,6 +44,18 @@ server.get('', (req, res, next)=>{
     })
 })
 
+server.get('/uno', (req, res, next)=>{
+    Candidatos.findAll()
+    .then(candidatos =>{
+        if(candidatos.length > 0){
+            res.status(200).json(candidatos)
+        }
+        else{
+            res.status(404).send('No hay candidatos/as')
+        }
+    })
+})
+
 server.delete('', async(req, res, next)=>{
     let {nombre} = req.body;
     await Candidatos.destroy({where:{nombre: nombre}})   
