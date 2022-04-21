@@ -17,7 +17,9 @@ export default function Comercial(){
 
     console.log(comercial)
 
-    comercial.reverse();
+    var comer = comercial.reverse();
+
+    console.log(comer)
 
     return (
         <div>
@@ -26,7 +28,7 @@ export default function Comercial(){
             </div>
             <div className="cont-cards">
                 {
-                    comercial && comercial.map((el)=>{
+                    comer && comer.map((el)=>{
                         return(
                             <div key={el.id}>
                                 <Card
