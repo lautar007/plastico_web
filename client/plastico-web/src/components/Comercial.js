@@ -17,6 +17,8 @@ export default function Comercial(){
 
     console.log(comercial)
 
+    comercial.reverse();
+
     return (
         <div>
             <div>

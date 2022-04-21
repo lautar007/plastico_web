@@ -16,7 +16,6 @@ export default function Artistic(){
 
     console.log(artistic)
 
-
     return (
         <div>
             <div>
