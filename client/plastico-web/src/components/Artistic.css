@@ -1,11 +1,12 @@
 @media screen and (max-width: 900px){
     .cont-cards{
+        display: flex !important;
         flex-direction: column-reverse !important;
     }
 }
 
 .cont-cards{
-    display: flex;
-    flex-direction: row-reverse;
+    display: grid;
+    grid-template-columns: auto auto auto;
     justify-content: center;
 }
