@@ -31,7 +31,7 @@ export default function Busqueda (){
     console.log(comService);
 
     function showResults (){
-        if(artResult.length > 0){
+        if(artResult){
             artResult.map(el =>{
                 return(
                     <div key={el.id}>
@@ -45,7 +45,7 @@ export default function Busqueda (){
                 )
             })
         }
-        if(comResult.length > 0){
+        if(comResult){
             comResult.map(el =>{
                 return(
                     <div key={el.id}>
@@ -59,7 +59,7 @@ export default function Busqueda (){
                 )
             })
         }
-        if(artService.length > 0){
+        if(artService){
             artService.map(el =>{
                 return(
                     <div key={el.id}>
@@ -73,7 +73,7 @@ export default function Busqueda (){
                 )
             })
         }
-        if(comService.length > 0){
+        if(comService){
             comService.map(el =>{
                 return(
                     <div key={el.id}>
@@ -87,6 +87,11 @@ export default function Busqueda (){
                 )
             })
         }
+        else return (
+            <div>
+                <h2>Por ahora no existen posteos que coincidan con tu búsqueda</h2>
+            </div>
+        )
     }
 
     return (
