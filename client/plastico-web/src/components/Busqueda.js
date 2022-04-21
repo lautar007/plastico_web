@@ -31,7 +31,7 @@ export default function Busqueda (){
     console.log(comService);
 
     function showResults (){
-        if(artResult){
+        if(artResult.length > 0){
             console.log('funciona');
             artResult.map(el =>{
                 return(
@@ -46,7 +46,7 @@ export default function Busqueda (){
                 )
             })
         }
-        if(comResult){
+        if(comResult.length > 0){
             console.log('funciona');
             comResult.map(el =>{
                 return(
@@ -61,7 +61,7 @@ export default function Busqueda (){
                 )
             })
         }
-        if(artService){
+        if(artService.length > 0){
             console.log('funciona');
             artService.map(el =>{
                 return(
@@ -76,7 +76,7 @@ export default function Busqueda (){
                 )
             })
         }
-        if(comService){
+        if(comService.length > 0){
             console.log('funciona');
             comService.map(el =>{
                 return(
