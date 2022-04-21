@@ -16,6 +16,8 @@ export default function Artistic(){
 
     console.log(artistic)
 
+    var art = artistic.reverse();
+
     return (
         <div>
             <div>
@@ -23,7 +25,7 @@ export default function Artistic(){
             </div>
             <div className="cont-cards">
                 {
-                    artistic && artistic.map((el)=>{
+                    art && art.map((el)=>{
                         return(
                             <div key={el.id}>
                                 <Card

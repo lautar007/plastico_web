@@ -15,11 +15,7 @@ export default function Comercial(){
         dispatch(getPublicaciones()); 
     }, [dispatch]);
 
-    console.log(comercial)
-
     var comer = comercial.reverse();
-
-    console.log(comer)
 
     return (
         <div>
