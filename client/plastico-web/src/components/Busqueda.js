@@ -32,6 +32,7 @@ export default function Busqueda (){
 
     function showResults (){
         if(artResult){
+            console.log('funciona');
             artResult.map(el =>{
                 return(
                     <div key={el.id}>
@@ -46,6 +47,7 @@ export default function Busqueda (){
             })
         }
         if(comResult){
+            console.log('funciona');
             comResult.map(el =>{
                 return(
                     <div key={el.id}>
@@ -60,6 +62,7 @@ export default function Busqueda (){
             })
         }
         if(artService){
+            console.log('funciona');
             artService.map(el =>{
                 return(
                     <div key={el.id}>
@@ -74,6 +77,7 @@ export default function Busqueda (){
             })
         }
         if(comService){
+            console.log('funciona');
             comService.map(el =>{
                 return(
                     <div key={el.id}>
