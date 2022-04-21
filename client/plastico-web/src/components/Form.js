@@ -16,7 +16,7 @@ export default function Form() {
         fecha: fecha,
         contenido: '',
         imagen:'',
-        categoria:[],
+        categoria:'',
         galeria:[],
         subtitulo:''
     })
@@ -37,19 +37,21 @@ export default function Form() {
         if(e.target.checked){
             setInput({
                 ...input,
-                categoria: [e.target.value]
-            })
+                categoria: e.target.value,
+                subtitulo: ''
+            });
             console.log(input.categoria)
         }
     }
 
     function handleSubCheck(e){
-      if(e.target.checked === false && input.categoria.includes(e.target.value)){
-        input.categoria = input.categoria.filter((i) => { return i !== e.target.value});
+      if(e.target.checked === false && input.subtitulo.includes(` #${e.target.value} `)){
+        input.subtitulo = input.subtitulo.replace(` #${e.target.value} `,'');
       }
-      if(e.target.checked && !input.categoria.includes(e.target.value)){
-        input.categoria.push(e.target.value)
+      if(e.target.checked && !input.subtitulo.includes(e.target.value)){
+        input.subtitulo = input.subtitulo + ` #${e.target.value} `
       }
+      console.log(input.subtitulo)
     }
 
     function handleSubmitPost(e){
@@ -138,7 +140,7 @@ export default function Form() {
 
 
               {
-                input.categoria[0] === 'artistico' ? 
+                input.categoria === 'artistico' ? 
 
                 <div>
                   <label id='labels'>Subcategorias Artísticas:</label>
@@ -148,7 +150,7 @@ export default function Form() {
                   <input
                     type='checkbox'
                     name="Estilismo"
-                    value="estilismo"
+                    value="Estilismo"
                     onChange={(e)=> handleSubCheck(e)}
                   /> 
                 </div>
@@ -157,7 +159,7 @@ export default function Form() {
                   <input
                     type='checkbox'
                     name="Direccion de Arte"
-                    value="direccion de arte"
+                    value="Direccion de arte"
                     onChange={(e)=> handleSubCheck(e)}
                     />
                 </div>
@@ -166,7 +168,7 @@ export default function Form() {
                   <input
                     type='checkbox'
                     name="Produccion Fotográfica y de Video"
-                    value="produccion fotografica y de video"
+                    value="Produccion fotografica y de video"
                     onChange={(e)=> handleSubCheck(e)}
                   />
                 </div> 
@@ -175,7 +177,7 @@ export default function Form() {
                   <input
                     type='checkbox'
                     name="Postproduccion Digital"
-                    value="postproducción digital"
+                    value="Postproducción digital"
                     onChange={(e)=> handleSubCheck(e)}
                   />
                 </div> 
@@ -184,7 +186,7 @@ export default function Form() {
                   <input
                     type='checkbox'
                     name="Dirección Creativa"
-                    value="dirección creativa"
+                    value="Dirección creativa"
                     onChange={(e)=> handleSubCheck(e)}
                   />
                 </div> 
@@ -195,7 +197,7 @@ export default function Form() {
               }
 
               {
-                input.categoria[0] === 'comercial' ?
+                input.categoria === 'comercial' ?
                 <div>
                   <label id='labels'>Subcategorias Comerciales:</label>
               <div id="check-cat">
@@ -204,7 +206,7 @@ export default function Form() {
                   <input
                     type='checkbox'
                     name="Foto Producto"
-                    value="foto producto"
+                    value="Foto Producto"
                     onChange={(e)=> handleSubCheck(e)}
                   /> 
                 </div>
@@ -213,7 +215,7 @@ export default function Form() {
                   <input
                     type='checkbox'
                     name="Diseño Grafico & Branding"
-                    value="diseño grafico & branding"
+                    value="Diseño grafico & Branding"
                     onChange={(e)=> handleSubCheck(e)}
                     />
                 </div>
@@ -222,7 +224,7 @@ export default function Form() {
                   <input
                     type='checkbox'
                     name="Postproduccion Digital / Motion Graphics"
-                    value="postproduccion digital / motion graphics"
+                    value="Postproduccion Digital / Motion Graphics"
                     onChange={(e)=> handleSubCheck(e)}
                   />
                 </div> 
