@@ -153,7 +153,7 @@ export default function Form() {
                   <input
                     type='checkbox'
                     name="Estilismo"
-                    value="Estilismo"
+                    value="estilismo"
                     onChange={(e)=> handleSubCheck(e)}
                   /> 
                 </div>
@@ -162,7 +162,7 @@ export default function Form() {
                   <input
                     type='checkbox'
                     name="Direccion de Arte"
-                    value="Direccion de arte"
+                    value="direccion de arte"
                     onChange={(e)=> handleSubCheck(e)}
                     />
                 </div>
@@ -171,7 +171,7 @@ export default function Form() {
                   <input
                     type='checkbox'
                     name="Produccion Fotográfica y de Video"
-                    value="Produccion fotografica y de video"
+                    value="produccion fotografica y de video"
                     onChange={(e)=> handleSubCheck(e)}
                   />
                 </div> 
@@ -180,7 +180,7 @@ export default function Form() {
                   <input
                     type='checkbox'
                     name="Postproduccion Digital"
-                    value="Postproducción digital"
+                    value="postproducción digital"
                     onChange={(e)=> handleSubCheck(e)}
                   />
                 </div> 
@@ -189,7 +189,7 @@ export default function Form() {
                   <input
                     type='checkbox'
                     name="Dirección Creativa"
-                    value="Dirección creativa"
+                    value="dirección creativa"
                     onChange={(e)=> handleSubCheck(e)}
                   />
                 </div> 
@@ -209,7 +209,7 @@ export default function Form() {
                   <input
                     type='checkbox'
                     name="Foto Producto"
-                    value="Foto Producto"
+                    value="foto producto"
                     onChange={(e)=> handleSubCheck(e)}
                   /> 
                 </div>
@@ -218,7 +218,7 @@ export default function Form() {
                   <input
                     type='checkbox'
                     name="Diseño Grafico & Branding"
-                    value="Diseño grafico & Branding"
+                    value="diseño grafico & branding"
                     onChange={(e)=> handleSubCheck(e)}
                     />
                 </div>
@@ -227,7 +227,7 @@ export default function Form() {
                   <input
                     type='checkbox'
                     name="Postproduccion Digital / Motion Graphics"
-                    value="Postproduccion Digital / Motion Graphics"
+                    value="postproduccion digital / motion graphics"
                     onChange={(e)=> handleSubCheck(e)}
                   />
                 </div> 

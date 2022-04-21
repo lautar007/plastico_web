@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
@@ -18,6 +18,15 @@ export default function Busqueda (){
 
     console.log(artistic);
     console.log(comercial);
+
+    const artResult = artistic.filter((a)=>{a.titulo.includes(search)});
+    console.log(artResult);
+    const comResult = comercial.filter((c)=>{c.titulo.includes(search)});
+    console.log(comResult);
+    const artService = artistic.filter((a)=>{a.subtitulo.includes('#' + search.toLowerCase())});
+    console.log(artService);
+    const comService = comercial.filter((c)=>{c.subtitulo.includes('#' + search.toLowerCase())});
+    console.log(comService);
 
     return (
         <div>
