@@ -33,87 +33,63 @@ export default function Busqueda (){
     function showResults (){
         if(artResult.length > 0){
             console.log('funciona');
-            return (
-                <div className="cont-cards">
-                    {
-                        artService.map(el =>{
-                            return(
-                                <div key={el.id}>
-                                    <Card
-                                    titulo={el.titulo}
-                                    imagen={el.imagen}
-                                    id={el.id}
-                                    subtitulo={el.subtitulo}
-                                    />
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-            )
+            return artResult.map(el =>{
+                return(
+                    <div key={el.id}>
+                        <Card
+                        titulo={el.titulo}
+                        imagen={el.imagen}
+                        id={el.id}
+                        subtitulo={el.subtitulo}
+                        />
+                    </div>
+                )
+            })
         }
         if(comResult.length > 0){
             console.log('funciona');
-            return (
-                <div className="cont-cards">
-                    {
-                        comService.map(el =>{
-                            return(
-                                <div key={el.id}>
-                                    <Card
-                                    titulo={el.titulo}
-                                    imagen={el.imagen}
-                                    id={el.id}
-                                    subtitulo={el.subtitulo}
-                                    />
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-            )
+            return comResult.map(el =>{
+                return(
+                    <div key={el.id}>
+                        <Card
+                        titulo={el.titulo}
+                        imagen={el.imagen}
+                        id={el.id}
+                        subtitulo={el.subtitulo}
+                        />
+                    </div>
+                )
+            })
         }
         if(artService.length > 0){
             console.log('funciona');
-            return (
-                <div className="cont-cards">
-                    {
-                        artService.map(el =>{
-                            return(
-                                <div key={el.id}>
-                                    <Card
-                                    titulo={el.titulo}
-                                    imagen={el.imagen}
-                                    id={el.id}
-                                    subtitulo={el.subtitulo}
-                                    />
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-            )
-        };
+            return artService.map(el =>{
+                return(
+                    <div key={el.id}>
+                        <Card
+                        titulo={el.titulo}
+                        imagen={el.imagen}
+                        id={el.id}
+                        subtitulo={el.subtitulo}
+                        />
+                    </div>
+                )
+            })
+        }
         if(comService.length > 0){
             console.log('funciona');
-            return (
-                <div className="cont-cards">
-                    {
-                        artService.map(el =>{
-                            return(
-                                <div key={el.id}>
-                                    <Card
-                                    titulo={el.titulo}
-                                    imagen={el.imagen}
-                                    id={el.id}
-                                    subtitulo={el.subtitulo}
-                                    />
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-            )
+            return comService.map(el =>{
+                return(
+                    <div key={el.id}>
+                        <Card
+                        titulo={el.titulo}
+                        imagen={el.imagen}
+                        id={el.id}
+                        subtitulo={el.subtitulo}
+                        />
+                    </div>
+                )
+            })
         }
         else return (
             <div>
@@ -125,9 +101,11 @@ export default function Busqueda (){
     return (
         <div>
             <h1>Estos son los resutlados para: {`"` + search + `"`}</h1>
+            <div className="cont-cards">
             {
                 showResults()
             }
+            </div>
         </div>
     )
 }
