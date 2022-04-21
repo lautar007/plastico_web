@@ -7,6 +7,7 @@ import { getPublicaciones } from "../actions/actions";
 export default function Busqueda (){
 
     const {search} = useParams();
+    console.log(search)
 
     const dispatch = useDispatch();
     const artistic = useSelector((state)=>state.Artistico);
