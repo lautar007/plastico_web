@@ -28,6 +28,7 @@ export default function Form() {
             [e.target.name]: e.target.value
         })
     }
+
     function handleGaleria(e){
         e.preventDefault();
         input.galeria.push(e.target.value)
@@ -38,18 +39,20 @@ export default function Form() {
             setInput({
                 ...input,
                 categoria: e.target.value,
-                subtitulo: ''
             });
             console.log(input.categoria)
         }
     }
 
     function handleSubCheck(e){
-      if(e.target.checked === false && input.subtitulo.includes(` #${e.target.value} `)){
-        input.subtitulo = input.subtitulo.replace(` #${e.target.value} `,'');
+      if(e.target.checked === false && input.subtitulo.includes(` #${e.target.value}`)){
+        input.subtitulo = input.subtitulo.replace(` #${e.target.value}`,'');
       }
       if(e.target.checked && !input.subtitulo.includes(e.target.value)){
-        input.subtitulo = input.subtitulo + ` #${e.target.value} `
+        setInput({
+          ...input,
+          subtitulo: input.subtitulo + ` #${e.target.value}`
+        })
       }
       console.log(input.subtitulo)
     }
