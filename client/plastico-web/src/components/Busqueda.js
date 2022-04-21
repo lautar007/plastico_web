@@ -33,63 +33,87 @@ export default function Busqueda (){
     function showResults (){
         if(artResult.length > 0){
             console.log('funciona');
-            return artResult.map(el =>{
-                return(
-                    <div key={el.id}>
-                        <Card
-                        titulo={el.titulo}
-                        imagen={el.imagen}
-                        id={el.id}
-                        subtitulo={el.subtitulo}
-                        />
-                    </div>
-                )
-            })
+            return (
+                <div className="cont-cards">
+                    {
+                        artService.map(el =>{
+                            return(
+                                <div key={el.id}>
+                                    <Card
+                                    titulo={el.titulo}
+                                    imagen={el.imagen}
+                                    id={el.id}
+                                    subtitulo={el.subtitulo}
+                                    />
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+            )
         }
         if(comResult.length > 0){
             console.log('funciona');
-            return comResult.map(el =>{
-                return(
-                    <div key={el.id}>
-                        <Card
-                        titulo={el.titulo}
-                        imagen={el.imagen}
-                        id={el.id}
-                        subtitulo={el.subtitulo}
-                        />
-                    </div>
-                )
-            })
+            return (
+                <div className="cont-cards">
+                    {
+                        comService.map(el =>{
+                            return(
+                                <div key={el.id}>
+                                    <Card
+                                    titulo={el.titulo}
+                                    imagen={el.imagen}
+                                    id={el.id}
+                                    subtitulo={el.subtitulo}
+                                    />
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+            )
         }
         if(artService.length > 0){
             console.log('funciona');
-            return artService.map(el =>{
-                return(
-                    <div key={el.id}>
-                        <Card
-                        titulo={el.titulo}
-                        imagen={el.imagen}
-                        id={el.id}
-                        subtitulo={el.subtitulo}
-                        />
-                    </div>
-                )
-            })
-        }
+            return (
+                <div className="cont-cards">
+                    {
+                        artService.map(el =>{
+                            return(
+                                <div key={el.id}>
+                                    <Card
+                                    titulo={el.titulo}
+                                    imagen={el.imagen}
+                                    id={el.id}
+                                    subtitulo={el.subtitulo}
+                                    />
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+            )
+        };
         if(comService.length > 0){
             console.log('funciona');
-            return comService.map(el =>{
-                return(
-                    <div key={el.id}>
-                        <Card
-                        titulo={el.titulo}
-                        imagen={el.imagen}
-                        id={el.id}
-                        subtitulo={el.subtitulo}
-                        />
-                    </div>
-                )
-            })
+            return (
+                <div className="cont-cards">
+                    {
+                        artService.map(el =>{
+                            return(
+                                <div key={el.id}>
+                                    <Card
+                                    titulo={el.titulo}
+                                    imagen={el.imagen}
+                                    id={el.id}
+                                    subtitulo={el.subtitulo}
+                                    />
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+            )
         }
         else return (
             <div>
