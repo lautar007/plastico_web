@@ -35,7 +35,7 @@ export default function Busqueda (){
         if(artResult.length > 0){
             console.log('funciona');
             return(
-                <div>
+                <div className="cont-cards">
                     {
                         artResult.map(el =>{
                             return(
@@ -56,7 +56,7 @@ export default function Busqueda (){
         if(comResult.length > 0){
             console.log('funciona');
             return(
-                <div>
+                <div className="cont-cards">
                     {
                         comResult.map(el =>{
                             return(
@@ -77,7 +77,7 @@ export default function Busqueda (){
         if(artService.length > 0){
             console.log('funciona');
             return(
-                <div>
+                <div className="cont-cards">
                     {
                         artService.map(el =>{
                             return(
@@ -98,7 +98,7 @@ export default function Busqueda (){
         if(comService.length > 0){
             console.log('funciona');
             return(
-                <div>
+                <div className="cont-cards">
                     {
                         comService.map(el =>{
                             return(
