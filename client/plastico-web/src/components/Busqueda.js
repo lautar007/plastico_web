@@ -33,7 +33,7 @@ export default function Busqueda (){
     function showResults (){
         if(artResult.length > 0){
             console.log('funciona');
-            artResult.map(el =>{
+            return artResult.map(el =>{
                 return(
                     <div key={el.id}>
                         <Card
@@ -63,7 +63,7 @@ export default function Busqueda (){
         }
         if(artService.length > 0){
             console.log('funciona');
-            artService.map(el =>{
+            return artService.map(el =>{
                 return(
                     <div key={el.id}>
                         <Card
@@ -78,7 +78,7 @@ export default function Busqueda (){
         }
         if(comService.length > 0){
             console.log('funciona');
-            comService.map(el =>{
+            return comService.map(el =>{
                 return(
                     <div key={el.id}>
                         <Card
