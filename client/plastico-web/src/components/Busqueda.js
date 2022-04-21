@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getPublicaciones } from "../actions/actions";
 import Card from "./Card";
+import './Artistic.css';
 
 export default function Busqueda (){
 
