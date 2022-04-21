@@ -17,6 +17,7 @@ import PostAdmin from './components/PostAdmin';
 import Footer from './components/Footer';
 import Pasantias from './components/Pasantias';
 import Staff from './components/Staff';
+import Busqueda from './components/Busqueda';
 
 
 
@@ -40,6 +41,7 @@ function App() {
         <Route exact path = '/adminPost' element = {<div><NavBar/><PostAdmin/></div>}/>
         <Route exact path = '/pasantias' element = {<div><NavBar/><Pasantias/></div>}/>
         <Route exact path = '/staff' element = {<div><NavBar/><Staff/></div>}/>
+        <Route exact path = '/busqueda/:search' element = {<div><NavBar/><Busqueda/></div>}/>
       </Routes>
     </div>
     </BrowserRouter>

@@ -164,3 +164,37 @@ h1{
     background-color: rgb(23, 221, 66);
     border-radius: 15px;
 }
+
+.searchBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    margin: auto;
+    top:70%;
+    left: auto;
+    width: 60%;
+}
+.searchBar input{
+    width: 90%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #9e9e9e, #626262);
+    box-shadow:  22px 22px 44px #000000;
+    padding: 5px 15px;
+    font-family: 'Slenco-Black';
+}
+.searchBar input::placeholder{
+    color:#1b1b1b
+}
+.searchBar img{
+    width: 50px;
+    height: 50px;
+    margin: auto 15px;
+    background-color:#9e9e9e;
+    padding: 5px;
+    border-radius: 50px;
+    box-shadow:  22px 22px 44px #000000;
+    cursor: pointer;
+}
