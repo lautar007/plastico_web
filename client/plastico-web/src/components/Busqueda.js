@@ -48,7 +48,7 @@ export default function Busqueda (){
         }
         if(comResult.length > 0){
             console.log('funciona');
-            comResult.map(el =>{
+            return comResult.map(el =>{
                 return(
                     <div key={el.id}>
                         <Card
