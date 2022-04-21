@@ -21,9 +21,9 @@ export default function Busqueda (){
     console.log(artistic);
     console.log(comercial);
 
-    const artResult = artistic.toUpperCase().filter((a)=>a.titulo.includes(search.toUpperCase()));
+    const artResult = artistic.filter((a)=>a.titulo.toUpperCase().includes(search.toUpperCase()));
     console.log(artResult);
-    const comResult = comercial.toUpperCase().filter((c)=>c.titulo.includes(search.toUpperCase()));
+    const comResult = comercial.filter((c)=>c.titulo.toUpperCase().includes(search.toUpperCase()));
     console.log(comResult);
     const artService = artistic.filter((a)=>a.subtitulo.includes('#' + search.toLowerCase()));
     console.log(artService);
