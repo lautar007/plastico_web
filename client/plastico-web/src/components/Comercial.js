@@ -19,7 +19,7 @@ export default function Comercial(){
         dispatch(getPublicaciones()); 
     }, [dispatch]);
 
-    var comer = comercial.reverse();
+    //var comer = comercial.reverse();
 
     function handleSearchBar(e){
         e.preventDefault();
@@ -49,7 +49,7 @@ export default function Comercial(){
             </div>
             <div className="cont-cards">
                 {
-                    comer && comer.map((el)=>{
+                    comercial && comercial.map((el)=>{
                         return(
                             <div key={el.id}>
                                 <Card
@@ -73,7 +73,7 @@ export default function Comercial(){
                    <Link className="link" to='/busqueda/diseño grafico & branding'>
                       <li>Diseño Gráfico & Branding</li>
                    </Link>
-                   <Link className="link" to='/busqueda/postproduccion digital / motion grafics'>
+                   <Link className="link" to='/busqueda/motion grafics'>
                       <li>Postproducción Digital / Motion Graphics</li>
                    </Link>
                </div>
