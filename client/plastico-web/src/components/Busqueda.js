@@ -5,6 +5,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { getPublicaciones } from "../actions/actions";
 import Card from "./Card";
 import './Artistic.css';
+import { Link } from "react-router-dom";
+import Lupa from '../media/Lupa.png';
 
 export default function Busqueda (){
 
@@ -14,13 +16,17 @@ export default function Busqueda (){
     const dispatch = useDispatch();
     const artistic = useSelector((state)=>state.Artistico);
     const comercial = useSelector((state)=>state.Comercial);
+    const [search1, setSearch1] = useState('');
 
     useEffect(()=>{
         dispatch(getPublicaciones()); 
     }, [dispatch]);
 
-    console.log(artistic);
-    console.log(comercial);
+    function handleSearchBar(e){
+        e.preventDefault();
+        setSearch1(e.target.value);
+        console.log(search1);
+    }
 
     const artResult = artistic.filter((a)=>a.titulo.toUpperCase().includes(search.toUpperCase()));
     console.log(artResult);
@@ -126,6 +132,15 @@ export default function Busqueda (){
     return (
         <div>
             <h1>Estos son los resutlados para: {`"` + search + `"`}</h1>
+            <div  className="searchBar1">
+                    <Link to={'/busqueda/' + search1}>
+                    <img className="searchLupa" src={Lupa}/> 
+                    </Link>
+                    <input 
+                    placeholder="Buscar por Nombre o Servicio"
+                    onChange={(e) => {handleSearchBar(e)}}
+                    />
+            </div>
             {
                 showResults()
             }
