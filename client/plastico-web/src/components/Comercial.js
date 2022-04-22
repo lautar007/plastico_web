@@ -63,6 +63,7 @@ export default function Comercial(){
                     })
                 }
             </div>
+            <div>
             {
                filter === true ?
                <div className="sub-filtro">
@@ -81,6 +82,7 @@ export default function Comercial(){
                :
                null
            }
+           </div>
         </div>
     )
 }

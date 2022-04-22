@@ -48,6 +48,7 @@ export default function Artistic(){
                     onChange={(e) => {handleSearchBar(e)}}
                     />
             </div>
+            <div>
            {
                filter === true ?
                <div className="sub-filtro">
@@ -72,6 +73,7 @@ export default function Artistic(){
                :
                null
            }
+           </div>
             <div className="cont-cards">
                 {
                     art && art.map((el)=>{
