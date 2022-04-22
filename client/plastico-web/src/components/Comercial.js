@@ -67,7 +67,6 @@ export default function Comercial(){
             {
                filter === true ?
                <div className="sub-filtro">
-               <ul>
                    <Link className="link" to='/busqueda/foto producto'>
                       <li>Foto Producto</li>
                    </Link>
@@ -77,11 +76,11 @@ export default function Comercial(){
                    <Link className="link" to='/busqueda/postproduccion digital / motion grafics'>
                       <li>Postproducción Digital / Motion Graphics</li>
                    </Link>
-               </ul>
                </div>
                :
                null
            }
+           <hr/>
            </div>
         </div>
     )

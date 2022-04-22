@@ -58,7 +58,7 @@
     position: absolute;
     left: 20%;
     top: 250px;
-    padding-right: 20px;
+    padding: 10px;
     border-radius: 20px;
     box-shadow:  22px 22px 44px #000000;
 }
@@ -67,7 +67,7 @@
     font-family: 'Slenco-Black';
     font-size: 20px;
     cursor: pointer;
-    margin:2px auto;
+    margin:2px 20px;
     text-decoration: none;
 }
 .sub-filtro li:hover{

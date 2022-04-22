@@ -52,7 +52,6 @@ export default function Artistic(){
            {
                filter === true ?
                <div className="sub-filtro">
-               <ul>
                    <Link className="link" to='/busqueda/estilismo'>
                       <li>Estilismo</li>
                    </Link>
@@ -67,13 +66,13 @@ export default function Artistic(){
                    </Link>
                    <Link className="link" to='/busqueda/direccion creativa'>
                       <li>Dirección Creativa</li>
-                   </Link>
-               </ul>
+                   </Link>          
                </div>
                :
                null
            }
            </div>
+           <hr/>
             <div className="cont-cards">
                 {
                     art && art.map((el)=>{
