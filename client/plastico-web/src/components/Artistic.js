@@ -48,6 +48,22 @@ export default function Artistic(){
                     onChange={(e) => {handleSearchBar(e)}}
                     />
             </div>
+            <div className="cont-cards">
+                {
+                    art && art.map((el)=>{
+                        return(
+                            <div key={el.id}>
+                                <Card
+                                titulo={el.titulo}
+                                imagen={el.imagen}
+                                id={el.id}
+                                subtitulo={el.subtitulo}
+                                />
+                            </div>
+                        )
+                    })
+                }
+            </div>
             <div>
            {
                filter === true ?
@@ -71,24 +87,8 @@ export default function Artistic(){
                :
                null
            }
-           </div>
            <hr/>
-            <div className="cont-cards">
-                {
-                    art && art.map((el)=>{
-                        return(
-                            <div key={el.id}>
-                                <Card
-                                titulo={el.titulo}
-                                imagen={el.imagen}
-                                id={el.id}
-                                subtitulo={el.subtitulo}
-                                />
-                            </div>
-                        )
-                    })
-                }
-            </div>
+           </div>
         </div>
     )
 }
