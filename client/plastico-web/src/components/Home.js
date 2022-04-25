@@ -89,9 +89,6 @@ export default function Home(){
                 {
                     menu === true ?
                     <div className="content-menu">
-                        <Link to='/manifest'>
-                        <button>Manifiesto</button>
-                        </Link>
                         <Link to='/blog'>
                         <button>Blog</button>
                         </Link>

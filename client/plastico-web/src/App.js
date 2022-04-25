@@ -3,7 +3,6 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Artistic from './components/Artistic';
 import Comercial from './components/Comercial';
-import Manifest from './components/Manifest';
 import Admin from './components/Admin';
 import Blog from './components/Blog';
 import Form from './components/Form';
@@ -31,7 +30,6 @@ function App() {
         <Route exact path = '/artistic' element = {<div><NavBar/><Artistic/></div>}/>
         <Route exact path = '/artistic/:id' element ={<div><NavBar/><PostDetail/></div>}/>
         <Route exact path = '/comercial' element = {<div><NavBar/><Comercial/></div>}/>
-        <Route exact path = '/manifest' element = {<div><NavBar/><Manifest/></div>}/>
         <Route exact path = '/admin' element = {<div><NavBar/><Admin/></div>}/>
         <Route exact path = '/blog' element = {<div><NavBar/><Blog/></div>}/>
         <Route exact path = '/form' element = {<div><NavBar/><Form/></div>}/>
@@ -42,6 +40,7 @@ function App() {
         <Route exact path = '/pasantias' element = {<div><NavBar/><Pasantias/></div>}/>
         <Route exact path = '/staff' element = {<div><NavBar/><Staff/></div>}/>
         <Route exact path = '/busqueda/:search' element = {<div><NavBar/><Busqueda/></div>}/>
+        <Route exact path = '/galeria/:id' element = {<div><NavBar/></div>}/>
       </Routes>
     </div>
     </BrowserRouter>

@@ -1,0 +1,19 @@
+.manifest{
+    background-color: rgb(233, 35, 35);
+    margin: 20px 5%;
+    text-align: justify;
+    padding: 15px 2%;
+    border-radius: 49px;
+background: linear-gradient(145deg, #d22020, #f92525);
+box-shadow:  7px 7px 14px #000000,
+             -7px -7px 14px #2f2f2f;
+}
+.manifest h2{
+    margin: auto 2%;
+    font-size: 40px;
+    font-family: 'Baron';
+}
+.manifest p{
+    font-family: 'Slenco-Black';
+    font-size: 20px;
+}

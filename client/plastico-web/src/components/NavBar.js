@@ -29,9 +29,6 @@ export default function NavBar () {
                 {
                     menu === true ?
                     <div className="content-menu1">
-                        <Link to='/manifest'>
-                        <button>Manifiesto</button>
-                        </Link>
                         <Link to='/blog'>
                         <button>Blog</button>
                         </Link>

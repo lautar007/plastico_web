@@ -53,10 +53,12 @@ export default function PostDetail(){
                 <h1>Galería</h1>
                 <div className="cont-galeria-post">
                 {
-                    publi. galeria && publi.galeria.length != 0 ?
+                    publi.galeria && publi.galeria.length != 0 ?
                     publi.galeria.map(img =>{
                         return(
+                                <Link to={ '/galeria' + id}>
                                 <img id="img-blog" key={Math.random()} src={img}></img>
+                                </Link>
                         )
                     }) 
                     :
