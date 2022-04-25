@@ -29,10 +29,12 @@ function rootReducer(state = initialState, action){
             let artistico = action.payload.filter(pub => pub.categoria === 'artistico');
             let comercial = action.payload.filter(pub => pub.categoria === 'comercial');
             let noticia = action.payload.filter(pub => pub.categoria === 'noticia');
+            let art = artistico.reverse();
+            let com = comercial.reverse();
             return{
                 ...state,
-                Artistico: artistico,
-                Comercial: comercial,
+                Artistico: art,
+                Comercial: com,
                 Noticia: noticia
             }
         case 'GET_PUBLICACION':

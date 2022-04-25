@@ -20,8 +20,6 @@ export default function Artistic(){
 
     console.log(artistic)
 
-    var art = artistic.reverse();
-
     function handleSearchBar(e){
         e.preventDefault();
         setSearch(e.target.value);
@@ -50,7 +48,7 @@ export default function Artistic(){
             </div>
             <div className="cont-cards">
                 {
-                    art && art.map((el)=>{
+                    artistic && artistic.map((el)=>{
                         return(
                             <div key={el.id}>
                                 <Card

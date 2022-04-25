@@ -19,7 +19,6 @@ export default function Comercial(){
         dispatch(getPublicaciones()); 
     }, [dispatch]);
 
-    //var comer = comercial.reverse();
 
     function handleSearchBar(e){
         e.preventDefault();
