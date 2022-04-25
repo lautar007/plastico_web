@@ -17,6 +17,7 @@ import Footer from './components/Footer';
 import Pasantias from './components/Pasantias';
 import Staff from './components/Staff';
 import Busqueda from './components/Busqueda';
+import Galeria from './components/Galeria';
 
 
 
@@ -40,7 +41,7 @@ function App() {
         <Route exact path = '/pasantias' element = {<div><NavBar/><Pasantias/></div>}/>
         <Route exact path = '/staff' element = {<div><NavBar/><Staff/></div>}/>
         <Route exact path = '/busqueda/:search' element = {<div><NavBar/><Busqueda/></div>}/>
-        <Route exact path = '/galeria/:id' element = {<div><NavBar/></div>}/>
+        <Route exact path = '/galeria/:id' element = {<div><NavBar/><Galeria/></div>}/>
       </Routes>
     </div>
     </BrowserRouter>
