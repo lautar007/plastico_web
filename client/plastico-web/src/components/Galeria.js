@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getPublicacion } from "../actions/actions";
 import { useEffect } from "react";
+import logo from '../media/LOGO.png';
 
 export default function Galeria () {
     
@@ -26,16 +27,16 @@ export default function Galeria () {
 
                 <ul className="slider">
                   <li id = 'slider1'>
-                      <img src={gal[0]}/>
+                      <img src={gal? gal[0]: logo}/>
                   </li>
                   <li id = 'slider2'>
-                      <img src={gal[1]}/>
+                      <img src={gal? gal[1]: logo}/>
                   </li>
                   <li id = 'slider3'>
-                      <img src={gal[2]}/>  
+                      <img src={gal? gal[2]: logo}/>  
                   </li>
                   <li id = 'slider4'>
-                      <img src={gal[3]}/>
+                      <img src={gal? gal[3]: logo}/>
                   </li>
                 </ul>
 
