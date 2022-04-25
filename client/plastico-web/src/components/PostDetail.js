@@ -56,7 +56,7 @@ export default function PostDetail(){
                     publi.galeria && publi.galeria.length != 0 ?
                     publi.galeria.map(img =>{
                         return(
-                                <Link to={ '/galeria' + id}>
+                                <Link to={ '/galeria/' + id}>
                                 <img id="img-blog" key={Math.random()} src={img}></img>
                                 </Link>
                         )
