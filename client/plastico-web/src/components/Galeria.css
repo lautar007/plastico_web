@@ -9,7 +9,7 @@
 }
 .slider{
     position: relative;
-    margin: auto;
+    background-color: aqua;
     width: fit-content;
 }
 .slider li{
