@@ -10,11 +10,11 @@
 }
 .slider{
     position: relative;
+    left: auto;
 }
 .slider li{
     opacity: 0;
     position: absolute;
-    left: 30%;
     width: inherit;
     height: inherit;
     transition: opacity .5s;
