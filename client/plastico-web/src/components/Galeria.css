@@ -10,6 +10,7 @@
 }
 .slider{
     position: relative;
+    margin: auto;
 }
 .slider li{
     opacity: 0;
@@ -17,8 +18,6 @@
     width: inherit;
     height: inherit;
     transition: opacity .5s;
-    left: 40%;
-    
 }
 
 .slider li:first-child{
