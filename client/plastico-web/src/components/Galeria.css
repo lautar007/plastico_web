@@ -14,8 +14,8 @@
 .slider li{
     opacity: 0;
     position: absolute;
-    width: inherit;
-    height: inherit;
+    width: 200px;
+    height: 600px;
     transition: opacity .5s;
 }
 
