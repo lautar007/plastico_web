@@ -10,6 +10,7 @@
 .slider{
     object-position: center;
     width: 90%;
+    background-color: burlywood;
 }
 .slider li{
     opacity: 0;
@@ -17,6 +18,7 @@
     width: 200px;
     height: 600px;
     transition: opacity .5s;
+    background-color: aqua;
 }
 
 .slider li:first-child{
