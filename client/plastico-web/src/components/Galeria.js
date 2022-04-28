@@ -43,16 +43,16 @@ export default function Galeria () {
 
                 <ul className="redonditos">
                     <li>
-                        <a href="#slider1">o</a>
+                        <button href="#slider1">o</button>
                     </li>
                     <li>
-                        <a href="#slider2">o</a>
+                        <button href="#slider2">o</button>
                     </li>
                     <li>
-                        <a href="#slider3">o</a>
+                        <button href="#slider3">o</button>
                     </li>
                     <li>
-                        <a href="#slider4">o</a>
+                        <button href="#slider4">o</button>
                     </li>
                 </ul>
 
