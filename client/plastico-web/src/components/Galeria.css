@@ -32,3 +32,9 @@
     display: flex;
     flex-direction: column;
 }
+.redonditos li{
+    text-decoration: none;
+    color: white;
+    font-family: 'Slenco-Black';
+    font-size: 40px;
+}
