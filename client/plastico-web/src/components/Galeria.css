@@ -8,7 +8,7 @@
     list-style: none;
 }
 .slider{
-    margin: auto;
+    object-position: center;
     background-color: aqua;
     width: fit-content;
 }
