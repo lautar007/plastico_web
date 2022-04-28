@@ -10,7 +10,7 @@
 .slider{
     object-position: center;
     background-color: aqua;
-    width: fit-content;
+    width: 100%;
 }
 .slider li{
     opacity: 0;
