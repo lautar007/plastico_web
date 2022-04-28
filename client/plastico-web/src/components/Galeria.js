@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getPublicacion } from "../actions/actions";
 import { useEffect } from "react";
@@ -43,16 +43,24 @@ export default function Galeria () {
 
                 <ul className="redonditos">
                     <li>
-                        <a href="#slider1">o</a>
+                        <Link to={'/galeria/' + id + '#slider1'}>
+                        <button>o</button>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#slider2">o</a>
+                        <Link to={'/galeria/' + id + '#slider2'}>
+                        <button>o</button>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#slider3">o</a>
+                        <Link to={'/galeria/' + id + '#slider3'}>
+                        <button>o</button>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#slider4">o</a>
+                        <Link to={'/galeria/' + id + '#slider4'}>
+                        <button>o</button>
+                        </Link>
                     </li>
                 </ul>
 

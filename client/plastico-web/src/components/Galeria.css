@@ -32,7 +32,7 @@
     display: flex;
     flex-direction: column;
 }
-.redonditos li a{
+.redonditos li button{
     background-color: black;
     text-decoration: none;
     color: white;
