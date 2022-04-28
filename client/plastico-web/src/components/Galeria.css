@@ -17,7 +17,8 @@
     width: inherit;
     height: inherit;
     transition: opacity .5s;
-    right: 40%;
+    left: 40%;
+    
 }
 
 .slider li:first-child{
