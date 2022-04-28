@@ -38,9 +38,9 @@
     color: white;
     font-family: 'Slenco-Black';
     font-size: 40px;
+    padding:  0px 10px;
     width: 60px;
     height: 60px;
-    border-radius: 25px;
-    border: solid thin rgb(233, 35, 35);  
+    border-radius: 25px; 
     cursor: pointer;
 }
