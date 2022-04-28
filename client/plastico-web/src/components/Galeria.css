@@ -10,7 +10,6 @@
 .slider{
     object-position: center;
     width: 90%;
-    background-color: burlywood;
 }
 .slider li{
     opacity: 0;
@@ -19,7 +18,6 @@
     height: inherit;
     margin:auto;
     transition: opacity .5s;
-    background-color: aqua;
 }
 
 .slider li:first-child{
@@ -40,5 +38,9 @@
     color: white;
     font-family: 'Slenco-Black';
     font-size: 40px;
+    width: 60px;
+    height: 60px;
+    border-radius: 25px;
+    border: solid thin rgb(233, 35, 35);  
     cursor: pointer;
 }
