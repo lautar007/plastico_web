@@ -3,7 +3,7 @@
     background-color: black;
     padding: 30px;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
 .cont-gal ul, li{
     list-style: none;
