@@ -10,7 +10,7 @@
 }
 .slider{
     position: relative;
-    left: auto;
+    margin-left: auto;
 }
 .slider li{
     opacity: 0;
