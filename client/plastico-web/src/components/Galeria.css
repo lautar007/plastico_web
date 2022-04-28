@@ -8,7 +8,7 @@
     list-style: none;
 }
 .slider{
-    position: relative;
+    margin: auto;
     background-color: aqua;
     width: fit-content;
 }
