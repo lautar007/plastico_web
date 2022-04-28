@@ -3,7 +3,7 @@
     background-color: black;
     padding: 30px;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row;
 }
 .cont-gal ul, li{
     list-style: none;
@@ -29,5 +29,5 @@
 
 .redonditos{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
