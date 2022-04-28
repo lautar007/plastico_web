@@ -43,6 +43,18 @@
     .content-menu{
         top: 100px !important;
     }
+    .searchBar{
+        position: relative !important;
+        width: 90% !important;
+    }
+    .searchBar img{
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .searchBar input{
+        height: 20px !important;
+        font-size: 15px !important;
+    }
 }
 
 .logo1{

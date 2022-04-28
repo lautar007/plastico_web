@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getPublicacion } from "../actions/actions";
 import { useEffect } from "react";
 import logo from '../media/LOGO.png';
+import './Galeria.css';
 
 export default function Galeria () {
     
@@ -38,6 +39,21 @@ export default function Galeria () {
                   <li id = 'slider4'>
                       <img src={gal? gal[3]: logo}/>
                   </li>
+                </ul>
+
+                <ul className="redonditos">
+                    <li>
+                        <a href="#slider1">1</a>
+                    </li>
+                    <li>
+                        <a href="#slider2">2</a>
+                    </li>
+                    <li>
+                        <a href="#slider3">3</a>
+                    </li>
+                    <li>
+                        <a href="#slider4">4</a>
+                    </li>
                 </ul>
 
             </div>

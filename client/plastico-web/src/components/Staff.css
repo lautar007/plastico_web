@@ -1,3 +1,10 @@
+@media screen and (max-width: 900px){
+    .video{
+        width: 90% !important;
+        height: 50% !important;
+    }
+}
+
 .manifest{
     background-color: rgb(233, 35, 35);
     margin: 20px 5%;
