@@ -17,6 +17,7 @@
     position: absolute;
     width: 200px;
     height: 600px;
+    margin:auto;
     transition: opacity .5s;
     background-color: aqua;
 }
