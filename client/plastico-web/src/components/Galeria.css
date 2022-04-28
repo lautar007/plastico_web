@@ -1,6 +1,5 @@
 .cont-gal{
     margin: auto;
-    background-color: black;
     padding: 30px;
     display: flex;
     flex-direction: row;
@@ -11,6 +10,7 @@
 .slider{
     position: relative;
     margin: auto;
+    width: fit-content;
 }
 .slider li{
     opacity: 0;
