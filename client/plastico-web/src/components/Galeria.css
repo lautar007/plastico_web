@@ -26,3 +26,8 @@
 .slider li:target{
     opacity:1;
 }
+
+.redonditos{
+    display: flex;
+    flex-direction: row;
+}
