@@ -3,14 +3,13 @@
     background-color: black;
     padding: 30px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
 }
 .cont-gal ul, li{
     list-style: none;
 }
 .slider{
     position: relative;
-    margin-left: auto;
 }
 .slider li{
     opacity: 0;
@@ -18,6 +17,7 @@
     width: inherit;
     height: inherit;
     transition: opacity .5s;
+    left: 500px;
 }
 
 .slider li:first-child{
