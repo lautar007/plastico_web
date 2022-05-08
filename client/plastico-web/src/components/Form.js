@@ -180,7 +180,7 @@ export default function Form() {
                   <input
                     type='checkbox'
                     name="Postproduccion Digital"
-                    value="postproducción digital"
+                    value="postproduccion digital"
                     onChange={(e)=> handleSubCheck(e)}
                   />
                 </div> 
@@ -189,7 +189,7 @@ export default function Form() {
                   <input
                     type='checkbox'
                     name="Dirección Creativa"
-                    value="dirección creativa"
+                    value="direccion creativa"
                     onChange={(e)=> handleSubCheck(e)}
                   />
                 </div> 
@@ -265,6 +265,22 @@ export default function Form() {
                 type = 'text'
                 name = 'galeria4'
                 placeholder="URL imagen 4"
+                onChange={(e)=> handleGaleria(e)}
+              />
+                 <input
+                id='input-post'
+                type = 'text'
+                name = 'galeria5'
+                placeholder="URL imagen 5"
+                onChange={(e)=> handleGaleria(e)}
+              />
+
+               <label id='labels'>Contenido Audiovisual:</label>
+               <input
+                id='input-post'
+                type = 'text'
+                name = 'galeria5'
+                placeholder="URL de YouTube"
                 onChange={(e)=> handleGaleria(e)}
               />
 
