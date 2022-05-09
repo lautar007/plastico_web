@@ -21,10 +21,40 @@ export default function Galeria () {
         dispatch(getPublicacion(id)); 
     }, [dispatch]);
 
+    var cont = 1; 
+
+    function leftArrow(){
+        e.preventDefault();
+        if(cont === 1){
+            cont = 5;
+            return '#slider' + cont;
+        }
+        else{
+            cont = cont - 1; 
+            return '#slider' + cont;
+        }
+    }
+
+    function rigthArrow(){
+        e.preventDefault();
+        if(cont === 5){
+            cont = 1;
+            return '#slider' + cont;
+        }
+        else{
+            cont = cont + 1; 
+            return '#slider' + cont;
+        }
+    }
+
+
+
     return(
         <div>
             <h1>Galería de imágenes</h1>
             <div className="cont-gal">
+
+                <a href={leftArrow()}>←</a>
 
                 <ul className="slider">
                   <li id = 'slider1'>
@@ -44,23 +74,7 @@ export default function Galeria () {
                   </li>
                 </ul>
 
-                <ul className="redonditos">
-                    <li>
-                        <a href="#slider1">o</a>
-                    </li>
-                    <li>
-                        <a href="#slider2">o</a>
-                    </li>
-                    <li>
-                        <a href="#slider3">o</a>
-                    </li>
-                    <li>
-                        <a href="#slider4">o</a>
-                    </li>
-                    <li>
-                        <a href="#slider5">o</a>
-                    </li>
-                </ul>
+                <a href={rigthArrow()}>→</a>
 
             </div>
         </div>
