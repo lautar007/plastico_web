@@ -42,8 +42,9 @@ export default function Galeria () {
             console.log('#slider' + cont);
             return '#slider1';
         } 
-        console.log('#slider' + (cont + 1));
-        return '#slider' + (cont+1);
+        cont = cont + 1; 
+        console.log('#slider' + cont);
+        return '#slider' + cont;
     }
 
 
