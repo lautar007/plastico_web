@@ -23,6 +23,7 @@ export default function Galeria () {
     
     const pag = window.location.href;
     const cont = pag[pag.length -1];
+    const contR = cont + 1;
 
     console.log(pag);
     console.log(cont);
@@ -52,7 +53,7 @@ export default function Galeria () {
                   </li>
                 </ul>
 
-                <a href={'#slider' + [cont + 1]}>→</a>
+                <a href={'#slider' + contR}>→</a>
 
             </div>
         </div>
