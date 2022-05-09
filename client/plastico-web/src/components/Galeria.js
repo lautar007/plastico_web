@@ -40,7 +40,7 @@ export default function Galeria () {
     function rigthArrow(){
         cont = cont + 1; 
             console.log('#slider' + (cont +1));
-            return '#slider' + cont;
+            return '#slider' + (cont +1);
     }
 
 
