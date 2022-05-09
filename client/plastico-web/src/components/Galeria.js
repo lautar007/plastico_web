@@ -29,7 +29,7 @@ export default function Galeria () {
             console.log('#slider' + cont);
             return '#slider' + cont;
         }
-        else{
+        if(cont != 1){
             cont = cont - 1; 
             console.log('#slider' + cont);
             return '#slider' + cont;
@@ -42,7 +42,7 @@ export default function Galeria () {
             console.log('#slider' + cont);
             return '#slider' + cont;
         }
-        else{
+        if(cont !=5){
             cont = cont + 1; 
             console.log('#slider' + cont);
             return '#slider' + cont;
