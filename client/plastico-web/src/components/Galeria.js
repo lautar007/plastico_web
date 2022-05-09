@@ -22,45 +22,17 @@ export default function Galeria () {
     }, [dispatch]);
     
     const pag = window.location.href;
+    const cont = pag[pag.length -1];
 
     console.log(pag);
+    console.log(cont);
   
-
-    function leftArrow(){
-        var cont = pag[pag.length -1];
-        console.log(cont)
-        switch (cont){
-            case 1: return '#slider5';
-            case 2: return '#slider1';
-            case 3: return '#slider2';
-            case 4: return '#slider3';
-            case 5: return '#slider4';
-            default: 
-            console.log('que?'); 
-            return '#slider1';
-        }
-    }
-
-    function rigthArrow(){
-        var cont = pag[pag.length -1];
-        switch (cont){
-            case 1: return '#slider2';
-            case 2: return '#slider3';
-            case 3: return '#slider4';
-            case 4: return '#slider5';
-            case 5: return '#slider1';
-            default: return '#slider1';
-        }
-    }
-
-
-
     return(
         <div>
             <h1>Galería de imágenes</h1>
             <div className="cont-gal">
 
-                <a href={leftArrow()}>←</a>
+                <a href={'#slider' + (cont - 1)}>←</a>
 
                 <ul className="slider">
                   <li id = 'slider1'>
@@ -80,7 +52,7 @@ export default function Galeria () {
                   </li>
                 </ul>
 
-                <a href={rigthArrow()}>→</a>
+                <a href={'#slider' + (cont + 1)}>←</a>
 
             </div>
         </div>
