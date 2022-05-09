@@ -56,7 +56,7 @@ export default function Galeria () {
             <h1>Galería de imágenes</h1>
             <div className="cont-gal">
 
-                <a href={leftArrow}>←</a>
+                <a href={leftArrow()}>←</a>
 
                 <ul className="slider">
                   <li id = 'slider1'>
@@ -76,7 +76,7 @@ export default function Galeria () {
                   </li>
                 </ul>
 
-                <a href={rigthArrow}>→</a>
+                <a href={rigthArrow()}>→</a>
 
             </div>
         </div>
