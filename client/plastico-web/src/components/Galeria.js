@@ -21,7 +21,8 @@ export default function Galeria () {
         dispatch(getPublicacion(id)); 
     }, [dispatch]);
     
-    const pag = window.location.pathname;
+    const pag = window.location.href;
+    
     console.log(pag);
     var cont = 1; 
 
