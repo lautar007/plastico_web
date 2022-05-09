@@ -34,6 +34,7 @@ export default function Galeria () {
             case 3: return '#slider2';
             case 4: return '#slider3';
             case 5: return '#slider4';
+            default: return '#slider1';
         }
     }
 
@@ -44,6 +45,7 @@ export default function Galeria () {
             case 3: return '#slider4';
             case 4: return '#slider5';
             case 5: return '#slider1';
+            default: return '#slider1';
         }
     }
 
