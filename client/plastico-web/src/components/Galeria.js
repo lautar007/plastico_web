@@ -24,29 +24,25 @@ export default function Galeria () {
     var cont = 1; 
 
     function leftArrow(){
-        if(cont != 1){
-            cont = cont - 1; 
-            console.log('#slider' + cont);
-            return '#slider' + cont;
-        }
         if(cont === 1){
             cont = 5;
             console.log('#slider' + cont);
             return '#slider' + cont;
         }
+        cont = cont - 1; 
+            console.log('#slider' + cont);
+            return '#slider' + cont;
     }
 
     function rigthArrow(){
-        if(cont !=5){
-            cont = cont + 1; 
-            console.log('#slider' + cont);
-            return '#slider' + cont;
-        }
         if(cont === 5){
             cont = 1;
             console.log('#slider' + cont);
             return '#slider' + cont;
         }
+        cont = cont + 1; 
+        console.log('#slider' + cont);
+        return '#slider' + cont;
     }
 
 
