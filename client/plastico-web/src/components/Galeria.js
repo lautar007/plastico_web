@@ -53,7 +53,7 @@ export default function Galeria () {
                   </li>
                 </ul>
 
-                <a href={'#slider' + contR}>→</a>
+                <a href={cont === '5'? '#slider1' : '#slider' + contR}>→</a>
 
             </div>
         </div>
