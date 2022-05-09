@@ -22,9 +22,10 @@ export default function Galeria () {
     }, [dispatch]);
     
     const pag = window.location.href;
-    
+
     console.log(pag);
-    var cont = 1; 
+    var cont = pag[pag.length -1];
+    console.log(cont); 
 
     function leftArrow(){
         if(cont === 1){
