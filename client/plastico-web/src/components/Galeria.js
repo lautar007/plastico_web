@@ -38,10 +38,6 @@ export default function Galeria () {
     }
 
     function rigthArrow(){
-        if(cont === 5){
-            console.log('#slider' + 1);
-            return '#slider1';
-        }
         cont = cont + 1; 
             console.log('#slider' + cont);
             return '#slider' + cont;
