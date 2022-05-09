@@ -13,6 +13,13 @@ export default function PostDetail(){
     const dispatch = useDispatch();
     const publi = useSelector((state)=>state.Publicacion);
     console.log(publi);
+
+    function filtro (element){
+        if(element.includes('jpg')){ return element}
+        if(element.includes('png')){return element}}
+
+    const imagenes = publi.galeria.filter(filtro)
+    console.log(imagenes);
  
 
     useEffect(()=>{
