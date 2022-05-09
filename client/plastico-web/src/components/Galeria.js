@@ -23,7 +23,7 @@ export default function Galeria () {
     
     const pag = window.location.href;
     const cont = pag[pag.length -1];
-    const contR = cont + 1;
+    const contR = parseInt(cont) + 1;
 
     console.log(pag);
     console.log(cont);
