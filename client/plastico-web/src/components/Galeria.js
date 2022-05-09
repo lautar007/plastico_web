@@ -29,9 +29,8 @@ export default function Galeria () {
 
     function leftArrow(){
         if(cont === 1){
-            cont = 5;
-            console.log('#slider' + cont);
-            return '#slider' + cont;
+            console.log('#slider' + 5);
+            return '#slider5';
         }
         cont = cont - 1; 
             console.log('#slider' + cont);
@@ -40,13 +39,11 @@ export default function Galeria () {
 
     function rigthArrow(){
         if(cont === 5){
-            cont = 1;
             console.log('#slider' + cont);
-            return '#slider' + cont;
-        }
-        cont = cont + 1; 
-        console.log('#slider' + cont);
-        return '#slider' + cont;
+            return '#slider1';
+        } 
+        console.log('#slider' + (cont + 1));
+        return '#slider' + (cont+1);
     }
 
 
