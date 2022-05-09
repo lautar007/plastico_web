@@ -38,13 +38,7 @@ export default function Galeria () {
     }
 
     function rigthArrow(){
-        if(cont === 5){
-            return '#slider1'
-        }
-        else{
-            console.log('#slider' + (cont +1));
-            return '#slider' + (cont +1);
-        }
+            if(cont != 5) return '#slider' + (cont +1);
     }
 
 
