@@ -28,13 +28,16 @@ export default function Galeria () {
 
     function leftArrow(){
         var cont = pag[pag.length -1];
+        console.log(cont)
         switch (cont){
             case 1: return '#slider5';
             case 2: return '#slider1';
             case 3: return '#slider2';
             case 4: return '#slider3';
             case 5: return '#slider4';
-            default: return '#slider1';
+            default: 
+            console.log('que?'); 
+            return '#slider1';
         }
     }
 
