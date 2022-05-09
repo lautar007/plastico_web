@@ -13,8 +13,6 @@ export default function PostDetail(){
     const dispatch = useDispatch();
     const publi = useSelector((state)=>state.Publicacion);
     console.log(publi);
-    const video = publi.galeria[publi.galeria.length - 1];
-    console.log(video);
 
     useEffect(()=>{
         dispatch(getPublicacion(id)); 
@@ -56,11 +54,13 @@ export default function PostDetail(){
                 {
                     publi.galeria && publi.galeria.length != 0 ?
                     publi.galeria.map(img =>{
+                        if(img.includes('jpg') || img.includes('png')){
                         return(
                                 <Link to={ '/galeria/' + id}>
                                 <img id="img-blog" key={Math.random()} src={img}></img>
                                 </Link>
                         )
+                        }
                     }) 
                     :
                     <div>
