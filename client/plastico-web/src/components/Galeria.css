@@ -20,10 +20,6 @@
     transition: opacity .5s;
 }
 
-.slider li:first-child{
-    opacity: 1;
-}
-
 .slider li:target{
     opacity:1;
 }
