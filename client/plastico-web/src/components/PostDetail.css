@@ -8,6 +8,7 @@
         border-left: solid black 15px;
     }
     .cont-galeria-post{
+        display: flex !important;
         flex-direction: column !important;
     }
 }
