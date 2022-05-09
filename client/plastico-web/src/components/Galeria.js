@@ -28,17 +28,13 @@ export default function Galeria () {
     console.log(cont); 
 
     function leftArrow(){
-        if(cont === 1){
-            console.log('#slider' + 5);
-            return '#slider5';
-        }
-        cont = cont - 1; 
             console.log('#slider' + cont);
-            return '#slider' + cont;
+            return '#slider' + (cont-1);
     }
 
     function rigthArrow(){
-            if(cont != 5) return '#slider' + (cont +1);
+            console.log('#slider' + (cont +1));
+            return '#slider' + (cont +1);
     }
 
 
