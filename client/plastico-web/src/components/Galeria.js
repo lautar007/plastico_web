@@ -24,7 +24,6 @@ export default function Galeria () {
     var cont = 1; 
 
     function leftArrow(){
-        e.preventDefault();
         if(cont === 1){
             cont = 5;
             return '#slider' + cont;
@@ -36,7 +35,6 @@ export default function Galeria () {
     }
 
     function rigthArrow(){
-        e.preventDefault();
         if(cont === 5){
             cont = 1;
             return '#slider' + cont;
