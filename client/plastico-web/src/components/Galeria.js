@@ -24,10 +24,10 @@ export default function Galeria () {
     const pag = window.location.href;
 
     console.log(pag);
-    var cont = pag[pag.length -1];
-    console.log(cont); 
+  
 
     function leftArrow(){
+        var cont = pag[pag.length -1];
         switch (cont){
             case 1: return '#slider5';
             case 2: return '#slider1';
@@ -39,6 +39,7 @@ export default function Galeria () {
     }
 
     function rigthArrow(){
+        var cont = pag[pag.length -1];
         switch (cont){
             case 1: return '#slider2';
             case 2: return '#slider3';
