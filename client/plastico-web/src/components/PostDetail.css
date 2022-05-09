@@ -73,8 +73,8 @@ hr{
     padding: 10px;
     margin: 20px 0px;
     justify-content: center;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 .cont-galeria-post h2{
     color: rgb(233, 35, 35);

@@ -39,6 +39,9 @@ export default function Galeria () {
                   <li id = 'slider4'>
                       <img src={gal? gal[3]: logo}/>
                   </li>
+                  <li id = 'slider5'>
+                      <img src={gal? gal[4]: logo}/>
+                  </li>
                 </ul>
 
                 <ul className="redonditos">
@@ -53,6 +56,9 @@ export default function Galeria () {
                     </li>
                     <li>
                         <a href="#slider4">o</a>
+                    </li>
+                    <li>
+                        <a href="#slider5">o</a>
                     </li>
                 </ul>
 
