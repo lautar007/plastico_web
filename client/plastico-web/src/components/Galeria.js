@@ -32,7 +32,7 @@ export default function Galeria () {
             <h1>Galería de imágenes</h1>
             <div className="cont-gal">
 
-                <a href={'#slider' + (cont - 1)}>←</a>
+                <a href={cont === 1? '#slider5' : '#slider' + (cont - 1)}>←</a>
 
                 <ul className="slider">
                   <li id = 'slider1'>
@@ -52,7 +52,7 @@ export default function Galeria () {
                   </li>
                 </ul>
 
-                <a href={'#slider' + (cont + 1)}>←</a>
+                <a href={'#slider' + (cont + 1)}>→</a>
 
             </div>
         </div>
