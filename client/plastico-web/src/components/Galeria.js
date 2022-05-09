@@ -20,7 +20,9 @@ export default function Galeria () {
     useEffect(()=>{
         dispatch(getPublicacion(id)); 
     }, [dispatch]);
-
+    
+    const pag = window.location.pathname;
+    console.log(pag);
     var cont = 1; 
 
     function leftArrow(){
