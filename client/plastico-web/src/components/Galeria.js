@@ -32,7 +32,7 @@ export default function Galeria () {
         <div>
             <h1>Galería de imágenes</h1>
             <Link to = {'/artistic/' + id} >
-            <button>Volver</button>
+            <button className="btn-contraseña">Volver</button>
             </Link>
             <div className="cont-gal">
 
