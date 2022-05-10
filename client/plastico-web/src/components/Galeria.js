@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getPublicacion } from "../actions/actions";
 import { useEffect } from "react";
@@ -31,6 +31,9 @@ export default function Galeria () {
     return(
         <div>
             <h1>Galería de imágenes</h1>
+            <Link to = {'/artistic/' + id} >
+            <button>Volver</button>
+            </Link>
             <div className="cont-gal">
 
                 <a className="flecha" href={cont === '1'? '#slider5' : '#slider' + (cont - 1)}>←</a>
