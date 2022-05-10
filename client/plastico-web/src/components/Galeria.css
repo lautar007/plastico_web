@@ -24,11 +24,8 @@
     opacity:1;
 }
 
-.redonditos{
-    display: flex;
-    flex-direction: column;
-}
-.redonditos li a{
+
+.flecha{
     background-color: black;
     text-decoration: none;
     color: white;
