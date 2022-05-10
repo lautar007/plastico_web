@@ -1,7 +1,7 @@
 @media screen and (max-width: 900px){
     .slider li{
         width: 50% !important;
-        top: 100px !important;
+        top: 20% !important;
     }
 }
 
@@ -43,4 +43,5 @@
     height: 60px;
     border-radius: 25px; 
     cursor: pointer;
+    margin-top: 20%;
 }
