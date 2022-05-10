@@ -1,7 +1,7 @@
 @media screen and (max-width: 900px){
     .slider li{
         width: 50% !important;
-        margin-top: 50%;
+        margin-top: 50% !important;
     }
 }
 
