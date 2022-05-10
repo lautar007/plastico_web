@@ -1,7 +1,10 @@
 @media screen and (max-width: 900px){
-    .slider{
-        width: 50% !important;
-        margin-top: 50% !important;
+    .slider li{
+        width: 200px !important;
+        margin: 0px !important;
+    }
+    .flecha{
+        margin-top: 0px !important;
     }
 }
 
