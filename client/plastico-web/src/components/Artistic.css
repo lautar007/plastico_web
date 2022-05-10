@@ -1,7 +1,7 @@
 @media screen and (max-width: 900px){
     .cont-cards{
         display: flex !important;
-        flex-direction: column-reverse !important;
+        flex-direction: column !important;
     }
 }
 
