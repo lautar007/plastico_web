@@ -52,7 +52,7 @@ export default function PostDetail(){
             <div>
                 <h1>Video</h1>
                 {
-                   publi.galeria[publi.galeria.length -1].includes('www.youtube.com')?
+                   publi.galeria && publi.galeria[publi.galeria.length -1].includes('www.youtube.com')?
                    <h1>Esta publicación contiene video</h1>
                    :
                    <div>
