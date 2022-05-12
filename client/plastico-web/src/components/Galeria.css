@@ -3,8 +3,11 @@
     .slider li{
         width: 20px !important;
         height: 10px !important;
-        margin-top: 50px !important;
+        margin-top: 500px !important;
         left: 0 !important;
+    }
+    .flecha{
+        margin-top: 0px!important;
     }
 }
 
