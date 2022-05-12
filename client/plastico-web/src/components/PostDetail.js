@@ -18,6 +18,10 @@ export default function PostDetail(){
         dispatch(getPublicacion(id)); 
     }, [dispatch]);
 
+    const video = publi.galeria.filter(img =>{img.includes('www.youtube.com')})
+    console.log(video)
+
+
     function handleLink (){
       if(publi.categoria === 'artistico'){
           return '/artistic'
@@ -47,6 +51,18 @@ export default function PostDetail(){
                         <button className="B-volver">Volver</button>
                     </Link>
                 </div>
+            </div>
+            <div>
+                <h1>Video</h1>
+                {
+                    video?
+                    <iframe width="1350" height="480" src={video[0]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    :
+                    <div>
+                    <h2>Esta publicación no contiene ningún video para visualizar</h2>
+                    <hr/>
+                    </div>
+                }
             </div>
             <div>
                 <h1>Galería</h1>

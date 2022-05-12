@@ -3,6 +3,14 @@
         width: 90% !important;
         height: 50% !important;
     }
+    .staff{
+        display: none !important;
+    }
+
+    .staff2{
+        display: flex !important;
+        flex-direction: column !important;
+    }
 }
 
 .manifest{
@@ -21,6 +29,67 @@ box-shadow:  7px 7px 14px #000000,
     font-family: 'Baron';
 }
 .manifest p{
+    font-family: 'Slenco-Black';
+    font-size: 20px;
+}
+
+.staff{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.staff img{
+    margin-bottom: 50px;
+    border-radius: 50px;
+    box-shadow:  7px 7px 14px #000000,
+             -7px -7px 14px #2f2f2f;
+}
+
+.person{
+    background-color: #000000;
+    width: 30%;
+    height: fit-content;
+    border-radius: 25px;
+}
+.person h2{
+    color: rgb(233, 225, 51);
+    font-family: 'Baron';
+    font-size: 40px;
+}
+.person p{
+    color: white;
+    text-align: center;
+    font-family: 'Slenco-Black';
+    font-size: 20px;
+}
+
+.staff2{
+    display: none;
+    margin-top: 40px;
+}
+.staff2 img{
+    margin-bottom: 50px;
+    border-radius: 50px;
+    box-shadow:  7px 7px 14px #000000,
+             -7px -7px 14px #2f2f2f;
+}
+
+.person2{
+    background-color: #000000;
+    width: 90%;
+    height: fit-content;
+    border-radius: 25px;
+    margin: 10px auto;
+}
+.person2 h2{
+    color: rgb(233, 225, 51);
+    font-family: 'Baron';
+    font-size: 40px;
+}
+.person2 p{
+    color: white;
+    text-align: center;
     font-family: 'Slenco-Black';
     font-size: 20px;
 }
