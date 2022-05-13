@@ -32,7 +32,7 @@ export default function PostDetail(){
     }
 
     function video(){
-        console.log(publi.galeria)
+        console.log(publi.galeria[publi.galeria.length -1])
         if(publi.galeria[publi.galeria.length -1].includes('www.youtube.com')){
             return (
                 <div>
@@ -67,6 +67,7 @@ export default function PostDetail(){
             </div>
             <div>
                 <h1>Video</h1>
+                <div className="cont-galeria-post">
                 {
                    publi.galeria && publi.galeria.length != 0 ?
                    video()
@@ -76,6 +77,7 @@ export default function PostDetail(){
                    <hr/>
                    </div>
                 }
+                </div>
             </div>
             <div>
                 <h1>Galería</h1>
