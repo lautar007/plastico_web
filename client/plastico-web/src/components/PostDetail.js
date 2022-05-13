@@ -31,6 +31,22 @@ export default function PostDetail(){
       }
     }
 
+    function video(){
+        console.log(publi.galeria)
+        if(publi.galeria[publi.galeria.length -1].includes('www.youtube.com')){
+            return (
+                <div>
+                     <iframe width="484" height="480" src={publi.galeria[publi.galeria.length -1]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            )
+        }
+        else return (
+            <div>
+                <p>Esta publicación no contiene ningún video</p>
+            </div>
+        )
+    }
+
 
     return(
         <div>
@@ -52,8 +68,8 @@ export default function PostDetail(){
             <div>
                 <h1>Video</h1>
                 {
-                   publi.galeria && publi.galeria[publi.galeria.length -1].includes('www.youtube.com')?
-                   <iframe width="484" height="480" src={publi.galeria[publi.galeria.length -1]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                   publi.galeria?
+                   video()
                    :
                    <div>
                    <h2>Esta publicación no contiene ningún video</h2>
