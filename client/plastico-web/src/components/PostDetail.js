@@ -53,7 +53,7 @@ export default function PostDetail(){
                 <h1>Video</h1>
                 {
                    publi.galeria && publi.galeria[publi.galeria.length -1].includes('www.youtube.com')?
-                   <h1>Esta publicación contiene video</h1>
+                   <iframe width="484" height="480" src={publi.galeria[publi.galeria.length -1]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                    :
                    <div>
                    <h2>Esta publicación no contiene ningún video</h2>
