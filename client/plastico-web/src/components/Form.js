@@ -71,7 +71,7 @@ export default function Form() {
 
     return(
       <div>
-        <h1 id="titulo-form">Cración de un nuevo Post</h1>
+        <h1 id="titulo-form">Creación de un nuevo Post</h1>
           <div id="cont-formPost">
             <form id="form-post">
               <label id='labels'>*Título:</label>

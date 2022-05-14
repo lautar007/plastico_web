@@ -31,6 +31,8 @@ export default function PostDetail(){
       }
     }
 
+    <iframe width="1350" height="480" src="https://www.youtube.com/embed/6r2aucghTUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
     function video(){
         console.log(publi.galeria[publi.galeria.length -1])
         if(publi.galeria[publi.galeria.length -1].includes('www.youtube.com')){

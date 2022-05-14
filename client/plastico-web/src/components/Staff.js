@@ -13,7 +13,6 @@ export default function Staff () {
                     <p>En Plástico Estudio nos enfocamos en soluciones integrales audiovisuales  artísticas y multimediales . Los servicios que ofrecemos son: Fotografía editorial, fotografía publicitaria , dirección de arte, dirección creativa, estilismo, retoque digital, diseño gráfico, servicio de postproducción de video, entre otros.</p>
                     <p>Trabajamos de manera personalizada para atender a las necesidades de cada cliente, y logrando así, un resultado y producto satisfactorio  para ambas partes con su respectivo valor agregado.</p>
                 </div>
-                <h1>Socixs Fundadorxs</h1>
                 <div className="staff">
                     <div className="person">
                         <h2>Nathalie Lopez</h2>
