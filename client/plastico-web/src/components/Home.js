@@ -76,13 +76,13 @@ export default function Home(){
                     <img onClick = {(e)=> handleMenu(e)} className="menu" src="https://i.pinimg.com/564x/de/b5/90/deb590f49a8249aedd5cf8b4411250be.jpg"></img>
                 </div>
                 <div  className="searchBar">
-                    <Link to={'/busqueda/' + search}>
-                    <img className="searchLupa" src={Lupa}/> 
-                    </Link>
                     <input 
                     placeholder="Buscar por Nombre o Servicio"
                     onChange={(e) => {handleSearchBar(e)}}
                     />
+                    <Link to={'/busqueda/' + search}>
+                    <img className="searchLupa" src={Lupa}/> 
+                    </Link>
                 </div>
             </div>
             <div>

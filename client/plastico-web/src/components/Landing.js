@@ -2,21 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './Landing.css';
 import LOGO from '../media/LOGO.png';
+import presentacion from '../media/presentacion.mp4'
 
 
 export default function Landing (){
     return(
         <div>
-            <div id="fadeRes">
-              <div id="plasticRes">
-                  <img id="land-logoRes" src = {LOGO}/>
-              </div>
-              <div id="enterBRes">
-                  <Link to='/home'>
-                    <button id="buttonE">Entrar</button>
-                  </Link>
-              </div>
-          </div>
+            <video src={presentacion} type="video/mp4" autoPlay muted loop></video>
           <div id="fadeIn">
               <div id="plastic">
                   <img id="land-logo" src = {LOGO}/>

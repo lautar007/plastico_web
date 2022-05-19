@@ -184,7 +184,7 @@ h1{
     justify-content: space-between;
     position: absolute;
     margin: auto;
-    top:20%;
+    top: 125px;
     left: auto;
     width: 60%;
 }
@@ -202,9 +202,9 @@ h1{
     color:#1b1b1b
 }
 .searchBar img{
-    width: 50px;
-    height: 50px;
-    margin: auto 15px;
+    width: 40px;
+    height: 40px;
+    margin: 5px 15px;
     background-color:white;
     padding: 5px;
     border-radius: 50px;
