@@ -16,23 +16,23 @@ export default function Staff () {
                 <div className="staff">
                     <div className="person">
                         <h2>Nathalie Lopez</h2>
-                        <p> - Producción Audiovisual</p>
-                        <p> - Dirección Creativa</p> 
-                        <p> - Diseño de Producción</p>
-                        <p> - Diseño Gráfico</p>
-                        <p> - ST</p> 
-                        <p> - Set Designer</p>
-                        <p> - Dirección de Arte</p>
+                        <p className="pe1"> - Producción Audiovisual</p>
+                        <p className="pe1"> - Dirección Creativa</p> 
+                        <p className="pe1"> - Diseño de Producción</p>
+                        <p className="pe1"> - Diseño Gráfico</p>
+                        <p className="pe1"> - ST</p> 
+                        <p className="pe1"> - Set Designer</p>
+                        <p className="pe1"> - Dirección de Arte</p>
                     </div>
                     <img src={staff}/>
                     <div className="person">
                         <h2>Lautaro Robin</h2>
-                        <p> - Producción Audiovisual</p>
-                        <p> - Dirección Creativa</p> 
-                        <p> - Fotografía Profesional</p>
-                        <p> - Digital Retoucher</p>
-                        <p> - Motion Grapher</p> 
-                        <p> - Video Editor</p>
+                        <p className="pe2"> Producción Audiovisual - </p>
+                        <p className="pe2"> Dirección Creativa - </p> 
+                        <p className="pe2"> Fotografía Profesional - </p>
+                        <p className="pe2"> Digital Retoucher - </p>
+                        <p className="pe2"> Motion Grapher - </p> 
+                        <p className="pe2"> Video Editor - </p>
                     </div>
                 </div>
 
