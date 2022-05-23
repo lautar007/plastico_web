@@ -19,7 +19,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: aqua;
 }
 .cont-gal ul, li{
     list-style: none;
@@ -27,7 +26,6 @@
 .slider{
     object-position: center;
     width: 80%;
-    background-color: salmon;
 }
 .slider li{
     opacity: 0;
