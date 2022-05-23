@@ -39,7 +39,7 @@ export default function PostDetail(){
             let videito = publi.galeria[publi.galeria.length -1].slice(32,43);
             return (
                 <div>
-                     <iframe width="484" height="480" src={videito} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     <iframe width="484" height="480" src={`https://www.youtube.com/embed/${videito}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             )
         }
