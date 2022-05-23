@@ -26,6 +26,7 @@
 .slider{
     object-position: center;
     width: 80%;
+    background-color: salmon;
 }
 .slider li{
     opacity: 0;
