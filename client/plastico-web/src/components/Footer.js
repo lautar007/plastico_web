@@ -122,7 +122,7 @@ export default function Footer(){
               </div>
               <div id="cont-pasantia">
                   <button onClick={(e)=> handlePasantia(e)}>Trabaja con nosotrxs.</button>
-                  <p>Dejanos tus datos para colaborar en nuestras produs como pasante!</p>
+                  <p>Dejanos tus datos si te interesa trabajar en nuestras producciones.</p>
               </div>
           </div>
           <hr/>

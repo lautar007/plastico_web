@@ -124,7 +124,7 @@ export default function Busqueda (){
         }
         else return (
             <div>
-                <h2>Por ahora no existen posteos que coincidan con tu búsqueda</h2>
+                <h2 className="searchResults">Por ahora no existen posteos que coincidan con tu búsqueda</h2>
             </div>
         )
     }
@@ -134,7 +134,9 @@ export default function Busqueda (){
             <h1>Estos son los resutlados para: {`"` + search + `"`}</h1>
             <div  className="searchBar1">
                     <Link to={'/busqueda/' + search1}>
-                    <img className="searchLupa" src={Lupa}/> 
+                    <div className="searchLupa">
+                        <img src={Lupa}/> 
+                    </div>
                     </Link>
                     <input 
                     placeholder="Buscar por Nombre o Servicio"

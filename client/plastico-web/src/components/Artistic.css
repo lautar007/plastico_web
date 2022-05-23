@@ -41,16 +41,7 @@
 .searchBar1 input::placeholder{
     color:#1b1b1b
 }
-.searchBar1 img{
-    width: 50px;
-    height: 50px;
-    margin: auto 15px;
-    background-color:white;
-    padding: 5px;
-    border-radius: 50px;
-    box-shadow:  22px 22px 44px #000000;
-    cursor: pointer;
-}
+
 
 .sub-filtro{
     background-color: black;

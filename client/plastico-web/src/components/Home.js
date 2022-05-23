@@ -81,7 +81,9 @@ export default function Home(){
                     onChange={(e) => {handleSearchBar(e)}}
                     />
                     <Link to={'/busqueda/' + search}>
-                    <img className="searchLupa" src={Lupa}/> 
+                        <div className="searchLupa">
+                            <img src={Lupa}/>
+                        </div> 
                     </Link>
                 </div>
             </div>

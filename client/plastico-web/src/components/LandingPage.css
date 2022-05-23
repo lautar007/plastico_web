@@ -202,13 +202,22 @@ h1{
 .searchBar input::placeholder{
     color:#1b1b1b
 }
-.searchBar img{
-    width: 40px;
-    height: 40px;
-    margin: 5px 15px;
-    background-color:white;
-    padding: 5px;
-    border-radius: 50px;
+.searchLupa{
+    background-color: white;
+    width: 45px;
+    height: 45px;
+    margin-top: 5px;
+    border-radius: 35px;
     box-shadow:  22px 22px 44px #000000;
+}
+.searchLupa img{
+    width: 30px;
+    height: 30px;
+    margin-top: 8px;
+    background-color:white;
     cursor: pointer;
+}
+.searchResults{
+    color:white;
+    font-family: 'Slenco-Black';
 }
