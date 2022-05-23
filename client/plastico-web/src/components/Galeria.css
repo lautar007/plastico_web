@@ -32,6 +32,7 @@
     width: 75%;
     height: inherit;
     margin:auto;
+    object-position: center;
     transition: opacity .5s;
 }
 
