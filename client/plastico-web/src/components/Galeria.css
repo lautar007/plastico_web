@@ -18,6 +18,7 @@
     padding: 30px;
     display: flex;
     flex-direction: row;
+    background-color: aqua;
 }
 .cont-gal ul, li{
     list-style: none;
@@ -32,7 +33,6 @@
     width: 75%;
     height: inherit;
     margin:auto;
-    object-position: center;
     transition: opacity .5s;
 }
 
