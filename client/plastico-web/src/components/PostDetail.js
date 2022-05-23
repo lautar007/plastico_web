@@ -36,9 +36,10 @@ export default function PostDetail(){
     function video(){
         console.log(publi.galeria[publi.galeria.length -1])
         if(publi.galeria[publi.galeria.length -1].includes('www.youtube.com')){
+            let videito = publi.galeria[publi.galeria.length -1].slice(32,43);
             return (
                 <div>
-                     <iframe width="484" height="480" src={publi.galeria[publi.galeria.length -1]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     <iframe width="484" height="480" src={videito} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             )
         }
