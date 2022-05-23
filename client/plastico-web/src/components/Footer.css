@@ -100,7 +100,7 @@
     color: white;
 }
 #cont-newsletter button{
-    margin: 25px 0px;
+    margin: 25px auto;
 }
 #news-nombre{
     width: 50%;
@@ -120,20 +120,20 @@
     justify-content: center;
 }
 #cont-pasantia button{
-    color: white;
+    color: black;
+    background-color: rgb(233, 35, 35);
     font-family: 'Slenco-Black';
-    background: none;
-    font-size: 20px;
+    font-size: 30px;
     width: 75%;
     transition: 500ms;
 }
 #cont-pasantia button:hover{
-    color:rgb(23, 221, 66);
+    color:white;
 }
 #cont-pasantia p{
     color: white;
     width: 75%;
-    font-size: 13px;
+    font-size: 20px;
 }
 
 
