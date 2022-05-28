@@ -25,7 +25,6 @@
 }
 .slider{
     object-position: center;
-    width: 80%;
 }
 .slider li{
     opacity: 0;
