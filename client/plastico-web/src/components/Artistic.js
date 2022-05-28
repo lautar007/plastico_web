@@ -39,7 +39,9 @@ export default function Artistic(){
             <div  className="searchBar1">
                     <button onClick={e => handleFilter(e)}>Filtros</button>
                     <Link to={'/busqueda/' + search}>
-                    <img className="searchLupa" src={Lupa}/> 
+                        <div className="searchLupa">
+                            <img src={Lupa}/>
+                        </div> 
                     </Link>
                     <input 
                     placeholder="Buscar por Nombre o Servicio"

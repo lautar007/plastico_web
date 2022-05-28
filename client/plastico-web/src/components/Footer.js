@@ -103,6 +103,10 @@ export default function Footer(){
                       <img id="logo-igB" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyfRA4kobPZT6hrUVOnFH4VDFfwC6S9P4L5s2OHG1YAWkhIYEKoEyaqavIe43qUuOVsmE&usqp=CAU"/>
                       <a href="https://www.behance.net/plasticoplastico">PLÁSTICO</a>
                   </div>
+                  <div id="cont-ig">
+                      <img id="logo-igB" src="https://i.pinimg.com/564x/15/7d/18/157d18d294a9e1810687cbba34a01118.jpg"/>
+                      <a href = 'https://ar.pinterest.com/plasticoestudiocreativo/_created/'>@plasticoestudiocreativo</a>
+                  </div>
               </div>
               <div id="cont-newsletter">
                   <h2>Subscribite al Newsletter</h2>

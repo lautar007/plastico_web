@@ -69,20 +69,6 @@ export default function PostDetail(){
                 </div>
             </div>
             <div>
-                <h1>Video</h1>
-                <div className="cont-galeria-post">
-                {
-                   publi.galeria && publi.galeria.length != 0 ?
-                   video()
-                   :
-                   <div>
-                   <h2>Esta publicación no contiene ningún video</h2>
-                   <hr/>
-                   </div>
-                }
-                </div>
-            </div>
-            <div>
                 <h1>Galería</h1>
                 <div className="cont-galeria-post">
                 {
@@ -103,6 +89,21 @@ export default function PostDetail(){
                     </div>
                 }
                 </div>
+                
+                <div>
+                <h1>Video</h1>
+                <div className="cont-galeria-post">
+                {
+                   publi.galeria && publi.galeria.length != 0 ?
+                   video()
+                   :
+                   <div>
+                   <h2>Esta publicación no contiene ningún video</h2>
+                   <hr/>
+                   </div>
+                }
+                </div>
+            </div>
             </div>
         </div>
     )
