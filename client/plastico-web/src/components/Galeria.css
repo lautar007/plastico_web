@@ -29,8 +29,8 @@
 }
 .slider li{
     opacity: 0;
-    width: 75px !important;
-    height: 100px !important;
+    width: 75px;
+    height: 100px;
     margin:auto;
     transition: opacity .5s;
 }
