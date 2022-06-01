@@ -8,7 +8,6 @@ import Blog from './components/Blog';
 import Form from './components/Form';
 import Home from './components/Home';
 import Landing from './components/Landing';
-import ToDo from './components/ToDo';
 import CardBlog from './components/CardBlog';
 import NewsDetail from './components/NewsDetail';
 import PostDetail from './components/PostDetail';
@@ -33,12 +32,11 @@ function App() {
         <Route exact path = '/comercial' element = {<div><NavBar/><Comercial/></div>}/>
         <Route exact path = '/admin' element = {<div><NavBar/><Admin/></div>}/>
         <Route exact path = '/blog' element = {<div><NavBar/><Blog/></div>}/>
-        <Route exact path = '/form' element = {<div><NavBar/><Form/></div>}/>
-        <Route exact path = '/plasticos' element ={<div><NavBar/><ToDo/></div>}/>
+        <Route exact path = '/aslfi234234/form' element = {<div><NavBar/><Form/></div>}/>
         <Route exact path = '/card' element ={<div><NavBar/><CardBlog/></div>}/>
         <Route exact path = '/blog/:id' element = {<div><NavBar/><NewsDetail/></div>}/>
-        <Route exact path = '/adminPost' element = {<div><NavBar/><PostAdmin/></div>}/>
-        <Route exact path = '/pasantias' element = {<div><NavBar/><Pasantias/></div>}/>
+        <Route exact path = '/greio237564/adminPost' element = {<div><NavBar/><PostAdmin/></div>}/>
+        <Route exact path = '/ewrju847205/pasantias' element = {<div><NavBar/><Pasantias/></div>}/>
         <Route exact path = '/staff' element = {<div><NavBar/><Staff/></div>}/>
         <Route exact path = '/busqueda/:search' element = {<div><NavBar/><Busqueda/></div>}/>
         <Route exact path = '/galeria/:id' element = {<div><NavBar/><Galeria/></div>}/>

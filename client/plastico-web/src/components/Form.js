@@ -31,7 +31,11 @@ export default function Form() {
 
     function handleGaleria(e){
         e.preventDefault();
-        input.galeria.push(e.target.value)
+        setInput({
+          ...input
+        })
+        input.galeria[e.target.name]= e.target.value
+        console.log(input.galeria)
     }
 
     function handleCheck(e){
@@ -101,14 +105,22 @@ export default function Form() {
                 onChange={(e)=> handleChange(e)}
               />
 
-              <label id='labels'>Imagen de Portada:</label>
+              <div className="div-imagenPortada">
+              
+              <label>Imagen de Portada:</label>
               <input
-                id='input-post'
                 type = 'text'
                 name = 'imagen'
                 placeholder="URL de la imagen principal"
                 onChange={(e)=> handleChange(e)}
               />
+
+                {
+                  input.imagen?
+                  <img id="img-adminPost" src={input.imagen} alt='imagen de portada'></img>:
+                  null
+                }
+              </div>
 
               <label id='labels'>*Categoria:</label>
               <div id="check-cat">
@@ -239,47 +251,82 @@ export default function Form() {
 
 
               <label id='labels'>imagenes de galería:</label>
+
+              <div className="div-imagenPortada">
               <input
-                id='input-post'
                 type = 'text'
-                name = 'galeria1'
+                name = {0}
                 placeholder="URL imagen 1"
                 onChange={(e)=> handleGaleria(e)}
               />
+              {
+                input.galeria[0]?
+                <img id="img-adminPost" alt='img galería 1' src={input.galeria[0]}></img>
+                : null
+              }
+              </div>
+
+              <div className="div-imagenPortada">
               <input
-                id='input-post'
                 type = 'text'
-                name = 'galeria2'
+                name = {1}
                 placeholder="URL imagen 2"
                 onChange={(e)=> handleGaleria(e)}
               />
+              {
+                input.galeria[1] != undefined?  
+                <img id="img-adminPost" alt='img galería 2' src={input.galeria[1]}></img>
+                : null
+              }
+              </div>
+
+              <div className="div-imagenPortada">
               <input
-                id='input-post'
                 type = 'text'
-                name = 'galeria3'
+                name = {2}
                 placeholder="URL imagen 3"
                 onChange={(e)=> handleGaleria(e)}
               />
+              {
+                input.galeria[2] != undefined?
+                <img id="img-adminPost" alt='img galería 3' src={input.galeria[2]}></img>
+                : null
+              }
+              </div>
+
+              <div className="div-imagenPortada">
               <input
-                id='input-post'
                 type = 'text'
-                name = 'galeria4'
+                name = {3}
                 placeholder="URL imagen 4"
                 onChange={(e)=> handleGaleria(e)}
               />
+              {
+                input.galeria[3] != undefined?
+                <img id="img-adminPost" alt='img galería 4' src={input.galeria[3]}></img>
+                : null
+              }
+              </div>
+
+              <div className="div-imagenPortada">
                  <input
-                id='input-post'
                 type = 'text'
-                name = 'galeria5'
+                name = {4}
                 placeholder="URL imagen 5"
                 onChange={(e)=> handleGaleria(e)}
               />
+              {
+                input.galeria[4] != undefined?
+                <img id="img-adminPost" alt='img galería 5' src={input.galeria[4]}></img>
+                : null
+              }
+              </div>
 
                <label id='labels'>Contenido Audiovisual:</label>
                <input
                 id='input-post'
                 type = 'text'
-                name = 'galeria5'
+                name = {5}
                 placeholder="URL de YouTube"
                 onChange={(e)=> handleGaleria(e)}
               />

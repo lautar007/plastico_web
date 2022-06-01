@@ -19,17 +19,18 @@ export default function Admin(){
     function handleSubmit(e){
         e.preventDefault();
         setEntrada(contraseña);
+        sessionStorage.name = contraseña
     }
 
     function nombres(){
         let nombre = ''
-        if(contraseña === 'lauchita'){
+        if(sessionStorage.name === 'lauchita'){
             nombre = 'Lautaro Nuñez'
         }
-        else if(contraseña === 'choripan'){
+        else if(sessionStorage.name === 'choripan'){
             nombre = 'Natalie Lopez'
         }
-        else if(contraseña === 'simio'){
+        else if(sessionStorage.name === 'simio'){
             nombre = 'Lautaro Robin'
         }
         return(
@@ -76,7 +77,7 @@ export default function Admin(){
     return(
         <div className="fondo-admin">
             {
-                entrada !== 'lauchita' && entrada !== 'choripan' && entrada !== 'simio'?
+                sessionStorage.name !== 'lauchita' && sessionStorage.name !== 'choripan' && sessionStorage.name !== 'simio'?
                 <div className="cont-img-input">
                     <div className="contraseña">
                         <h2 className="admins">Administradores</h2> 
@@ -101,22 +102,19 @@ export default function Admin(){
                 null
             }
             {
-                entrada === 'lauchita' || entrada === 'choripan' || entrada === 'simio' ?
+                sessionStorage.name === 'lauchita' || sessionStorage.name === 'choripan' || sessionStorage.name === 'simio' ?
                 <div>
                     <div>
                         {nombres()}
                     </div>
                     <div className="cont-botonesAdmin">
-                        <Link to='/plasticos'>
-                        <button className="btn-listita">Listita de Tareas</button>
-                        </Link>
-                        <Link to='/form'>
+                        <Link to='/aslfi234234/form'>
                         <button className="btn-form">Nueva Publicación</button>
                         </Link>
-                        <Link to = '/adminPost'>
+                        <Link to = '/greio237564/adminPost'>
                         <button className="btn-admin">Administrar publicaciones</button>
                         </Link>
-                        <Link to = '/pasantias'>
+                        <Link to = '/ewrju847205/pasantias'>
                         <button className='btn-pasSub'>Pasantías y Subscripciones</button>
                         </Link>
                     </div>  
