@@ -54,7 +54,7 @@ export default function PostDetail(){
     // --- zona de hardcodeo ----
     //Aquí se harcodea un array con URL de imágenes para reemplazar lo que llega de la DB y poder usarlo a nivel local.
     let hardGaleria = ['https://i.pinimg.com/564x/8f/9c/79/8f9c7953c5bb091debf7f2848ef1c319.jpg', 'https://i.pinimg.com/564x/23/dd/ec/23ddec61accdace2506689e799bbb053.jpg', 'https://i.pinimg.com/564x/22/b2/ca/22b2ca3e7e48cd74e56f8e96d93fe472.jpg', 'https://i.pinimg.com/564x/f8/e0/d4/f8e0d45fbfbef9d2c1ac9ad60ae079eb.jpg', 'https://i.pinimg.com/564x/a1/e8/a0/a1e8a09479fa66df0e58a6fbca1362ae.jpg']
-    let hardImagen = 'https://i.pinimg.com/564x/cf/e7/40/cfe740ab4c68389742d91a2780a3a9c6.jpg'
+    let hardImagen = 'https://i.pinimg.com/564x/12/f6/92/12f69233db7cc2c81f04fe34629afcba.jpg'
 
 
     return(
