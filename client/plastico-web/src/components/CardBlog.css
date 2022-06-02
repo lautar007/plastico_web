@@ -74,12 +74,12 @@
 }
 #img-blog-logo{
     background-color: black;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     object-fit:cover;
     border: solid black;
     border-width: 10px;
-    margin: 150px 150px;
+    margin: 100px 100px;
     border-radius: 20px;
 }
 #subt-blog{
