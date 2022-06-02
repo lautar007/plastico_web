@@ -25,6 +25,11 @@
         height: 300px !important;
         margin-left: 15px !important;
     }
+    #img-blog-logo{
+        width: 300px !important;
+        height: 300px !important;
+        margin-left: 15px !important;
+    }
     #subt-blog{
         width: 300px !important;
         height: 100px !important;
@@ -60,9 +65,19 @@
 #img-blog{
     width: 400px;
     height: 400px;
-    object-fit:contain;
+    object-fit:fill;
+    border: solid black;
+    border-width: 10px;
     margin: 0px 0px;
     
+}
+#img-blog-logo{
+    width: 400px;
+    height: 400px;
+    object-fit:cover;
+    border: solid black;
+    border-width: 10px;
+    margin: 0px 0px;
 }
 #subt-blog{
     color:rgb(0, 121, 196);
