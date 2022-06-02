@@ -65,7 +65,7 @@
 #img-blog{
     width: 400px;
     height: 400px;
-    object-fit:fill;
+    object-fit:scale-down;
     border: solid black;
     border-width: 10px;
     margin: 0px 0px;
