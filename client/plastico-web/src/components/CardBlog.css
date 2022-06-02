@@ -79,7 +79,8 @@
     object-fit:cover;
     border: solid black;
     border-width: 10px;
-    margin: auto;
+    margin: 150px 150px;
+    border-radius: 20px;
 }
 #subt-blog{
     color:rgb(0, 121, 196);
