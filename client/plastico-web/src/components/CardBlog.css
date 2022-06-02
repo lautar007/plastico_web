@@ -63,21 +63,23 @@
     margin: 20px 0px;
 }
 #img-blog{
+    background-color: black;
     width: 400px;
     height: 400px;
     object-fit:scale-down;
     border: solid black;
     border-width: 10px;
-    margin: 0px 0px;
+    margin: 10px 10px;
     
 }
 #img-blog-logo{
+    background-color: black;
     width: 400px;
     height: 400px;
     object-fit:cover;
     border: solid black;
     border-width: 10px;
-    margin: 0px 0px;
+    margin: 10px 10px;
 }
 #subt-blog{
     color:rgb(0, 121, 196);
@@ -138,4 +140,5 @@
 .cont-galeria{
     display: grid;
     grid-template-columns: auto auto;
+    justify-content: center;
 }

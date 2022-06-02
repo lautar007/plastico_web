@@ -1,4 +1,5 @@
 import React from "react";
+import LOGO from '../media/LOGO.png';
 import './CardBlog.css';
 
 export default function CardBlog({titulo, imagen, subtitulo, contenido, fecha, galeria}){
@@ -29,6 +30,7 @@ export default function CardBlog({titulo, imagen, subtitulo, contenido, fecha, g
                         )
                     })
                 }
+                <img src={LOGO} id='img-blog-logo'/>
                 </div>
                 <hr/>
                 <div id="disqus_thread"></div>
