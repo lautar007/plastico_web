@@ -64,8 +64,8 @@
 }
 #img-blog{
     background-color: black;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     object-fit:scale-down;
     border: solid black;
     border-width: 10px;
@@ -74,8 +74,8 @@
 }
 #img-blog-logo{
     background-color: black;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     object-fit:cover;
     border: solid black;
     border-width: 10px;
