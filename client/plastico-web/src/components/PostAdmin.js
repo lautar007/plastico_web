@@ -49,9 +49,11 @@ export default function PostAdmin (){
                                 <h4 id='label2'>Categoría:</h4>
                                 <p id="data">{post.categoria}</p>
                             </div>
-                            <div>
+                            <div className="botonesAdmin">
                                 <button id = 'B-delete' value={post.titulo} onClick={(e)=> handleDelete(e) }>Eliminar post</button>
-                                <button>Editar</button>
+                                <Link to={'/enkia924928/editionPost/' + post.id}>
+                                <button id="B-editar">Editar</button>
+                                </Link>
                             </div>
                         </div>
                     )
@@ -74,9 +76,11 @@ export default function PostAdmin (){
                                 <h4 id='label2'>Categoría:</h4>
                                 <p id="data">{post.categoria}</p>
                             </div>
-                            <div>
+                            <div className="botonesAdmin">
                                 <button id = 'B-delete' value={post.titulo} onClick={(e)=> handleDelete(e) }>Eliminar post</button>
-                                <button>Editar</button>
+                                <Link to={'/enkia924928/editionPost/' + post.id}>
+                                <button id="B-editar">Editar</button>
+                                </Link>
                             </div>
                         </div>
                     )
