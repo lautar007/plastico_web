@@ -10,6 +10,9 @@ import LOGO from '../media/LOGO.png';
 export default function PostDetail(){
 
     let {id} = useParams();
+
+    const hoy = new Date()
+    const fecha = hoy.getDate() + '-' + ( hoy.getMonth() + 1 ) + '-' + hoy.getFullYear();
     
     const dispatch = useDispatch();
     const publi = useSelector((state)=>state.Publicacion);
@@ -20,21 +23,29 @@ export default function PostDetail(){
     }, [dispatch]);
 
     const [input, setInput] = useState({
-        titulo: publi.titulo,
-        fecha: publi.fecha,
-        contenido: publi.contenido,
-        imagen: publi.imagen,
-        categoria: publi.categoria,
-        galeria: publi.galeria,
-        subtitulo: publi.subtitulo
+        titulo: '',
+        fecha: fecha,
+        contenido: '',
+        imagen:'',
+        categoria:'',
+        galeria:[],
+        subtitulo:''
     })
-
-    console.log(input)
 
 
     return(
         <div>
             <h1>Edición de post: {publi.titulo}</h1>
+
+            <div>
+            <label>Título</label>
+            <imput
+            name ='titulo'
+            type = 'text'
+            value= {publi.titulo}
+            />
+            </div>
+
         </div>
     )
 }
