@@ -3,6 +3,7 @@ import { useState, useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deletePost, getPublicaciones } from "../actions/actions";
 import { Link } from "react-router-dom";
+import './ToDo.css'
 
 //los estilos de esta página estan dentro de ToDo.css
 
