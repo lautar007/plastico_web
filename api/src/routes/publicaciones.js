@@ -66,4 +66,31 @@ server.delete('', async(req, res, next)=>{
     .catch(err => console.log(err))
 })
 
+server.put('/:id', async(req, res) =>{
+    const {id} = req.params;
+    let {
+        titulo,
+        fecha,
+        contenido,
+        imagen,
+        categoria,
+        galeria,
+        subtitulo
+    } = req.body;
+    Publicaciones.findOne({where:{id: id}})
+    .then(publicacion =>{
+        publicacion.update({
+            titulo: titulo,
+            fecha: fecha,
+            contenido: contenido,
+            imagen: imagen,
+            categoria: categoria,
+            galeria: galeria,
+            subtitulo: subtitulo
+        })
+        res.status(200).json(publicacion)
+    })
+    .catch(err => console.log(err))
+})
+
 module.exports = server
