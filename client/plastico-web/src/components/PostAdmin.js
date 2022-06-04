@@ -51,9 +51,7 @@ export default function PostAdmin (){
                             </div>
                             <div>
                                 <button id = 'B-delete' value={post.titulo} onClick={(e)=> handleDelete(e) }>Eliminar post</button>
-                                <Link to={'/enkia924928/editionPost/' + post.id}>
                                 <button>Editar</button>
-                                </Link>
                             </div>
                         </div>
                     )
@@ -78,9 +76,7 @@ export default function PostAdmin (){
                             </div>
                             <div>
                                 <button id = 'B-delete' value={post.titulo} onClick={(e)=> handleDelete(e) }>Eliminar post</button>
-                                <Link to={'/enkia924928/editionPost/' + post.id}>
                                 <button>Editar</button>
-                                </Link>
                             </div>
                         </div>
                     )
