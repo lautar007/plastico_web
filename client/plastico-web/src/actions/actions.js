@@ -98,7 +98,7 @@ export function putPublicacion(id, payload){
         })
         return dispatch({
             type: 'PUT_PUBLICACION',
-            payload: json.data
+            payload: data
         })
     }
 }
