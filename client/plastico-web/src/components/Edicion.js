@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect} from "react";
+import { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getPublicacion} from "../actions/actions";
@@ -18,6 +18,19 @@ export default function PostDetail(){
     useEffect(()=>{
         dispatch(getPublicacion(id)); 
     }, [dispatch]);
+
+    const [input, setInput] = useState({
+        titulo: publi.titulo,
+        fecha: publi.fecha,
+        contenido: publi.contenido,
+        imagen: publi.imagen,
+        categoria: publi.categoria,
+        galeria: publi.galeria,
+        subtitulo: publi.subtitulo
+    })
+
+    console.log(input)
+
 
     return(
         <div>
