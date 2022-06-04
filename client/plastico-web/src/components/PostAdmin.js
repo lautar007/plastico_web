@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deletePost, getPublicaciones } from "../actions/actions";
+import { Link } from "react-router-dom";
 
 //los estilos de esta página estan dentro de ToDo.css
 
@@ -47,7 +48,12 @@ export default function PostAdmin (){
                                 <h4 id='label2'>Categoría:</h4>
                                 <p id="data">{post.categoria}</p>
                             </div>
-                            <button id = 'B-delete' value={post.titulo} onClick={(e)=> handleDelete(e) }>Eliminar post</button>
+                            <div>
+                                <button id = 'B-delete' value={post.titulo} onClick={(e)=> handleDelete(e) }>Eliminar post</button>
+                                <Link to={'/enkia924928/editionPost/' + post.id}>
+                                <button>Editar</button>
+                                </Link>
+                            </div>
                         </div>
                     )
                 })
@@ -69,7 +75,12 @@ export default function PostAdmin (){
                                 <h4 id='label2'>Categoría:</h4>
                                 <p id="data">{post.categoria}</p>
                             </div>
-                            <button id = 'B-delete' value={post.titulo} onClick={(e)=> handleDelete(e) }>Eliminar post</button>
+                            <div>
+                                <button id = 'B-delete' value={post.titulo} onClick={(e)=> handleDelete(e) }>Eliminar post</button>
+                                <Link to={'/enkia924928/editionPost/' + post.id}>
+                                <button>Editar</button>
+                                </Link>
+                            </div>
                         </div>
                     )
                 })

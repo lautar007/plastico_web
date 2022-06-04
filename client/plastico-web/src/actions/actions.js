@@ -81,6 +81,28 @@ export function getPublicacion(id){
     }
 }
 
+export function putPublicacion(id, payload){
+    return async function (dispatch){
+        const data = await axios({
+            method: 'PUT',
+            data: {
+                titulo: payload.titulo,
+                fecha: payload.fecha,
+                contenido: payload.contenido,
+                imagen: payload.imagen,
+                categoria: payload.categoria,
+                galeria: payload.galeria,
+                subtitulo: payload.subtitulo
+            },
+            url: ('/publicaciones/' + id) 
+        })
+        return dispatch({
+            type: 'PUT_PUBLICACION',
+            payload: json.data
+        })
+    }
+}
+
 export function postCandidatos(payload){
     return async function (dispatch){
         const data = await axios({
@@ -155,3 +177,4 @@ export function getPortada(){
         })
     }
 }
+

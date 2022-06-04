@@ -18,6 +18,7 @@ import Staff from './components/Staff';
 import Busqueda from './components/Busqueda';
 import Galeria from './components/Galeria';
 import Hardcode from './components/Hardcode';
+import Edicion from './components/Edicion';
 
 
 
@@ -37,6 +38,7 @@ function App() {
         <Route exact path = '/card' element ={<div><NavBar/><CardBlog/></div>}/>
         <Route exact path = '/blog/:id' element = {<div><NavBar/><NewsDetail/></div>}/>
         <Route exact path = '/greio237564/adminPost' element = {<div><NavBar/><PostAdmin/></div>}/>
+        <Route exact path = '/enkia924928/editionPost/:id' element = {<div><NavBar/><Edicion/></div>}/>
         <Route exact path = '/ewrju847205/pasantias' element = {<div><NavBar/><Pasantias/></div>}/>
         <Route exact path = '/staff' element = {<div><NavBar/><Staff/></div>}/>
         <Route exact path = '/busqueda/:search' element = {<div><NavBar/><Busqueda/></div>}/>

@@ -56,6 +56,11 @@ function rootReducer(state = initialState, action){
                 ...state,
                 Portada: action.payload
             }
+        case 'PUT_PUBLICACION':
+            console.log(action.payload)
+            return{
+                ...state
+            }
 
         default:
             return state;
