@@ -482,7 +482,7 @@ export default function PostDetail(){
               />
               {
               input.galeria?
-              nuevoVideo()
+              console.log(input.galeria[input.galeria.length -1])
               :
               null
               }
