@@ -1,65 +1,484 @@
 import React from "react";
+import { useEffect, useState} from "react";
+import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getPublicacion, putPublicacion} from "../actions/actions";
+import { Link } from "react-router-dom";
+import './Edicion.css'
 import LOGO from '../media/LOGO.png';
-import './CardBlog.css';
 
-export default function CardBlog({titulo, imagen, subtitulo, contenido, fecha, galeria}){
+export default function PostDetail(){
 
-    let content = 'esto es un contenido de prueba'
+    let {id} = useParams();
 
-    const parrafos = content.split('\n');
+    const hoy = new Date()
+    const fecha = hoy.getDate() + '-' + ( hoy.getMonth() + 1 ) + '-' + hoy.getFullYear();
+    
+   
+    const publi = {
+        titulo: 'Título de prueba',
+        fecha: fecha,
+        contenido: 'lorem ipsum jajajaja que loco que estoy.Esto está hardcodeado',
+        imagen: 'https://i.pinimg.com/564x/34/bd/76/34bd76749c88dcd5b36c568b32f1076d.jpg',
+        categoria: 'comercial',
+        galeria: ['https://i.pinimg.com/564x/61/c1/59/61c159e7fafe0bed631b2e49698110a0.jpg', 'https://i.pinimg.com/736x/ea/d5/6d/ead56d600fded6ec4845615aedf42678.jpg', 'https://i.pinimg.com/564x/ac/11/48/ac1148fe839f4dccd04d1a6ac7aff1d8.jpg', 'https://i.pinimg.com/564x/03/eb/40/03eb406fa864c899e5dc1ab14401573e.jpg', 'https://i.pinimg.com/564x/00/3f/7e/003f7e394eecef55faeaffa2362111f2.jpg', 'https://i.pinimg.com/564x/a5/9f/16/a59f1617fefce6e74e004d9e7b3bdfe9.jpg', 'https://www.youtube.com/watch?v=CeKMHBOU6Jk&ab_channel=JimmyKimmelLive'],
+        subtitulo: 'Más pics de la Yeni Lorens, nunca supe como se escribe.'
+    }
 
-    let hardGaleria = ['https://i.pinimg.com/564x/8f/9c/79/8f9c7953c5bb091debf7f2848ef1c319.jpg', 'https://i.pinimg.com/564x/23/dd/ec/23ddec61accdace2506689e799bbb053.jpg', 'https://i.pinimg.com/564x/22/b2/ca/22b2ca3e7e48cd74e56f8e96d93fe472.jpg', 'https://i.pinimg.com/564x/f8/e0/d4/f8e0d45fbfbef9d2c1ac9ad60ae079eb.jpg', 'https://i.pinimg.com/564x/a1/e8/a0/a1e8a09479fa66df0e58a6fbca1362ae.jpg']
-    let hardImagen = 'https://i.pinimg.com/564x/12/f6/92/12f69233db7cc2c81f04fe34629afcba.jpg'
+    console.log(publi)
+
+    const [input, setInput] = useState({
+        titulo: '',
+        fecha: '',
+        contenido: '',
+        imagen:'',
+        categoria:'',
+        galeria:[],
+        subtitulo:''
+    })
+
+    //FUNCION PARA CAMBIAR TITULO, SUBTITULO, CONTENIDO E IMAGEN DE PORTADA
+    function handleChange(e){
+        e.preventDefault();
+        setInput({
+            ...input,
+            [e.target.name]: e.target.value
+        })
+        console.log(input)
+    }
+
+    //FUNCION PARA CAMBIAR LA CATEGORÍA DEL POST
+    function handleCheck(e){
+        if(e.target.checked){
+            setInput({
+                ...input,
+                categoria: e.target.value,
+            });
+            console.log(input.categoria)
+        }
+    }
+
+    //FUNCION PARA CAMBIAR LAS SUBCATEGORIAS
+    function handleSubCheck(e){
+        if(e.target.checked === false && input.subtitulo.includes(` #${e.target.value}`)){
+          input.subtitulo = input.subtitulo.replace(` #${e.target.value}`,'');
+        }
+        if(e.target.checked && !input.subtitulo.includes(e.target.value)){
+          setInput({
+            ...input,
+            subtitulo: input.subtitulo + ` #${e.target.value}`
+          })
+        }
+        console.log(input.subtitulo)
+      }
+
+    //FUNCION PARA CAMBIAR LAS IMAGENES DE LAS CATEGORÍAS
+    function handleGaleria(e){
+        e.preventDefault();
+        setInput({
+          ...input
+        })
+        input.galeria[e.target.name]= e.target.value
+        console.log(input.galeria)
+    }
+
+    
+    //FUNCION PARA LA VISUALIZACIÓN DE VIDEO ESTABLECIDO
+    function videoEstablecido(){
+        console.log(publi.galeria[publi.galeria.length -1])
+        if(publi.galeria[publi.galeria.length -1].includes('www.youtube.com')){
+            let videito = publi.galeria[publi.galeria.length -1].slice(32,43);
+            return (
+                <div>
+                     <iframe width="484" height="480" src={`https://www.youtube.com/embed/${videito}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            )
+        }
+        else return (
+            <div>
+                <h4 className="ed-origen">Esta publicación no contiene ningún video</h4>
+            </div>
+        )
+    }
+
+    //FUNCION PARA LA VISUALIZACIÓN DE UN NUEVO VIDEO
+    function nuevoVideo(){
+        console.log(input.galeria[input.galeria.length -1])
+        if(input.galeria.length > 0 && input.galeria[input.galeria.length -1].includes('www.youtube.com')){
+            let videito = input.galeria[input.galeria.length -1].slice(32,43);
+            return (
+                <div>
+                     <iframe width="484" height="480" src={`https://www.youtube.com/embed/${videito}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            )
+        }
+    }
+
+    //FUNCION IMPORTANTE PARA APLICAR LOS CAMBIOS!!!!
+    function handleSubmitPost(e){
+        e.preventDefault();
+       if(input.titulo === ''){
+           input.titulo = publi.titulo
+       }
+       if(input.subtitulo === ''){
+           input.subtitulo = publi.subtitulo
+       }
+       if(input.fecha ===''){
+           input.fecha = publi.fecha
+       }
+       if(input.imagen === ''){
+           input.imagen = publi.imagen
+       }
+       if(input.contenido === ''){
+           input.contenido = publi.contenido
+       }
+       if(input.categoria === ''){
+           input.categoria = publi.categoria
+       }
+       if(input.galeria[0] === undefined){
+           input.galeria[0] = publi.galeria[0]
+       }
+       if(input.galeria[1] === undefined){
+        input.galeria[1] = publi.galeria[1]
+    }
+    if(input.galeria[2] === undefined){
+        input.galeria[2] = publi.galeria[2]
+    }
+    if(input.galeria[3] === undefined){
+        input.galeria[3] = publi.galeria[3]
+    }
+    if(input.galeria[4] === undefined){
+        input.galeria[4] = publi.galeria[4]
+    }
+    if(input.galeria[5] === undefined){
+        input.galeria[5] = publi.galeria[5]
+    }
+    if(input.galeria[6] === undefined){
+        input.galeria[6] = publi.galeria[6]
+    }
+
+    console.log(input)
+    }
+
 
     return(
-        <div id="cont-blog">
-            <div id="paper-blog">
-                <h2 id="titulo-blog">Este es un post de blog hardcodeado</h2>
-                <hr></hr>
-                <div id="cont-img-blog">
-                    <img id="img-blog" src={hardImagen}/>
-                    <h2 id="subt-blog">Hola</h2>
-                </div>
-                {
-                    parrafos && parrafos.map((el) =>{
-                        return(
-                            <p id="content-blog" key={Math.random()}>{el}</p>
-                        )
-                    })
-                }
-                <div className="cont-galeria" key={Math.random()}>
-                {
-                    hardGaleria && hardGaleria.map(el=>{
-                        return(
-                                <img id="img-blog" key={Math.random()} src={el}></img>
-                        )
-                    })
-                }
-                <img src={LOGO} id='img-blog-logo'/>
-                </div>
-                <hr/>
-                <div id="disqus_thread"></div>
-{
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://plasticoestudio.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })()
-}
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                <hr/>
-                <p id="fecha-blog">fecha de publicación: 31/02/23</p>
+        <div>
+            <h1>Edición de post: {publi.titulo}</h1>
+
+            <div className="cont-edPost">
+            <form id="form-post">
+
+            <label className="ed-label">Título</label>
+            <h4 className="ed-origen">Cambiar '{publi.titulo}' por:</h4>
+            <input
+            id='input-post'
+            name ='titulo'
+            type = 'text'
+            onChange={(e)=> handleChange(e)}
+            />
+
+            <label className="ed-label">Subtítulo</label>
+            <h4 className="ed-origen">Cambiar '{publi.subtitulo.slice(0, 25)}...' por:</h4>
+            <input
+            id='input-post'
+            name ='subtitulo'
+            type = 'text'
+            onChange={(e)=> handleChange(e)}
+            />
+
+            <label className="ed-label">Contenido</label>
+            <h4 className="ed-origen">Cambiar '{publi.contenido.slice(0, 25)}...' por:</h4>
+            <textarea
+            id='input-postC'
+            type = 'text'
+            name = 'contenido'
+            onChange={(e)=> handleChange(e)}
+            />
+
+            <label className="ed-label">Imágen de portada</label>
+            <img 
+            id="img-edPost"
+            src={publi.imagen}/>
+            <h4 className="ed-origen">Cambiar por:</h4>
+            <div className="inputConImagen">
+            <input
+            id='input-post'
+            name ='imagen'
+            type = 'text'
+            placeholder="URL de la imagen"
+            onChange={(e)=> handleChange(e)}
+            />
+            {
+                  input.imagen?
+                  <img id="img-edPost" src={input.imagen} alt='imagen de portada'></img>:
+                  null
+            }
             </div>
+
+            <label className="ed-label">Cambio de Categoría</label>
+                <div>
+                <div>
+                  <label>Artistico</label> 
+                  <input
+                    type='checkbox'
+                    name="Artistico"
+                    value="artistico"
+                    onChange={(e)=> handleCheck(e)}
+                  /> 
+                </div>
+                     <div>
+                  <label>Comercial</label>
+                  <input
+                    type='checkbox'
+                    name="Comercial"
+                    value="comercial"
+                    onChange={(e)=> handleCheck(e)}
+                    />
+                </div>
+                <div> 
+                  <label>Noticia de Blog</label>
+                  <input
+                    type='checkbox'
+                    name="Noticia"
+                    value="noticia"
+                    onChange={(e)=> handleCheck(e)}
+                  />
+                </div> 
+                </div>
+
+            {
+            input.categoria === 'artistico'?
+            <div className="ed-labelSub">
+                <label className="ed-label">Subcategorías Artísticas</label>
+                <div id="check-cat">
+                <div>
+                  <label>Estilismo</label> 
+                  <input
+                    type='checkbox'
+                    name="Estilismo"
+                    value="estilismo"
+                    onChange={(e)=> handleSubCheck(e)}
+                  /> 
+                </div>
+                <div>
+                  <label>Dirección de Arte</label>
+                  <input
+                    type='checkbox'
+                    name="Direccion de Arte"
+                    value="direccion de arte"
+                    onChange={(e)=> handleSubCheck(e)}
+                    />
+                </div>
+                <div> 
+                  <label>Producción Fotográfica y de Video</label>
+                  <input
+                    type='checkbox'
+                    name="Produccion Fotográfica y de Video"
+                    value="produccion fotografica y de video"
+                    onChange={(e)=> handleSubCheck(e)}
+                  />
+                </div> 
+                <div> 
+                  <label>Postproducción Digital</label>
+                  <input
+                    type='checkbox'
+                    name="Postproduccion Digital"
+                    value="postproduccion digital"
+                    onChange={(e)=> handleSubCheck(e)}
+                  />
+                </div> 
+                <div> 
+                  <label>Dirección Creativa</label>
+                  <input
+                    type='checkbox'
+                    name="Dirección Creativa"
+                    value="direccion creativa"
+                    onChange={(e)=> handleSubCheck(e)}
+                  />
+                </div> 
+              </div>
+            </div>:
+            null
+            }
+            {
+                input.categoria === 'comercial'?
+                <div className="ed-labelSub">
+                   <label className="ed-label">Subcategorías Comerciales</label>
+                   <div id="check-cat">
+                <div>
+                  <label>Foto Producto</label> 
+                  <input
+                    type='checkbox'
+                    name="Foto Producto"
+                    value="foto producto"
+                    onChange={(e)=> handleSubCheck(e)}
+                  /> 
+                </div>
+                <div>
+                  <label>Diseño Gráfico & Branding</label>
+                  <input
+                    type='checkbox'
+                    name="Diseño Grafico & Branding"
+                    value="diseño grafico & branding"
+                    onChange={(e)=> handleSubCheck(e)}
+                    />
+                </div>
+                <div> 
+                  <label>Postproducción Digital / Motion Graphics</label>
+                  <input
+                    type='checkbox'
+                    name="Postproduccion Digital / Motion Graphics"
+                    value="postproduccion digital / motion graphics"
+                    onChange={(e)=> handleSubCheck(e)}
+                  />
+                </div> 
+              </div>
+                </div>:
+                null
+            }
+
+
+            <label className="ed-label">Imágenes de la Galería</label>
+            <div className="aclaracion">
+               <h4 className="ed-origen">Imagen establecida</h4>
+               <h4 className="ed-origen">-- Imagen nueva -- </h4>
+            </div>
+            <div className="div-imagenPortada">
+                <img
+                id="img-edGalPost"
+                src={publi.galeria[0]}
+                />
+              <input
+                type = 'text'
+                name = {0}
+                placeholder="URL imagen 1"
+                onChange={(e)=> handleGaleria(e)}
+              />
+              {
+                input.galeria[0] != undefined?
+                <img id="img-adminPost" alt='img galería 1' src={input.galeria[0]}></img>
+                : null
+              }
+              </div>
+
+              <div className="div-imagenPortada">
+              <img
+                id="img-edGalPost"
+                src={publi.galeria[1]}
+                />
+              <input
+                type = 'text'
+                name = {1}
+                placeholder="URL imagen 2"
+                onChange={(e)=> handleGaleria(e)}
+              />
+              {
+                input.galeria[1] != undefined?  
+                <img id="img-adminPost" alt='img galería 2' src={input.galeria[1]}></img>
+                : null
+              }
+              </div>
+
+              <div className="div-imagenPortada">
+              <img
+                id="img-edGalPost"
+                src={publi.galeria[2]}
+                />
+              <input
+                type = 'text'
+                name = {2}
+                placeholder="URL imagen 3"
+                onChange={(e)=> handleGaleria(e)}
+              />
+              {
+                input.galeria[2] != undefined?
+                <img id="img-adminPost" alt='img galería 3' src={input.galeria[2]}></img>
+                : null
+              }
+              </div>
+
+              <div className="div-imagenPortada">
+              <img
+                id="img-edGalPost"
+                src={publi.galeria[3]}
+                />
+              <input
+                type = 'text'
+                name = {3}
+                placeholder="URL imagen 4"
+                onChange={(e)=> handleGaleria(e)}
+              />
+              {
+                input.galeria[3] != undefined?
+                <img id="img-adminPost" alt='img galería 4' src={input.galeria[3]}></img>
+                : null
+              }
+              </div>
+
+              <div className="div-imagenPortada">
+              <img
+                id="img-edGalPost"
+                src={publi.galeria[4]}
+                />
+                 <input
+                type = 'text'
+                name = {4}
+                placeholder="URL imagen 5"
+                onChange={(e)=> handleGaleria(e)}
+              />
+              {
+                input.galeria[4] != undefined?
+                <img id="img-edGalPost" alt='img galería 5' src={input.galeria[4]}></img>
+                : null
+              }
+              </div>
+
+              <div className="div-imagenPortada">
+              <img
+                id="img-edGalPost"
+                src={publi.galeria[5]}
+                />
+                 <input
+                type = 'text'
+                name = {5}
+                placeholder="URL imagen 5"
+                onChange={(e)=> handleGaleria(e)}
+              />
+              {
+                input.galeria[5] != undefined?
+                <img id="img-edGalPost" alt='img galería 5' src={input.galeria[5]}></img>
+                : null
+              }
+              </div>
+
+
+              <label className="ed-label">Video</label>
+              <h4 className="ed-origen">Video establecido en el post:</h4>
+              {
+                  publi.galeria?
+                  videoEstablecido()
+                  :
+                  null
+              }
+              <h4 className="ed-origen">Colocar o Cabiar video por:</h4>
+               <input
+                id='input-post'
+                type = 'text'
+                name = {6}
+                placeholder="URL de YouTube"
+                onChange={(e)=> handleGaleria(e)}
+              />
+              {
+              input.galeria?
+              nuevoVideo()
+              :
+              null
+              }
+
+               <button id="ed-btn-crear" onClick={(e)=> handleSubmitPost(e)} >Aplicar los cambios</button>
+            </form>
+            </div>
+
         </div>
     )
 }
