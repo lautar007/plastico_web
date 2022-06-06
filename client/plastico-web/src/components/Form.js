@@ -17,7 +17,7 @@ export default function Form() {
         contenido: '',
         imagen:'',
         categoria:'',
-        galeria:[],
+        galeria:[undefined, undefined, undefined, undefined, undefined, undefined, undefined],
         subtitulo:''
     })
 
@@ -260,7 +260,7 @@ export default function Form() {
                 onChange={(e)=> handleGaleria(e)}
               />
               {
-                input.galeria[0]?
+                input.galeria[0] != undefined && input.galeria[0] != ''?
                 <img id="img-adminPost" alt='img galería 1' src={input.galeria[0]}></img>
                 : null
               }
@@ -274,7 +274,7 @@ export default function Form() {
                 onChange={(e)=> handleGaleria(e)}
               />
               {
-                input.galeria[1] != undefined?  
+                input.galeria[1] != undefined && input.galeria[1] != ''?  
                 <img id="img-adminPost" alt='img galería 2' src={input.galeria[1]}></img>
                 : null
               }
@@ -288,7 +288,7 @@ export default function Form() {
                 onChange={(e)=> handleGaleria(e)}
               />
               {
-                input.galeria[2] != undefined?
+                input.galeria[2] != undefined && input.galeria[2] != ''?
                 <img id="img-adminPost" alt='img galería 3' src={input.galeria[2]}></img>
                 : null
               }
@@ -302,7 +302,7 @@ export default function Form() {
                 onChange={(e)=> handleGaleria(e)}
               />
               {
-                input.galeria[3] != undefined?
+                input.galeria[3] != undefined && input.galeria[3] != ''?
                 <img id="img-adminPost" alt='img galería 4' src={input.galeria[3]}></img>
                 : null
               }
@@ -316,8 +316,22 @@ export default function Form() {
                 onChange={(e)=> handleGaleria(e)}
               />
               {
-                input.galeria[4] != undefined?
+                input.galeria[4] != undefined && input.galeria[4] != ''?
                 <img id="img-adminPost" alt='img galería 5' src={input.galeria[4]}></img>
+                : null
+              }
+              </div>
+
+              <div className="div-imagenPortada">
+                 <input
+                type = 'text'
+                name = {5}
+                placeholder="URL imagen 6"
+                onChange={(e)=> handleGaleria(e)}
+              />
+              {
+                input.galeria[5] != undefined && input.galeria[5] != ''?
+                <img id="img-adminPost" alt='img galería 5' src={input.galeria[5]}></img>
                 : null
               }
               </div>
@@ -326,7 +340,7 @@ export default function Form() {
                <input
                 id='input-post'
                 type = 'text'
-                name = {5}
+                name = {6}
                 placeholder="URL de YouTube"
                 onChange={(e)=> handleGaleria(e)}
               />
