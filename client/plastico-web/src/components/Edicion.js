@@ -338,10 +338,13 @@ export default function PostDetail(){
                <h4 className="ed-origen">-- Imagen nueva -- </h4>
             </div>
             <div className="div-imagenPortada">
-                <img
-                id="img-edGalPost"
-                src={publi.galeria[0]}
-                />
+                {publi.galeria? 
+                  <img
+                  id="img-edGalPost"
+                  src={publi.galeria[0]}
+                  />:
+                  null
+                }
               <input
                 type = 'text'
                 name = {0}
@@ -356,10 +359,13 @@ export default function PostDetail(){
               </div>
 
               <div className="div-imagenPortada">
-              <img
-                id="img-edGalPost"
-                src={publi.galeria[1]}
-                />
+              {publi.galeria? 
+                  <img
+                  id="img-edGalPost"
+                  src={publi.galeria[1]}
+                  />:
+                  null
+                }
               <input
                 type = 'text'
                 name = {1}
@@ -374,10 +380,13 @@ export default function PostDetail(){
               </div>
 
               <div className="div-imagenPortada">
-              <img
-                id="img-edGalPost"
-                src={publi.galeria[2]}
-                />
+              {publi.galeria? 
+                  <img
+                  id="img-edGalPost"
+                  src={publi.galeria[2]}
+                  />:
+                  null
+                }
               <input
                 type = 'text'
                 name = {2}
@@ -392,10 +401,13 @@ export default function PostDetail(){
               </div>
 
               <div className="div-imagenPortada">
-              <img
-                id="img-edGalPost"
-                src={publi.galeria[3]}
-                />
+              {publi.galeria? 
+                  <img
+                  id="img-edGalPost"
+                  src={publi.galeria[3]}
+                  />:
+                  null
+                }
               <input
                 type = 'text'
                 name = {3}
@@ -410,10 +422,13 @@ export default function PostDetail(){
               </div>
 
               <div className="div-imagenPortada">
-              <img
-                id="img-edGalPost"
-                src={publi.galeria[4]}
-                />
+              {publi.galeria? 
+                  <img
+                  id="img-edGalPost"
+                  src={publi.galeria[4]}
+                  />:
+                  null
+                }
                  <input
                 type = 'text'
                 name = {4}
@@ -428,10 +443,13 @@ export default function PostDetail(){
               </div>
 
               <div className="div-imagenPortada">
-              <img
-                id="img-edGalPost"
-                src={publi.galeria[5]}
-                />
+              {publi.galeria? 
+                  <img
+                  id="img-edGalPost"
+                  src={publi.galeria[5]}
+                  />:
+                  null
+                }
                  <input
                 type = 'text'
                 name = {5}
