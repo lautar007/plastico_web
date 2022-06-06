@@ -16,6 +16,7 @@ export default function PostDetail(){
 
     useEffect(()=>{
         dispatch(getPublicacion(id)); 
+        console.log('funciona')
     }, [dispatch]);
 
 
