@@ -11,7 +11,6 @@ export default function PostDetail(){
     let {id} = useParams();
     
     const dispatch = useDispatch();
-    dispatch(getPublicacion(id)); 
     const publi = useSelector((state)=>state.Publicacion);
     console.log(publi);
 
@@ -173,7 +172,7 @@ export default function PostDetail(){
             />
 
             <label className="ed-label">Subtítulo</label>
-            <h4 className="ed-origen">Cambiar '{publi.subtitulo.slice(0, 25)}...' por:</h4>
+            <h4 className="ed-origen">Cambiar Subtitulo por:</h4>
             <input
             id='input-post'
             name ='subtitulo'
@@ -182,7 +181,7 @@ export default function PostDetail(){
             />
 
             <label className="ed-label">Contenido</label>
-            <h4 className="ed-origen">Cambiar '{publi.contenido.slice(0, 25)}...' por:</h4>
+            <h4 className="ed-origen">Cambiar Contenido por:</h4>
             <textarea
             id='input-postC'
             type = 'text'
