@@ -16,7 +16,7 @@ export default function PostDetail(){
     const dispatch = useDispatch();
     useEffect(()=>{
         dispatch(getPublicacion(id)); 
-    }, [dispatch]);
+    }, [dispatch, id]);
 
     const publi = useSelector((state)=>state.Publicacion);
     console.log(publi);
@@ -351,7 +351,7 @@ export default function PostDetail(){
                 onChange={(e)=> handleGaleria(e)}
               />
               {
-                input.galeria[0] != undefined?
+                input.galeria[0] !== undefined?
                 <img id="img-adminPost" alt='img galería 1' src={input.galeria[0]}></img>
                 : null
               }
@@ -369,7 +369,7 @@ export default function PostDetail(){
                 onChange={(e)=> handleGaleria(e)}
               />
               {
-                input.galeria[1] != undefined?  
+                input.galeria[1] !== undefined?  
                 <img id="img-adminPost" alt='img galería 2' src={input.galeria[1]}></img>
                 : null
               }
@@ -387,7 +387,7 @@ export default function PostDetail(){
                 onChange={(e)=> handleGaleria(e)}
               />
               {
-                input.galeria[2] != undefined?
+                input.galeria[2] !== undefined?
                 <img id="img-adminPost" alt='img galería 3' src={input.galeria[2]}></img>
                 : null
               }
@@ -405,7 +405,7 @@ export default function PostDetail(){
                 onChange={(e)=> handleGaleria(e)}
               />
               {
-                input.galeria[3] != undefined?
+                input.galeria[3] !== undefined?
                 <img id="img-adminPost" alt='img galería 4' src={input.galeria[3]}></img>
                 : null
               }
@@ -423,7 +423,7 @@ export default function PostDetail(){
                 onChange={(e)=> handleGaleria(e)}
               />
               {
-                input.galeria[4] != undefined?
+                input.galeria[4] !== undefined?
                 <img id="img-edGalPost" alt='img galería 5' src={input.galeria[4]}></img>
                 : null
               }
@@ -441,7 +441,7 @@ export default function PostDetail(){
                 onChange={(e)=> handleGaleria(e)}
               />
               {
-                input.galeria[5] != undefined?
+                input.galeria[5] !== undefined?
                 <img id="img-edGalPost" alt='img galería 5' src={input.galeria[5]}></img>
                 : null
               }
