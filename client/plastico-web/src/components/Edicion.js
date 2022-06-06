@@ -20,7 +20,7 @@ export default function PostDetail(){
 
     const [input, setInput] = useState({
         titulo: '',
-        fecha: fecha,
+        fecha: '',
         contenido: '',
         imagen:'',
         categoria:'',
