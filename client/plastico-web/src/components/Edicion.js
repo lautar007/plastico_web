@@ -1,8 +1,9 @@
 import React from "react";
-import { useEffect, useState} from "react";
+import { useEffect} from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getPublicacion, putPublicacion} from "../actions/actions";
+import { getPublicacion} from "../actions/actions";
 import './Edicion.css'
 
 export default function PostDetail(){
