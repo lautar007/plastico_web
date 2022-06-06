@@ -8,17 +8,19 @@ import './Edicion.css'
 export default function PostDetail(){
 
     let {id} = useParams();
+    console.log(id)
 
     const hoy = new Date()
     const fecha = hoy.getDate() + '-' + ( hoy.getMonth() + 1 ) + '-' + hoy.getFullYear();
     
     const dispatch = useDispatch();
-    const publi = useSelector((state)=>state.Publicacion);
-    console.log(publi);
-
     useEffect(()=>{
         dispatch(getPublicacion(id)); 
     }, [dispatch]);
+
+    const publi = useSelector((state)=>state.Publicacion);
+    console.log(publi);
+
 
     const [input, setInput] = useState({
         titulo: '',
