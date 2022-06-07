@@ -174,6 +174,7 @@ export default function PostDetail(){
             />
 
             <label className="ed-label">Subtítulo</label>
+            <p>En caso de cambiar el subtítulo es pertinente volver a colocar las subcategorías.</p>
             <h4 className="ed-origen">Cambiar Subtitulo por:</h4>
             <input
             id='input-post'
