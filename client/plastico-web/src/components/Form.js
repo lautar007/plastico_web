@@ -205,6 +205,15 @@ export default function Form() {
                     onChange={(e)=> handleSubCheck(e)}
                   />
                 </div> 
+                <div> 
+                  <label>Videoclip</label>
+                  <input
+                    type='checkbox'
+                    name="Videoclip"
+                    value="videclip"
+                    onChange={(e)=> handleSubCheck(e)}
+                  />
+                </div>
               </div>
                 </div>
                 :
@@ -240,6 +249,15 @@ export default function Form() {
                     type='checkbox'
                     name="Postproduccion Digital / Motion Graphics"
                     value="postproduccion digital / motion graphics"
+                    onChange={(e)=> handleSubCheck(e)}
+                  />
+                </div> 
+                <div> 
+                  <label>Institucional</label>
+                  <input
+                    type='checkbox'
+                    name="Institucional"
+                    value="institucional"
                     onChange={(e)=> handleSubCheck(e)}
                   />
                 </div> 
