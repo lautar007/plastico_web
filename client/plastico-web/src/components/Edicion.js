@@ -79,9 +79,9 @@ export default function PostDetail(){
     
     //FUNCION PARA LA VISUALIZACIÓN DE VIDEO ESTABLECIDO
     function videoEstablecido(){
-        console.log(publi.galeria[publi.galeria.length -1])
-        if(publi.galeria[publi.galeria.length -1].includes('www.youtube.com')){
-            let videito = publi.galeria[publi.galeria.length -1].slice(32,43);
+        console.log(publi.galeria[6])
+        if(publi.galeria[6] && publi.galeria[6].includes('www.youtube.com')){
+            let videito = publi.galeria[6].slice(32,43);
             return (
                 <div>
                      <iframe width="484" height="480" src={`https://www.youtube.com/embed/${videito}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
