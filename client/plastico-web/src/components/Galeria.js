@@ -38,22 +38,22 @@ export default function Galeria () {
 
             <ul id = 'galeria-M'>
               <li>
-                  <a href ='#0'><img id= 'img-blog-gal' src={gal[0]? gal[0]: logo}/></a>
+                  <a href ='#0'><img id= 'img-blog' src={gal[0]? gal[0]: logo}/></a>
               </li>
               <li>
-                  <a href="#1"><img id= 'img-blog-gal' src={gal[1]? gal[1]: logo}/></a>
+                  <a href="#1"><img id= 'img-blog' src={gal[1]? gal[1]: logo}/></a>
               </li>
               <li>
-                  <a href="#2"><img id= 'img-blog-gal' src={gal[2]? gal[2]: logo}/></a>  
+                  <a href="#2"><img id= 'img-blog' src={gal[2]? gal[2]: logo}/></a>  
               </li>
               <li>
-                  <a href="#3"><img id= 'img-blog-gal' src={gal[3]? gal[3]: logo}/></a>
+                  <a href="#3"><img id= 'img-blog' src={gal[3]? gal[3]: logo}/></a>
               </li>
               <li>
-                  <a href="#4"><img id= 'img-blog-gal' src={gal[4]? gal[4]: logo}/></a>
+                  <a href="#4"><img id= 'img-blog' src={gal[4]? gal[4]: logo}/></a>
               </li>
               <li>
-                  <a href="#5"><img id= 'img-blog-gal' src={gal[5]? gal[5]: logo}/></a>
+                  <a href="#5"><img id= 'img-blog' src={gal[5]? gal[5]: logo}/></a>
               </li>
             </ul>
 
