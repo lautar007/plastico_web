@@ -3,7 +3,8 @@
         grid-template-columns: auto !important;
     }
     #img-blog-gal{
-        margin-left: 0px !important;
+        width: 350px !important;
+        height: 350px !important;
     }
     .imagen-modal a:nth-child(1){
         position: absolute;
@@ -21,11 +22,17 @@
     display: grid;
     grid-template-columns: auto auto;
     padding-left: 0px;
+    list-style: none;
 }
 #img-blog-gal{
-    width: 300px;
-    height: 300px;
-    margin-left: 15px;
+    background-color: black;
+    width: 400px;
+    height: 400px;
+    object-fit:scale-down;
+    border: solid black;
+    border-width: 10px;
+    margin: 10px 10px;
+    
 }
 
 .modal{
