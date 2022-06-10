@@ -35,8 +35,11 @@ export default function Galeria () {
         <button className="btn-contraseña">Volver</button>
         </Link>
         <div className="cont-gal">
-
-            <ul id = 'galeria-M'>
+            {
+                gal?
+                <div>
+                    <div>
+                     <ul id = 'galeria-M'>
               <li>
                   <a href ='#0'><img id= 'img-blog-gal' src={gal[0]? gal[0]: logo}/></a>
               </li>
@@ -57,7 +60,7 @@ export default function Galeria () {
               </li>
             </ul>
 
-        </div>
+            </div>
 
         <div className="modal" id="0">
             <div className="imagen-modal">
@@ -112,7 +115,11 @@ export default function Galeria () {
             </div>
             <a className="cerrar-modal" href="">X</a>
         </div>
-
+                </div>
+                :
+                <h1>Cargando...</h1>
+            }
+    </div>
     </div>
     )
 }
