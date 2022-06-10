@@ -79,7 +79,7 @@ export default function PostDetail(){
                 publi.galeria.map(img =>{
                     if(img &&(img.includes('jpg') || img.includes('png'))){
                     return(
-                            <Link to={ '/galeria/' + id + '#slider1'}>
+                            <Link to={ '/galeria/' + id}>
                                 <img id="img-blog" key={Math.random()} src={img}></img>
                             </Link>
                     )
