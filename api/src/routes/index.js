@@ -6,6 +6,7 @@ const publicaciones = require('./publicaciones');
 const tareas = require('./tareas');
 const candidatos = require('./candidatos');
 const portada = require('./portada');
+const mensajes = require('./mensajes')
 
 const router = Router();
 
@@ -16,6 +17,7 @@ router.use('/publicaciones', publicaciones);
 router.use('/tareas', tareas);
 router.use('/candidatos', candidatos);
 router.use('/portada', portada);
+router.use('/mensajes', mensajes);
 
 
 
