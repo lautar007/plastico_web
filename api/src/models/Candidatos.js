@@ -10,7 +10,7 @@ module.exports = (sequelize) => {
     },
     edad:{
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: true
     },
     mail: {
         type: DataTypes.STRING,
@@ -27,6 +27,14 @@ module.exports = (sequelize) => {
     pasantia: {
         type: DataTypes.BOOLEAN,
         defaultValue: false
+    },
+    contacto:{
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+    },
+    mensaje:{
+        type: DataTypes.TEXT,
+        allowNull: true
     }
 },
 {
