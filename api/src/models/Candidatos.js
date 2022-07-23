@@ -27,14 +27,6 @@ module.exports = (sequelize) => {
     pasantia: {
         type: DataTypes.BOOLEAN,
         defaultValue: false
-    },
-    contacto:{
-        type: DataTypes.BOOLEAN,
-        defaultValue: false
-    },
-    mensaje:{
-        type: DataTypes.TEXT,
-        allowNull: true
     }
 },
 {
