@@ -32,6 +32,22 @@
         width: 25% !important;
     }
 
+    .cont-mensajes{
+        flex-direction: column !important;
+    }
+    .mensajes-inputs{
+        height: 30px !important;
+        margin: auto !important;
+    }
+
+    .mensajes-cuerpo{
+        width: 100% !important;
+    }
+    #input-mensaje{
+        height: 75px !important;
+
+    }
+
 }
 
 
@@ -218,4 +234,33 @@
     color: white;
     text-align: left;
     margin-left: 25px;
+}
+
+.mensajes-inputs{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 10px 5%;
+}
+.mensajes h2{
+    color: white;
+}
+.mensajes p{
+    color:white;
+}
+.mensajes-inputs input{
+    margin:auto 5px;
+    height: 15px;
+    padding: 0px;
+}
+.cont-mensajes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.mensajes-cuerpo{
+    width: 40%;
+}
+#input-mensaje{
+    height: 125px;
+    width: 90%;
 }

@@ -87,6 +87,33 @@ export default function Footer(){
 
     return(
         <div>
+            <hr/>
+            <div className="mensajes">
+                <h2>Dejanos un mensaje o consulta:</h2>
+                <div className="cont-mensajes">
+                    <div>
+                        <div className="mensajes-inputs">
+                            <p>Nombre:</p>
+                            <input></input>
+                        </div>
+                        <div className="mensajes-inputs">
+                            <p>Email:</p>
+                            <input></input>
+                        </div>
+                        <div className="mensajes-inputs">
+                            <p>Teléfono (opcional):</p>
+                            <input></input>
+                        </div>
+                    </div>
+                    <div className="mensajes-cuerpo">
+                        <p>Mensaje:</p>
+                        <textarea
+                        id="input-mensaje"
+                        />
+                    </div>
+                </div>
+            </div>
+            <hr/>
           <div id = 'cont-Footer'>
               <div id="cont-redes">
                   <h2>Seguinos:</h2>
