@@ -87,7 +87,6 @@ export default function Footer(){
 
     return(
         <div>
-            <hr/>
             <div className="mensajes">
                 <h2>Dejanos un mensaje o consulta:</h2>
                 <div className="cont-mensajes">
