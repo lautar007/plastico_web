@@ -34,7 +34,7 @@ server.get('', (req, res, next)=>{
             res.status(200).json(mensaje)
         }
         else{
-            res.status(404).send('No hay candidatos/as')
+            res.status(404).send('No hay mensajes')
         }
     })
 })
