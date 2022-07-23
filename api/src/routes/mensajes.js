@@ -39,4 +39,13 @@ server.get('', (req, res, next)=>{
     })
 })
 
+server.delete('', async(req, res, next)=>{
+    let {nombre} = req.body;
+    await Mensajes.destroy({where:{nombre: nombre}})   
+    .then(
+        res.send('Mensaje Eliminado')
+    )
+    .catch(err => console.log(err))
+})
+
 module.exports = server
