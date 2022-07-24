@@ -178,3 +178,18 @@ export function getPortada(){
     }
 }
 
+export function postMensajes(payload){
+    return async function (dispatch){
+        const data = await axios({
+            method: 'POST',
+            data:{
+                nombre: payload.nombre,
+                mail: payload.mail,
+                telefono: payload.telefono,
+                mensaje: payload.mensaje,
+            },
+            url:'/mensajes'
+        })
+        return data;
+    }
+}

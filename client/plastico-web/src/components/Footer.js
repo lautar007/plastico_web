@@ -2,7 +2,7 @@ import React from "react";
 import './Footer.css';
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { postCandidatos } from "../actions/actions";
+import { postCandidatos, postMensajes } from "../actions/actions";
 
 
 export default function Footer(){
@@ -13,7 +13,7 @@ export default function Footer(){
         nombre: '',
         edad: 0,
         mail: '',
-        telefono: 'no tiene',
+        telefono: 'no proporcionó',
         newsletter: false,
         pasantia: false
     })
@@ -83,7 +83,41 @@ export default function Footer(){
             alert('Debe rellenar los campos con su información para que podamos contactarle')
         }
     }
+// DESDE AQUÍ SE MANEJA LA MENSAJERÍA -----------------------------------
+    const [mensaje, setMensaje] = useState({
+        nombre: '',
+        mail: '',
+        telefono: 'no proporcionó',
+        mensaje: ''
+    })
+
+    function handleChangeMensajes(e){
+        e.preventDefault();
+        setMensaje({
+            ...mensaje,
+            [e.target.name]: e.target.value,
+        })
+        console.log(mensaje);
+    }
     
+    function handleSubmitMensajes (e){
+        e.preventDefault();
+        if(mensaje.nombre.length > 2 && mensaje.mail.length > 5 && mensaje.mensaje){
+            dispatch(postMensajes(mensaje));
+            alert('Gracias por el mensaje, nos pondremos en contacto pronto.');
+            setMensaje({
+                nombre: '',
+                mail: '',
+                telefono: 'no proporcionó',
+                mensaje: ''
+            })
+        }
+        else {
+            alert('Debe rellenar los campos con su información y un mensaje para que podamos contactarle')
+        }
+    }
+
+// HASTA AQUÍ SE MANEJA LA MENSAJERÍA ------------------------------------
 
     return(
         <div>
@@ -93,22 +127,37 @@ export default function Footer(){
                     <div>
                         <div className="mensajes-inputs">
                             <p>Nombre:</p>
-                            <input></input>
+                            <input
+                            name = 'nombre'
+                            onChange={(e)=> handleChangeMensajes(e)}
+                            />
                         </div>
                         <div className="mensajes-inputs">
                             <p>Email:</p>
-                            <input></input>
+                              <input
+                            name = 'mail'
+                            onChange={(e)=> handleChangeMensajes(e)}
+                            />
                         </div>
                         <div className="mensajes-inputs">
                             <p>Teléfono (opcional):</p>
-                            <input></input>
+                              <input
+                            name = 'telefono'
+                            onChange={(e)=> handleChangeMensajes(e)}
+                            />
                         </div>
                     </div>
                     <div className="mensajes-cuerpo">
                         <p>Mensaje:</p>
                         <textarea
                         id="input-mensaje"
+                        name="mensaje"
+                        onChange={(e)=> handleChangeMensajes(e)}
                         />
+                        <button 
+                        className="btn-contraseña"
+                        onClick={(e)=> handleSubmitMensajes(e)}
+                        >Enviar</button>
                     </div>
                 </div>
             </div>
