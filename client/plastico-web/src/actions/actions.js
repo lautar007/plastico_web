@@ -203,3 +203,15 @@ export function getMensajes(){
         })
     }
 }
+
+export function deleteMensaje(nombre){
+    return async function(dispatch){
+        const data = await axios({
+            method: "DELETE",
+            data:{nombre: nombre},
+            url: '/mensajes',
+        })
+        .then(resultado => dispatch({type: 'DELETE_MENSAJE', payload:resultado}))
+        .catch(err => alert(err))
+    }
+}

@@ -67,6 +67,10 @@ function rootReducer(state = initialState, action){
                 ...state,
                 Mensajes: action.payload
             }
+        case 'DELETE_MENSAJE':
+                return{
+                    ...state
+                }
 
         default:
             return state;

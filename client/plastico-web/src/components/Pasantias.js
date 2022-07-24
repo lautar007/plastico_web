@@ -2,7 +2,7 @@ import React from 'react';
 import './Pasantia.css';
 import {useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deletePasante, getMensajes, getPasantes } from '../actions/actions';
+import { deleteMensaje, deletePasante, getMensajes, getPasantes } from '../actions/actions';
 
 export default function Pasantias (){
 
@@ -31,6 +31,12 @@ export default function Pasantias (){
         dispatch(deletePasante(e.target.name));
         window.location.reload();
     }
+
+    function handleDeleteMensaje(e){
+        e.preventDefault();
+        dispatch(deleteMensaje(e.target.name));
+        window.location.reload();
+    }
     
     return(
         <div>
@@ -55,7 +61,7 @@ export default function Pasantias (){
                                         <h3>Teléfono:</h3>
                                         <p>{el.telefono}</p>
                                     </div>
-                                    <button name={el.nombre} >Eliminar</button>
+                                    <button name={el.nombre} onClick={(e)=> handleDeleteMensaje(e)} >Eliminar</button>
                                 </div>
                                 <div className='item2'>
                                     <h3>Mensaje:</h3>
