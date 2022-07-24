@@ -37,28 +37,30 @@ export default function Pasantias (){
             <h1 className='tit-pas'>Mensajería</h1>
             <hr/>
             <div className='cont-newsSub'>
-                <h2>Hay {mensajes.length} mensajes:</h2>
+            <h2>Hay {mensajes.length} mensajes:</h2>
                 {
                     mensajes && mensajes.map(el=>{
                         return(
-                            <div key={Math.random()} className='sub-list'>
-                                <div className='item'>
-                                    <h3>Nombre:</h3>
-                                    <p>{el.nombre}</p>
+                            <div>
+                                <div key={Math.random()} className='sub-list2'>
+                                    <div className='item'>
+                                        <h3>Nombre:</h3>
+                                        <p>{el.nombre}</p>
+                                    </div>
+                                    <div className='item'>
+                                        <h3>E-mail:</h3>
+                                        <p>{el.mail}</p>
+                                    </div>
+                                    <div className='item'>
+                                        <h3>Teléfono:</h3>
+                                        <p>{el.telefono}</p>
+                                    </div>
+                                    <button name={el.nombre} >Eliminar</button>
                                 </div>
-                                <div className='item'>
-                                    <h3>E-mail:</h3>
-                                    <p>{el.mail}</p>
-                                </div>
-                                <div className='item'>
-                                    <h3>Teléfono:</h3>
-                                    <p>{el.telefono}</p>
-                                </div>
-                                <div className='item'>
+                                <div className='item2'>
                                     <h3>Mensaje:</h3>
                                     <p>{el.mensaje}</p>
                                 </div>
-                                <button name={el.nombre} >Eliminar</button>
                             </div>
                         )
                     })

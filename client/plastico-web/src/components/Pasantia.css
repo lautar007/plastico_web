@@ -18,6 +18,11 @@
         width: 50% !important;
         margin: 10px auto !important;
     }
+    .item2{
+        display: flex !important;
+        flex-direction: column !important;
+        margin: 5px !important;
+    }
 }
 
 .tit-pas{
@@ -100,4 +105,40 @@
     background-color: black;
     color: rgb(2,145,236);
     border-color: rgb(2,145,236);
+}
+
+.sub-list2{
+    display: grid;
+    grid-template-columns: 20% 32% 20% 15%;
+    justify-content: left;
+    background-color: black;
+    border-top: solid thin rgb(2,145,236);
+    height: fit-content;
+    padding-left: 5%;
+}
+.sub-list2 button{
+    height:30px;
+    margin-top: 12px;
+    cursor: pointer;
+    background-color: rgb(2,145,236);
+    color: black;
+    border-color: black;
+    transition: 500ms;
+}
+.sub-list2 button:hover{
+    background-color: black;
+    color: rgb(2,145,236);
+    border-color: rgb(2,145,236);
+}
+.item2{
+    background-color: black;
+    color: rgb(2,145,236);
+    display: flex;
+    flex-direction: row;
+}
+.item2 p{
+margin: auto;
+}
+.item2 h3{
+    margin-left: 2%;
 }
