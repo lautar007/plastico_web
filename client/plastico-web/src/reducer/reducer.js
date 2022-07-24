@@ -7,7 +7,8 @@ const initialState = {
     Noticia: [],
     Publicacion:{},
     Candidatos: [],
-    Portada: []
+    Portada: [],
+    Mensajes: []
 }
 
 function rootReducer(state = initialState, action){
@@ -60,6 +61,11 @@ function rootReducer(state = initialState, action){
             console.log(action.payload)
             return{
                 ...state
+            }
+        case 'GET_MENSAJES':
+            return{
+                ...state,
+                Mensajes: action.payload
             }
 
         default:

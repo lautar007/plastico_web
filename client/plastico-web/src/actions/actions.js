@@ -193,3 +193,13 @@ export function postMensajes(payload){
         return data;
     }
 }
+
+export function getMensajes(){
+    return async function(dispatch){
+        var json = await axios.get('/mensajes');
+        return dispatch({
+            type: 'GET_MENSAJES',
+            payload: json.data
+        })
+    }
+}
