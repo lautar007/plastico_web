@@ -36,8 +36,8 @@ export default function Artistic(){
             <div>
                 <h1>trabajos artísticos</h1>
             </div>
-            <div  className="searchBar1">
-                    <button onClick={e => handleFilter(e)}>Filtros</button>
+            <div>
+                <div className="searchBar1">              
                     <Link to={'/busqueda/' + search}>
                         <div className="searchLupa">
                             <img src={Lupa}/>
@@ -47,6 +47,8 @@ export default function Artistic(){
                     placeholder="Buscar por Nombre o Servicio"
                     onChange={(e) => {handleSearchBar(e)}}
                     />
+                </div>
+                <button className="filtros-btn" onClick={e => handleFilter(e)}>Filtros</button>
             </div>
             <div className="cont-cards">
                 {
@@ -82,7 +84,10 @@ export default function Artistic(){
                    </Link>
                    <Link className="link" to='/busqueda/direccion creativa'>
                       <li>Dirección Creativa</li>
-                   </Link>          
+                   </Link>   
+                   <Link className="link" to='/busqueda/direccion creativa'>
+                      <li>Videoclip</li>
+                   </Link>        
                </div>
                :
                null

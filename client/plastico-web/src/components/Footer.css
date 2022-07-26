@@ -37,7 +37,7 @@
     }
     .mensajes-inputs{
         height: 30px !important;
-        margin: auto !important;
+        margin: 10px 5% !important;
     }
 
     .mensajes-cuerpo{
@@ -238,8 +238,8 @@
 
 .mensajes-inputs{
     display: grid;
-    grid-template-columns: auto auto;
-    margin: 10px 5%;
+    grid-template-columns: 20% 80%;
+    margin: 10px 0%;
 }
 .mensajes h2{
     color: white;
@@ -247,9 +247,14 @@
 .mensajes p{
     color:white;
 }
+.mensajes-inputs p{
+    margin-right: 30%;
+}
 .mensajes-inputs input{
-    margin:auto 5px;
+    margin-top: 20px;
+    margin-left: 5%;
     height: 15px;
+    width: 225px;
     padding: 0px;
 }
 .cont-mensajes{

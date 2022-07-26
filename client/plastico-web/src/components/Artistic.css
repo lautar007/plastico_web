@@ -3,6 +3,10 @@
         display: flex !important;
         flex-direction: column !important;
     }
+    .searchBar1 input{
+        margin: auto 0px 5px 0px !important;
+        height: 25px !important;
+    }
 }
 
 .cont-cards{
@@ -17,9 +21,9 @@
     justify-content: space-between;
     margin: 20px auto auto auto;
     right: auto;
-    width: 60%;
+    width: 90%;
 }
-.searchBar1 button{
+.filtros-btn{
     font-size: 20px;
     height: 55px;
     border-radius: 50px;
@@ -36,6 +40,7 @@
     background: linear-gradient(145deg, white, #cecece);
     box-shadow:  22px 22px 44px #000000;
     padding: 5px 15px;
+    margin-bottom: 5px;
     font-family: 'Slenco-Black';
 }
 .searchBar1 input::placeholder{
@@ -47,7 +52,7 @@
     background-color: black;
     color: white;
     position: absolute;
-    left: 20%;
+    left: 55%;
     top: 250px;
     padding: 10px;
     border-radius: 20px;

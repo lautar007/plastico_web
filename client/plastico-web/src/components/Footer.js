@@ -140,7 +140,7 @@ export default function Footer(){
                             />
                         </div>
                         <div className="mensajes-inputs">
-                            <p>Teléfono (opcional):</p>
+                            <p>Teléfono: (opcional)</p>
                               <input
                             name = 'telefono'
                             onChange={(e)=> handleChangeMensajes(e)}

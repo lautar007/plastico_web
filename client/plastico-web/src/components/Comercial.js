@@ -36,8 +36,8 @@ export default function Comercial(){
             <div>
                 <h1>trabajos comerciales</h1>
             </div>
-            <div  className="searchBar1">
-                    <button onClick={e => handleFilter(e)}>Filtros</button>
+            <div>
+                <div className="searchBar1">              
                     <Link to={'/busqueda/' + search}>
                         <div className="searchLupa">
                             <img src={Lupa}/>
@@ -47,6 +47,8 @@ export default function Comercial(){
                     placeholder="Buscar por Nombre o Servicio"
                     onChange={(e) => {handleSearchBar(e)}}
                     />
+                </div>
+                <button className="filtros-btn" onClick={e => handleFilter(e)}>Filtros</button>
             </div>
             <div className="cont-cards">
                 {
@@ -76,6 +78,9 @@ export default function Comercial(){
                    </Link>
                    <Link className="link" to='/busqueda/motion grafics'>
                       <li>Postproducción Digital / Motion Graphics</li>
+                   </Link>
+                   <Link className="link" to='/busqueda/motion grafics'>
+                      <li>Institucional</li>
                    </Link>
                </div>
                :
