@@ -139,3 +139,9 @@
     background-color: rgb(23, 221, 66);
     border-radius: 15px;
 }
+.link-wpp{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0%;
+    right: 0%;
+}
