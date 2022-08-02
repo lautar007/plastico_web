@@ -181,6 +181,10 @@ export default function Footer(){
                       <img id="logo-igB" src="https://i.pinimg.com/564x/15/7d/18/157d18d294a9e1810687cbba34a01118.jpg"/>
                       <a href = 'https://ar.pinterest.com/plasticoestudiocreativo/_created/'>@plasticoestudiocreativo</a>
                   </div>
+                  <div id="cont-ig">
+                      <img id="logo-igB" src="https://i.pinimg.com/564x/2b/e7/ce/2be7cee4fe404b8fa86d31d139fab757.jpg"/>
+                      <a href = 'https://www.linkedin.com/in/pl%C3%A1stico-estudio-93a885221/'>Plastico Estudio</a>
+                  </div>
               </div>
               <div id="cont-newsletter">
                   <h2>Subscribite al Newsletter</h2>
@@ -198,6 +202,7 @@ export default function Footer(){
                   />
                   <button className="btn-contraseña" onClick={(e)=> handleSubmit(e)}>Enviar</button>
               </div>
+              <hr/>
               <div id="cont-pasantia">
                   <button onClick={(e)=> handlePasantia(e)}>Trabaja con nosotrxs.</button>
                   <p>Dejanos tus datos si te interesa trabajar en nuestras producciones.</p>
