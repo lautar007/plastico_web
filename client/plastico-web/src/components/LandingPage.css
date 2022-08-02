@@ -67,6 +67,7 @@
     }
     .link-wpp{
         top: 90% !important;
+        right: 20% !important;
     }
 }
 
@@ -256,8 +257,8 @@ h1{
 
 .link-wpp{
     position: absolute;
-    top:80%;
-    right:20%;
+    top:100vh;
+    right:5%;
     width: 5%;
     height: 110px;
     
