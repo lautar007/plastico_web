@@ -147,3 +147,6 @@
     grid-template-columns: auto auto;
     justify-content: center;
 }
+.link-comentarios{
+    background-color: aqua;
+}
