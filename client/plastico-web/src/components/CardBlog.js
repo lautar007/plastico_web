@@ -34,7 +34,7 @@ export default function CardBlog({titulo, imagen, subtitulo, contenido, fecha, g
                 <img src={LOGO} id='img-blog-logo'/>
                 </div>
                 <Link id="link" to={'/blog/' + id}>
-                    <h6 className="link-comentarios">Comentarios...</h6>
+                    <h4 className="link-comentarios">Comentarios...</h4>
                 </Link>
                 <hr/>
                 <p id="fecha-blog">fecha de publicación: {fecha}</p>
