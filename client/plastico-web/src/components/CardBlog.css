@@ -151,4 +151,6 @@
     justify-content: left;
     color:black;
     width: 20%;
+    border-color: black;
+    border-radius: 15px;
 }
