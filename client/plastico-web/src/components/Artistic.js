@@ -34,7 +34,7 @@ export default function Artistic(){
     return (
         <div>
             <div>
-                <h1>trabajos artísticos</h1>
+                <h1>ArtWork</h1>
             </div>
             <div>
                 <div className="searchBar1">              

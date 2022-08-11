@@ -16,7 +16,7 @@
 .manifest{
     background-color:rgb(233, 225, 51);
     margin: 20px 5%;
-    text-align: justify;
+    text-align:left;
     padding: 15px 2%;
     border-radius: 49px;
 box-shadow:  7px 7px 14px #000000,
@@ -37,9 +37,14 @@ box-shadow:  7px 7px 14px #000000,
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/vector-gratis/estudio-fotografico-focos-fondo-blanco_107791-633.jpg?w=740&t=st=1659477663~exp=1659478263~hmac=fc5b7b3f8034af47293eae1cbd6a36763e688b1f59bdd9072bd5db9eec2a41fe');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:difference;
+    background-color: rgba(0,0,0,0.6);
 }
 .staff img{
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     border-radius: 50px;
     box-shadow:  7px 7px 14px #000000,
              -7px -7px 14px #2f2f2f;
