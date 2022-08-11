@@ -50,8 +50,8 @@ export default function Admin(){
     //---------------------------------
 
     const [input, setInput] = useState({
-        imagenA: '',
-        imagenB: ''
+        imagenA: portadas[0].imagenA,
+        imagenB: portadas[0].imagenB
     })
 
     function handleChange(e){
