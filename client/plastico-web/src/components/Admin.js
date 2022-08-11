@@ -57,13 +57,13 @@ export default function Admin(){
     function handleChange(e){
         e.preventDefault();
         console.log(portadas[0].imagenA, portadas[0].imagenB)
-        if(e.target.name === 'imagenA' && !input.imagenB){
+        if(e.target.name === 'imagenA'){
         setInput({
             imagenA: e.target.value, 
             imagenB: portadas[0].imagenB
         });
         }
-        else if(e.target.name === 'imagenB' && !input.imagenA){
+        else if(e.target.name === 'imagenB'){
             setInput({
                 imagenA: portadas[0].imagenA,
                 imagenB: e.target.value 
