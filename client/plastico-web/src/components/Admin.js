@@ -60,12 +60,19 @@ export default function Admin(){
             imagenA: portadas[0].imagenA,
             imagenB: portadas[0].imagenB
         })
-        if(e.target.value){
+        console.log(input)
+        if(e.target.name == 'imagenA'){
         setInput({
             ...input,
-            [e.target.name]: e.target.value 
+            imagenA: e.target.value 
         });
-    }
+        }
+        else if(e.target.name == 'imagenB'){
+            setInput({
+                ...input,
+                imagenB: e.target.value 
+            });
+        }
         console.log(input);
     }
 
