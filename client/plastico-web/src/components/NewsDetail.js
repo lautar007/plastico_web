@@ -17,8 +17,9 @@ export default function NewsDetail(){
         dispatch(getPublicacion(id)); 
     }, [dispatch]);
     
- 
+    if(noticia.contenido){
     const parrafos = noticia.contenido.split('\n');
+    }
 
     return(
         <div id="cont-blog">
