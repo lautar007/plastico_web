@@ -56,20 +56,16 @@ export default function Admin(){
 
     function handleChange(e){
         e.preventDefault();
-        setInput({
-            imagenA: portadas[0].imagenA,
-            imagenB: portadas[0].imagenB
-        })
-        console.log(input)
+        console.log(portadas[0].imagenA, portadas[0].imagenB)
         if(e.target.name == 'imagenA'){
         setInput({
-            ...input,
-            imagenA: e.target.value 
+            imagenA: e.target.value, 
+            imagenB: portadas[0].imagenB
         });
         }
         else if(e.target.name == 'imagenB'){
             setInput({
-                ...input,
+                imagenA: portadas[0].imagenA,
                 imagenB: e.target.value 
             });
         }
