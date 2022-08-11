@@ -56,6 +56,9 @@ export default function Blog () {
                                 fecha = {el.fecha}
                                 galeria = {el.galeria}
                                 />
+                                <Link id="link" to={'/blog/' + el.id}>
+                                    <h6>Comentarios...</h6>
+                                </Link>
                             </div>
                         )
                     })
