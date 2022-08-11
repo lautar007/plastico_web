@@ -18,7 +18,7 @@ export default function NewsDetail(){
     }, [dispatch]);
     
  
-    //const parrafos = noticia.contenido.split('\n');
+    const parrafos = noticia.contenido.split('\n');
 
     return(
         <div id="cont-blog">
@@ -30,10 +30,12 @@ export default function NewsDetail(){
                 <h2 id="subt-blog">"{noticia.subtitulo}"</h2>
             </div>
             {
-                noticia.contenido ?
-                        <p id="content-blog" key={Math.random()}>{noticia.contenido}</p>
-                        : null
-            }
+                    parrafos && parrafos.map((el) =>{
+                        return(
+                            <p id="content-blog" key={Math.random()}>{el}</p>
+                        )
+                    })
+                }
             <div className="cont-galeria" key={Math.random()}>
             {
                 noticia.galeria && noticia.galeria.map(el=>{
