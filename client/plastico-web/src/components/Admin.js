@@ -57,17 +57,29 @@ export default function Admin(){
     function handleChange(e){
         e.preventDefault();
         console.log(portadas[0].imagenA, portadas[0].imagenB)
-        if(e.target.name == 'imagenA'){
+        if(e.target.name == 'imagenA' && !input.imagenB){
         setInput({
             imagenA: e.target.value, 
             imagenB: portadas[0].imagenB
         });
         }
-        else if(e.target.name == 'imagenB'){
+        else if(e.target.name == 'imagenB' && !input.imagenA){
             setInput({
                 imagenA: portadas[0].imagenA,
                 imagenB: e.target.value 
             });
+        }
+        else if(e.target.name == 'imagenA' && input.imagenB != portadas[0].imagenB){
+            setInput({
+                ...input,
+                imagenA: e.target.value
+            })
+        }
+        else if(e.target.name == 'imagenB' && input.imagenA != portadas[0].imagenA){
+            setInput({
+                ...input,
+                imagenB: e.target.value
+            })
         }
         console.log(input);
     }
