@@ -16,7 +16,8 @@
     }
 
     .vent-pasantia{
-        bottom: -550px !important;
+        bottom: -200% !important;
+        left: 15% !important;
     }
     .vent-pasantia h2{
         margin: 20px 40px 40px 40px;

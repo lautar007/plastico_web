@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import {useDispatch, useSelector} from 'react-redux';
 import { Link } from "react-router-dom";
-import { deletePortada, postPortada } from "../actions/actions";
+import { deletePortada, postPortada, getPortada } from "../actions/actions";
 import './Admin.css';
 
 export default function Admin(){
@@ -10,6 +10,15 @@ export default function Admin(){
     const dispatch = useDispatch();
     const [contraseña, setContraseña] = useState('false')
     const [entrada, setEntrada] = useState('false')
+
+
+    const portadas = useSelector((state)=> state.Portada);
+
+    useEffect(()=>{
+        dispatch(getPortada()); 
+    }, [dispatch]);
+
+    console.log(portadas);
 
     function handleInputChange(e){
         e.preventDefault();
