@@ -54,32 +54,38 @@ export default function Admin(){
         imagenB: ''
     })
 
-    function handleChange(e){
+    function handleChangeA(e){
         e.preventDefault();
         console.log(portadas[0].imagenA, portadas[0].imagenB)
-        if(e.target.name === 'imagenA'){
+        if(input.imagenB && input.imagenB !== portadas[0].imagenB){
         setInput({
-            imagenA: e.target.value, 
-            imagenB: portadas[0].imagenB
+            ...input,
+            imagenA: e.target.value
         });
         }
-        else if(e.target.name === 'imagenB'){
+        else {
             setInput({
-                imagenA: portadas[0].imagenA,
-                imagenB: e.target.value 
+                imagenA: e.target.value,
+                imagenB: portadas[0].imagenB 
             });
         }
-        else if(e.target.name === 'imagenA' && input.imagenB !== portadas[0].imagenB){
-            setInput({
-                ...input,
-                imagenA: e.target.value
-            })
+        console.log(input);
+    }
+
+    function handleChangeB(e){
+        e.preventDefault();
+        console.log(portadas[0].imagenA, portadas[0].imagenB)
+        if(input.imagenA && input.imagenA !== portadas[0].imagenA){
+        setInput({
+            ...input,
+            imagenB: e.target.value
+        });
         }
-        else if(e.target.name === 'imagenB' && input.imagenA !== portadas[0].imagenA){
+        else {
             setInput({
-                ...input,
+                imagenA: portadas[0].imagenA,
                 imagenB: e.target.value
-            })
+            });
         }
         console.log(input);
     }
@@ -156,7 +162,7 @@ export default function Admin(){
                             <input
                             placeholder="URL de la imagen"
                             name="imagenA"
-                            onChange={(e) => handleChange(e)}
+                            onChange={(e) => handleChangeA(e)}
                             />
                         </div>
                         <div className="input-portada">
@@ -164,7 +170,7 @@ export default function Admin(){
                             <input
                             placeholder="URL de la imagen"
                             name="imagenB"
-                            onChange={(e) => handleChange(e)}
+                            onChange={(e) => handleChangeB(e)}
                             />
                         </div>
                         <button className="btn-portada" onClick={(e)=> borrarPortada(e)}>Borrar Portada</button>
