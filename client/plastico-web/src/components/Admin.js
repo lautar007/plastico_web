@@ -50,16 +50,22 @@ export default function Admin(){
     //---------------------------------
 
     const [input, setInput] = useState({
-        imagenA: portadas[0].imagenA,
-        imagenB: portadas[0].imagenB
+        imagenA: '',
+        imagenB: ''
     })
 
     function handleChange(e){
         e.preventDefault();
         setInput({
+            imagenA: portadas[0].imagenA,
+            imagenB: portadas[0].imagenB
+        })
+        if(e.target.value){
+        setInput({
             ...input,
             [e.target.name]: e.target.value 
         });
+    }
         console.log(input);
     }
 
