@@ -17,10 +17,7 @@ export default function NewsDetail(){
         dispatch(getPublicacion(id)); 
     }, [dispatch]);
     
-    if(noticia.contenido){
-    const parrafos = noticia.contenido.split('\n');
-    }
-
+ 
     return(
         <div id="cont-blog">
         <div id="paper-blog">
@@ -31,12 +28,10 @@ export default function NewsDetail(){
                 <h2 id="subt-blog">"{noticia.subtitulo}"</h2>
             </div>
             {
-                    parrafos && parrafos.map((el) =>{
-                        return(
-                            <p id="content-blog" key={Math.random()}>{el}</p>
-                        )
-                    })
-                }
+                noticia.contenido ?
+                        <p id="content-blog" key={Math.random()}>{noticia.contenido}</p>
+                        : null
+            }
             <div className="cont-galeria" key={Math.random()}>
             {
                 noticia.galeria && noticia.galeria.map(el=>{
