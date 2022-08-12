@@ -17,6 +17,7 @@ import Pasantias from './components/Pasantias';
 import Staff from './components/Staff';
 import Busqueda from './components/Busqueda';
 import Galeria from './components/Galeria';
+import Plastiverso from './components/Plastiverso'
 import Hardcode from './components/Hardcode';
 import Edicion from './components/Edicion';
 
@@ -43,7 +44,9 @@ function App() {
         <Route exact path = '/staff' element = {<div><NavBar/><Staff/></div>}/>
         <Route exact path = '/busqueda/:search' element = {<div><NavBar/><Busqueda/></div>}/>
         <Route exact path = '/galeria/:id' element = {<div><NavBar/><Galeria/></div>}/>
+        <Route exact path = '/plastiverso' element = {<div><NavBar/><Plastiverso/></div>}/>
         <Route exact path = '/hardcode' element = {<div><NavBar/><Hardcode/></div>}/>
+        
       </Routes>
     </div>
     </BrowserRouter>

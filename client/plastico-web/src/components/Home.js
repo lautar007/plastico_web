@@ -97,6 +97,9 @@ export default function Home(){
                         <Link to='/staff'>
                         <button>Quienes Somos</button>
                         </Link>
+                        <Link to='/plastiverso'>
+                        <button>Plastiverso</button>
+                        </Link>
                     </div>
                     :
                     null    
