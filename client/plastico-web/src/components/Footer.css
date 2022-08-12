@@ -55,7 +55,7 @@
 #cont-Footer{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 
@@ -144,6 +144,7 @@
     font-size: 30px;
     width: 75%;
     transition: 500ms;
+    margin-top: 12%;
 }
 #cont-pasantia button:hover{
     color:white;
@@ -251,6 +252,7 @@
 }
 .mensajes-inputs p{
     margin-right: 30%;
+    
 }
 .mensajes-inputs input{
     margin-top: 20px;
@@ -263,9 +265,11 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-left: -3%;
 }
 .mensajes-cuerpo{
     width: 40%;
+    margin-left: 1%;
 }
 #input-mensaje{
     height: 125px;

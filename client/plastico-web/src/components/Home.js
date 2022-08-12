@@ -102,11 +102,6 @@ export default function Home(){
                     null    
                 }
             </div>
-            <div className="link-wpp">
-                <a className="linkAWpp" href="https://api.whatsapp.com/send?phone=+543513257629&text=Hola%20Pl%C3%A1stico,%20quiero%20hacer%20una%20consulta:%20">
-                <img src="https://i.pinimg.com/564x/ea/ef/ca/eaefcad3d9695ae94098674193faf554.jpg" className= 'whatsapp-btn'></img>
-                </a>
-            </div>
         </div>
     )
 }

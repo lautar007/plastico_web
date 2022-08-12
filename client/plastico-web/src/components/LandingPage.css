@@ -99,6 +99,7 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    height: 100vh;
 }
 
 .artistic{
@@ -248,18 +249,17 @@ h1{
     height: 100px;
     width: 100px;
     border-radius: 50px;
-    position : sticky;
-    bottom:0;
-     font-size: 30px;
-     color: white;
-     background-color:  #3991bd;
-}
+    font-size: 30px;
+    color: white;
+    margin: -15px 25% 0 25%;
 
-.link-wpp{
-    position: absolute;
-    top:100vh;
-    right:5%;
-    width: 5%;
-    height: 110px;
+}
+.escribinos{
+    margin-left: 20%;
+    margin-top: 45px;
+    padding: 0;
     
+}
+.link-wpp{
+    margin-left: 5%;
 }
