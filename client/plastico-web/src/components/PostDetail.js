@@ -15,12 +15,7 @@ export default function PostDetail(){
     const publi = useSelector((state)=>state.Publicacion);
     console.log(publi);
     
-    var parrafos = []
-
-    if(publi){
-    parrafos = publi.contenido.split('\n');
-    }
-
+    
     console.log(parrafos)
 
     useEffect(()=>{
