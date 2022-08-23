@@ -121,7 +121,6 @@ export default function PostDetail(){
                 {
                    publi.galeria && publi.galeria.length != 0 ?
                    <div>
-                   <h1>Video</h1>
                    {video()}
                    </div>
                    :
