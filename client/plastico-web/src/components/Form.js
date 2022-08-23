@@ -27,6 +27,11 @@ export default function Form() {
             ...input,
             [e.target.name]: e.target.value
         })
+        console.log(input.contenido)
+    }
+
+    function handleFormato(e){
+      
     }
 
     function handleGaleria(e){
@@ -104,6 +109,13 @@ export default function Form() {
                 placeholder="Cuerpo de la publicación"
                 onChange={(e)=> handleChange(e)}
               />
+
+              <div>
+                <button name = 'negrita' onClick={(e)=> handleFormato(e)}><b>N</b></button>
+                <button name = 'cursiva' onClick={(e)=> handleFormato(e)}><i>K</i></button>
+                <button name = 'subrayado' onClick={(e)=> handleFormato(e)}><u>U</u></button>
+                <button name = 'tachado'onClick={(e)=> handleFormato(e)}><s>S</s></button>
+              </div>
 
               <div className="div-imagenPortada">
               
@@ -278,7 +290,7 @@ export default function Form() {
                 onChange={(e)=> handleGaleria(e)}
               />
               {
-                input.galeria[0] != undefined && input.galeria[0] != ''?
+                input.galeria[0] !== undefined && input.galeria[0] !== ''?
                 <img id="img-adminPost" alt='img galería 1' src={input.galeria[0]}></img>
                 : null
               }
@@ -292,7 +304,7 @@ export default function Form() {
                 onChange={(e)=> handleGaleria(e)}
               />
               {
-                input.galeria[1] != undefined && input.galeria[1] != ''?  
+                input.galeria[1] !== undefined && input.galeria[1] !== ''?  
                 <img id="img-adminPost" alt='img galería 2' src={input.galeria[1]}></img>
                 : null
               }
