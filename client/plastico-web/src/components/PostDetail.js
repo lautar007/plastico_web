@@ -16,8 +16,6 @@ export default function PostDetail(){
     console.log(publi);
     
     
-    console.log(parrafos)
-
     useEffect(()=>{
         dispatch(getPublicacion(id)); 
     }, [dispatch]);
