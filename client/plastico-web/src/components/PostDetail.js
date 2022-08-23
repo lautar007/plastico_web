@@ -55,6 +55,7 @@ export default function PostDetail(){
 
     function handleParrafos (){
         parrafos = publi.contenido.split('\n')
+        return ''
     }
 
 
