@@ -116,16 +116,16 @@ export default function PostDetail(){
                 </div>
                 
                 <div>
-                <h1>Video</h1>
+                
                 <div className="cont-galeria-post">
                 {
                    publi.galeria && publi.galeria.length != 0 ?
-                   video()
-                   :
                    <div>
-                   <h2>Esta publicación no contiene ningún video</h2>
-                   <hr/>
+                   <h1>Video</h1>
+                   {video()}
                    </div>
+                   :
+                   null
                 }
                 </div>
             </div>
