@@ -14,8 +14,14 @@ export default function PostDetail(){
     const dispatch = useDispatch();
     const publi = useSelector((state)=>state.Publicacion);
     console.log(publi);
+    
+    var parrafos = []
 
-    const parrafos = publi.contenido.split('\n');
+    if(publi){
+    parrafos = publi.contenido.split('\n');
+    }
+
+    console.log(parrafos)
 
     useEffect(()=>{
         dispatch(getPublicacion(id)); 
@@ -62,13 +68,7 @@ export default function PostDetail(){
                     <h1>{publi.titulo}</h1>
                     <hr/>
                     <h2>{publi.subtitulo}</h2>
-                    {
-                    parrafos && parrafos.map((el) =>{
-                        return(
-                            <p id="content-blog" key={Math.random()}>{el}</p>
-                        )
-                    })
-                    }
+                    <p>{publi.contenido}</p>
                     <hr/>
                     <p1>Fecha de publicación: {publi.fecha}</p1>
                     <p1>Galería de fotos, abajo ↓</p1>
