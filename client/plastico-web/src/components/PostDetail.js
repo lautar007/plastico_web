@@ -53,6 +53,10 @@ export default function PostDetail(){
         )
     }
 
+    function handleParrafos (){
+        parrafos = publi.contenido.split('\n')
+    }
+
 
     return(
         <div>
@@ -64,7 +68,7 @@ export default function PostDetail(){
                     <h2>{publi.subtitulo}</h2>
                     {
                         publi.contenido ?
-                        parrafos = publi.contenido.split('\n')
+                        handleParrafos()
                        :
                        null
                     }
