@@ -30,9 +30,6 @@ export default function Form() {
         console.log(input.contenido)
     }
 
-    function handleFormato(e){
-      
-    }
 
     function handleGaleria(e){
         e.preventDefault();
@@ -109,13 +106,6 @@ export default function Form() {
                 placeholder="Cuerpo de la publicación"
                 onChange={(e)=> handleChange(e)}
               />
-
-              <div>
-                <button name = 'negrita' onClick={(e)=> handleFormato(e)}><b>N</b></button>
-                <button name = 'cursiva' onClick={(e)=> handleFormato(e)}><i>K</i></button>
-                <button name = 'subrayado' onClick={(e)=> handleFormato(e)}><u>U</u></button>
-                <button name = 'tachado'onClick={(e)=> handleFormato(e)}><s>S</s></button>
-              </div>
 
               <div className="div-imagenPortada">
               
