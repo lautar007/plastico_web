@@ -14,7 +14,7 @@ export default function Home(){
     const[carga, setCarga] = useState(true)
     setTimeout(() => {
         setCarga(false)
-    }, 7000);
+    }, 5000);
     const [search, setSearch] = useState('');
 
     const portadas = useSelector((state)=> state.Portada);
