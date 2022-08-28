@@ -11,6 +11,10 @@ export default function Home(){
 
     const dispatch = useDispatch();
     const [menu, setMenu] = useState(false);
+    const[carga, setCarga] = useState(true)
+    setTimeout(() => {
+        setCarga(false)
+    }, 7000);
     const [search, setSearch] = useState('');
 
     const portadas = useSelector((state)=> state.Portada);
@@ -20,6 +24,8 @@ export default function Home(){
     }, [dispatch]);
 
     console.log(portadas);
+    console.log(carga);
+
 
     function portadaProviderA(){
         if(portadas.length > 0){
@@ -60,6 +66,14 @@ export default function Home(){
 
     return (
         <div>
+            {
+                carga === true?
+                <div className="pantallaCarga">
+                    <h1>Cargando</h1>
+                </div>
+                :
+                null
+            }
             <div className="estructure">
                 <div className="artistic" style={{backgroundImage: `url(${portadaArt})`}}>
                 <Link className="logo" to= '/'>
@@ -105,6 +119,7 @@ export default function Home(){
                     null    
                 }
             </div>
+          
         </div>
     )
 }
