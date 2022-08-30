@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getPortada } from "../actions/actions";
 import { useEffect } from "react";
 import Lupa from '../media/Lupa.png';
+import logoCarga from '../media/plasticopng.mp4'
 
 export default function Home(){
 
@@ -14,7 +15,7 @@ export default function Home(){
     const[carga, setCarga] = useState(true)
     setTimeout(() => {
         setCarga(false)
-    }, 5000);
+    }, 7000);
     const [search, setSearch] = useState('');
 
     const portadas = useSelector((state)=> state.Portada);
@@ -69,6 +70,7 @@ export default function Home(){
             {
                 carga === true?
                 <div className="pantallaCarga">
+                    <video src={logoCarga} type="video/mp4" autoPlay muted loop></video>
                     <h1>Cargando</h1>
                 </div>
                 :
