@@ -26,7 +26,7 @@ hr{
     width: 40%;
     height: 70vh;
     object-fit: scale-down;
-    background-color: aqua;
+    background-color: black;
     border-right: solid black 15px; 
     border-bottom: solid black 15px;
 }
