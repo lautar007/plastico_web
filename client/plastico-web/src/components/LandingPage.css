@@ -255,22 +255,22 @@ h1{
 }
 
 .whatsapp-btn{
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
     border-radius: 50px;
     font-size: 30px;
     color: white;
-    margin: -15px 25% 0 25%;
+    margin: -15px 11vw 0 5vw;
 
 }
 .escribinos{
-    margin-left: 20%;
+    margin-left: -7vw;
     margin-top: 45px;
     padding: 0;
     
 }
 .link-wpp{
-    margin-left: 5%;
+    margin-left: -3vw;
 }
 
 .pantallaCarga{
