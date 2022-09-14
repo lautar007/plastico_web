@@ -265,8 +265,9 @@ h1{
 }
 .escribinos{
     margin-left: -6.5vw;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    font-size: 28px;
     padding: 0;
     
 }
