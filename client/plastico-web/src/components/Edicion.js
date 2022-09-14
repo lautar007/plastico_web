@@ -167,6 +167,7 @@ export default function PostDetail(){
             <label className="ed-label">Título</label>
             <h4 className="ed-origen">Cambiar '{publi.titulo}' por:</h4>
             <input
+            value = {publi.titulo}
             id='input-post'
             name ='titulo'
             type = 'text'
@@ -177,6 +178,7 @@ export default function PostDetail(){
             <p>En caso de cambiar el subtítulo es pertinente volver a colocar las subcategorías.</p>
             <h4 className="ed-origen">Cambiar Subtitulo por:</h4>
             <input
+            value = {publi.subtitulo}
             id='input-post'
             name ='subtitulo'
             type = 'text'
@@ -186,6 +188,7 @@ export default function PostDetail(){
             <label className="ed-label">Contenido</label>
             <h4 className="ed-origen">Cambiar Contenido por:</h4>
             <textarea
+            value = {publi.contenido}
             id='input-postC'
             type = 'text'
             name = 'contenido'
