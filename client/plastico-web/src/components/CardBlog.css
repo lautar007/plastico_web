@@ -38,7 +38,16 @@
         display:flex !important;
         flex-direction: column !important;
     }
-}
+
+
+    @media screen and (min-width: 1800px){
+        #img-blog{
+            width: 25vw;
+            height: 25vw;
+        }
+    }
+
+
 
 #cont-blog{
     margin: 25px 15% 25px 0%;

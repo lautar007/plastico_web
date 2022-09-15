@@ -89,7 +89,7 @@ export default function PostDetail(){
                 </div>
             </div>
             <div>
-                <h1>Galería</h1>
+                <h1 className="post-galeria">Galería</h1>
                 <div className="cont-galeria-post">
                 {
                     publi.galeria && publi.galeria.length != 0 ?
