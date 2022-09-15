@@ -38,15 +38,17 @@
     }
     .mensajes-inputs{
         height: 30px !important;
-        margin: 10px 5% !important;
+        margin: 10px 0px !important;
     }
 
     .mensajes-cuerpo{
         width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        object-position: center !important;
     }
     #input-mensaje{
         height: 75px !important;
-
     }
 
 }
