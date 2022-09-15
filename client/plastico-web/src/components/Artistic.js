@@ -51,7 +51,20 @@ export default function Artistic(){
                 <button className="filtros-btn" onClick={e => handleFilter(e)}>Filtros</button>
             </div>
             <div className="cont-cards">
-              
+                {
+                    artistic && artistic.map((el)=>{
+                        return(
+                            <div key={el.id}>
+                                <Card
+                                titulo={el.titulo}
+                                imagen={el.imagen}
+                                id={el.id}
+                                subtitulo={el.subtitulo}
+                                />
+                            </div>
+                        )
+                    })
+                }
             </div>
             <div>
            {
