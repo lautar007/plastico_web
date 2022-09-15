@@ -67,8 +67,8 @@ hr{
     margin-top: 8px;
     margin-right: 5px;
     margin-left: 15px;
-    width:100px;
-    height: 50px;
+    width: 5vw;
+    height: 4vh;
     background-color: rgb(233, 35, 35);
     transition: 250ms;
     border-color: black;
