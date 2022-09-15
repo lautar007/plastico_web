@@ -17,6 +17,12 @@
 #contPostInfo h1{
     font-size: 7vh;
 }
+#contPostInfo h2{
+    font-size: 3vw;
+}
+#contPostInfo p{
+    font-size: 1vh;
+}
 }
 
 .contPost{
