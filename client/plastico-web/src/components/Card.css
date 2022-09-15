@@ -75,3 +75,7 @@
   .img-container:hover h3 {
     opacity: .75;  
   }
+
+  .card-titulo{
+    max-width: fit-content;
+  }
