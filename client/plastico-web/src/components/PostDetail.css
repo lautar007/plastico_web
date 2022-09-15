@@ -21,7 +21,7 @@
     font-size: 2vw;
 }
 #contPostInfo p{
-    font-size: 0.5vw;
+    font-size: 1vw;
 }
 }
 
@@ -63,12 +63,12 @@ hr{
 
 .B-volver{
     font-family: 'Slenco-Black';
-    font-size: 18px;
+    font-size: 2vw;
     margin-top: 8px;
     margin-right: 5px;
     margin-left: 15px;
-    width: 15vw;
-    height: 10vh;
+    width: 8vw;
+    height: 810vh;
     background-color: rgb(233, 35, 35);
     transition: 250ms;
     border-color: black;
