@@ -61,12 +61,12 @@
 
 .btn-contraseña{
     font-family: 'Slenco-Black';
-    font-size: 18px;
+    font-size: 1.3vw;
     margin-top: 8px;
     margin-right: 5px;
     margin-left: 15px;
-    width:100px;
-    height: 50px;
+    width: 6vw;
+    height: 6vh;
     background-color: rgb(233, 35, 35);
     transition: 250ms;
     border-color: black;

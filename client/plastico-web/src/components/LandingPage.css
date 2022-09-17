@@ -81,6 +81,70 @@
     }
 }
 
+@media screen and (min-width: 1800px){
+    .artistic-tit{
+        width: 20vw !important;
+        height: auto !important;
+        margin-top: 50vh !important;
+        padding-bottom: 2vh;
+    }
+
+    .comercial-tit{
+        width: 20vw !important;
+        height: auto !important;
+        margin-top: 50vh !important;
+        padding-bottom: 2vh;
+    }
+
+    .searchBar input{
+        height: 6vh !important;
+        font-size: 1.2vw !important;
+    }
+    .searchLupa{
+        width: 85px !important;
+        height: 85px !important;
+        margin-top: 0px !important;
+    }
+    .searchLupa img{
+        width: 60px !important;
+        height: 60px !important;
+    }
+    .searchBar{
+        top: 25vh !important;
+    }
+    .logo1{
+        top: 40px !important;
+        left: 60px !important;
+        width: 150px !important;
+        height: 150px !important;  
+    }
+    .menu{
+        top: 40px !important;
+        right: 60px !important;
+        width: 150px !important;
+        height: 150px !important;
+        border-radius: 50%;
+        position: absolute;
+        cursor: pointer;
+        object-fit: fill;
+    }
+    .content-menu{
+        top: 100px !important;
+        right: 300px !important;
+    }
+    .content-menu button{
+        margin-bottom: 2vh !important;
+        font-size: 2vw !important;
+    }
+    .pantallaCarga video{
+        position: absolute;
+        left: 45vw;
+        top: 40vh;
+        height: auto !important;
+        width: 10vw !important;
+    }
+}
+
 body{
     background-color:  rgb(19, 19, 19);
 }

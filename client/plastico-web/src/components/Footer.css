@@ -54,10 +54,38 @@
 }
 
 
+@media screen and (min-width: 1800px){
+    h1{
+        font-size: 3vw !important;
+    }
+    h2{
+        font-size: 2vw !important;
+    }
+    .mensajes-inputs p{
+        font-size: 1vw !important;
+    }
+    .mensajes-inputs input{
+        height: 3vh !important;
+        width: 12vw !important;
+        margin-top: 3vh !important;
+    }
+    .mensajes-cuerpo p{
+        font-size: 1vw !important;
+    }
+    #input-mensaje{
+        height: 15vh !important;
+    }
+    .whatsapp-btn{
+        height: auto;
+        width: 8vw;
+        border-radius: 50%;
+    }
+}
+
 #cont-Footer{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
 }
 
 
@@ -67,8 +95,8 @@
 #cont-redes{
     display: flex;
     flex-direction: column;
-    padding-right: 25px;
-    border-right: solid thin white;
+    padding-right: 2.5vw;
+    margin: 0 0 0 5vw;
 }
 #cont-redes h2{
     color: white;
@@ -84,15 +112,16 @@
     text-decoration: none;
     padding-top: 10px;
     padding-left: 10px;
+    font-size: 1.1vw;
 }
 #logo-ig{
-    height: 50px;
-    width: 50px;
+    height: auto;
+    width: 3.5vw;
     border-radius: 50px;
 }
 #logo-igB{
-    height: 50px;
-    width: 50px;
+    height: auto;
+    width: 3.5vw;
     border-radius: 50px;
     
 }
@@ -104,26 +133,31 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 25px;
-    padding: 0px 55px;
-    margin-left: 5%;
+    padding: 0 4vw 0 0;
+    margin-left: 5vw;
+    justify-content: center;
 }
 #cont-newsletter h2{
     color: white;
     font-family: 'Slenco-Black';
+    margin: 0;
 }
 #cont-newsletter h4{
     color: white;
     font-family: 'Slenco-Black';
+    font-size: 1.3vw;
 }
 #cont-newsletter p{
     padding: 0;
+    font-size: 1vw;
     color: white;
 }
 #cont-newsletter button{
     margin: 25px auto;
 }
-#news-nombre{
+#cont-newsletter input{
     width: 50%;
+    height: 2.5vh;
     margin-left: 25%;
 }
 
@@ -143,7 +177,7 @@
     color: black;
     background-color: rgb(233, 35, 35);
     font-family: 'Slenco-Black';
-    font-size: 30px;
+    font-size: 1.7vw;
     width: 75%;
     transition: 500ms;
     margin-top: 12%;
@@ -154,7 +188,7 @@
 #cont-pasantia p{
     color: white;
     width: 75%;
-    font-size: 16px;
+    font-size: 1vw;
 }
 
 
@@ -163,11 +197,11 @@
 .vent-pasantia{
     background-color: black;
     position: absolute;
-    bottom: -150px;
-    left: 10%;
+    bottom: -85vh;
+    left: 10vw;
     width: 70%;
     height: fit-content;
-    padding-bottom: 25px;
+    padding-bottom: 70px;
     border-radius: 50px;
     border:solid thin rgb(23, 221, 66);
     box-shadow: 0px 2px 50px 19px rgba(0,0,0,0.88);
@@ -183,23 +217,29 @@
     flex-direction: row;
     height: 25px;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
 }
 .nombre-edad p{
-    margin: 0 5px 0 25px;
+    margin: 0 1vh 3vh 1vh;
+    font-size: 1vw;
     color: white;
+}
+.nombre-edad input{
+    width: 10vw;
+    height: 3vh;
+    font-size: 1vw;
 }
 .p-edad{
     width: 5%;
 }
 .enviar-pas{
     font-family: 'Slenco-Black';
-    font-size: 18px;
+    font-size: 1.3vw;
     margin-top: 8px;
     margin-right: 5px;
     margin-left: 15px;
-    width:100px;
-    height: 50px;
+    width: 6vw;
+    height: 6vh;
     background-color: rgb(23, 221, 66);
     transition: 250ms;
     border-color: black;
@@ -214,12 +254,12 @@
 }
 .volver-pas{
     font-family: 'Slenco-Black';
-    font-size: 18px;
+    font-size: 1.3vw;
     margin-top: 8px;
     margin-right: 5px;
     margin-left: 15px;
-    width:100px;
-    height: 50px;
+    width: 6vw;
+    height: 6vh;
     background-color: rgb(233, 35, 35);
     transition: 250ms;
     border-color: black;
@@ -235,10 +275,10 @@
 
 
 .derechos{
-    font-size: 10px;
+    font-size: 0.8vw;
     color: white;
     text-align: left;
-    margin-left: 25px;
+    margin: 0 0 10px 25px;
 }
 
 .mensajes-inputs{
@@ -268,10 +308,12 @@
     flex-direction: row;
     justify-content: start;
     margin-left: 2vw;
+    padding-left: 3.5vw;
 }
 .mensajes-cuerpo{
     width: 40%;
-    margin-left: 1%;
+    margin-left: 2vw;
+    padding-left: 0.5vw;
 }
 #input-mensaje{
     height: 125px;
