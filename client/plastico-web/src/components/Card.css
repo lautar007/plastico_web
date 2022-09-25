@@ -16,7 +16,7 @@
 
 @media screen and (min-width: 1800px){
    .img-container h2{
-    width: fit-content;
+    font-size: 1vh;
    }
 }
 
