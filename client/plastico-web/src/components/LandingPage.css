@@ -101,13 +101,13 @@
         font-size: 1.2vw !important;
     }
     .searchLupa{
-        width: 85px !important;
-        height: 85px !important;
+        width: 4vw !important;
+        height: 4vw !important;
         margin-top: 0px !important;
     }
     .searchLupa img{
-        width: 60px !important;
-        height: 60px !important;
+        width: 2.5vw !important;
+        height: 2.5vw !important;
     }
     .searchBar{
         top: 25vh !important;
@@ -303,13 +303,14 @@ h1{
     height: 45px;
     margin-top: 5px;
     margin-left: 15%;
-    border-radius: 35px;
+    border-radius: 5vw;
     box-shadow:  22px 22px 44px #000000;
+    object-position: center;
 }
 .searchLupa img{
     width: 30px;
     height: 30px;
-    margin-top: 8px;
+    margin-top: 1.5vh;
     background-color:white;
     cursor: pointer;
 }

@@ -9,6 +9,13 @@
     }
 }
 
+@media screen and (min-width: 1800px){
+    .searchBar1 input{
+        height: 6vh !important;
+        font-size: 1.2vw !important;
+    }
+}
+
 .cont-cards{
     display: grid;
     grid-template-columns: auto auto auto;
@@ -24,9 +31,10 @@
     width: 90%;
 }
 .filtros-btn{
-    font-size: 20px;
-    height: 55px;
-    border-radius: 50px;
+    font-size: 1.7vw;
+    width: 9vw;
+    height: 8vh;
+    border-radius: 5vw;
     font-family: 'Slenco-Black';
     padding: 5px 15px;
     margin: auto;
