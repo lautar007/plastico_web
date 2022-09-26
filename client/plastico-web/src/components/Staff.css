@@ -29,7 +29,7 @@ box-shadow:  7px 7px 14px #000000,
 }
 .manifest p{
     font-family: 'Slenco-Black';
-    font-size: 20px;
+    font-size: 1.3vw;
 }
 
 .staff{
@@ -67,14 +67,14 @@ box-shadow:  7px 7px 14px #000000,
     color: white;
     text-align: left;
     font-family: 'Slenco-Black';
-    font-size: 20px;
+    font-size: 1.2vw;
     margin-left: 15%;
 }
 .pe2{
     color: white;
     text-align: right;
     font-family: 'Slenco-Black';
-    font-size: 20px;
+    font-size: 1.2vw;
     margin-right:  15%;
 }
 
