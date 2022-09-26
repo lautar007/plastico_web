@@ -18,6 +18,17 @@
     src:url('../fonts/TheNextFont.ttf')
 }
 
+@media screen and (min-width: 1800px){
+    .logo{
+        width: 5vw !important;
+        height: 10vh !important;
+    }
+    .menu1{
+        width: 5vw !important;
+        height: 10vh !important;
+    }
+}
+
 .NB-fondo{
     background-color: black;
     padding: 5px 0px;
@@ -38,7 +49,7 @@
 }
 
 .logo{
-    top: 5px;
+    margin: 0.5vh 6.5vw 1vh 0;
     width: 75px;
     height: 75px;
     border-radius: 50%;  
@@ -106,6 +117,7 @@
 .menu1{
     width: 75px;
     height: 75px;
+    margin: 0.5vh 6.5vw 1vh 0;
     border-radius: 50%;
     cursor: pointer;
     object-fit: fill;
@@ -116,8 +128,8 @@
     background-color: black;
     display: flex;
     flex-direction: column;
-    top: 5px;
-    right: 15px; 
+    top: 1vh;
+    right: 15vw; 
     padding: 15px;
     border-radius: 15px;
     box-shadow:  -20px 20px 60px #000000;
@@ -131,7 +143,7 @@
     margin-bottom: 15px;
     border: none;
     border-bottom: solid thin;
-    font-size: 25px;
+    font-size: 1.5vw;
     transition: 500ms;
 }
 .content-menu1 button:hover{

@@ -35,6 +35,9 @@ export default function NavBar () {
                         <Link to='/staff'>
                         <button>Quienes Somos</button>
                         </Link>
+                        <Link to='/plastiverso'>
+                        <button>Plastiverso</button>
+                        </Link>
                     </div>
                     :
                     null    

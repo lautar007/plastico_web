@@ -23,6 +23,20 @@
 
 }
 
+@media screen and (min-width: 1800px){
+    #land-logo{
+        width: 15vw !important;
+        height: 45vh !important;
+    }
+
+    #buttonE{
+        width: 13vw !important;
+        height: 7vh !important;
+        font-size: 2vw !important;
+        border-radius: 2vw !important;
+    }
+}
+
 video{
     position: absolute;
     top: 0;
