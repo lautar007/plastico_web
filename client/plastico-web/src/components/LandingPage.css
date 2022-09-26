@@ -87,6 +87,7 @@
         height: auto !important;
         margin-top: 50vh !important;
         padding-bottom: 2vh;
+        margin-left: -10vw !important;
     }
 
     .comercial-tit{
@@ -184,7 +185,8 @@ html, body {
 }
 
 .artistic-tit{
-    margin-top: 50%;
+    margin-left: -10vw;
+    margin-top: 30vh;
     margin-bottom: 50%;
     background-color: transparent;
     color: white;
@@ -209,7 +211,7 @@ html, body {
 }
 
 .comercial-tit{
-    margin-top: 50%;
+    margin-top: 30vh;
     margin-bottom: 50%;
     background-color: transparent;
     color: white;
