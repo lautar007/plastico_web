@@ -21,6 +21,12 @@
         width: 90% !important;
         margin-left: 4% !important;
     }
+    .btn-contraseña{
+        width: 35vw !important;
+        height: 7vh !important;
+        font-size: 5vw !important;
+        margin: 8px auto !important;
+    }
 }
 
 .cont-img-input{

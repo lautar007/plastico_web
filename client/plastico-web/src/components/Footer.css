@@ -41,14 +41,60 @@
         margin: 10px 0px !important;
     }
 
+    .mensajes-inputs input{
+        width: 65vw !important;
+        height: 25px !important;
+    }
+
     .mensajes-cuerpo{
         width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
         object-position: center !important;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
     }
     #input-mensaje{
+        margin-left: 20px !important;
         height: 75px !important;
+        width: 80vw !important;
+    }
+    .whatsapp-btn{
+        margin-left: 12vw !important;
+    }
+    #cont-ig a{
+        font-size: 4vw !important;
+        margin-top: 11px !important;
+    }
+    #logo-ig{
+        width: 15vw !important;
+    }
+    #logo-igB{
+        width: 15vw !important;
+    }
+    #cont-newsletter h2{
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+    }
+    #cont-newsletter h4{
+        font-size: 6vw !important;
+        margin: 0 !important
+    }
+    #cont-newsletter p{
+        font-size: 4vw !important;
+    }
+    #cont-pasantia{
+        padding: 0 auto !important;
+        margin-top: -10vh !important;
+    }
+    #cont-pasantia button{
+        font-size: 6vw !important;
+    }
+    #cont-pasantia p{
+        font-size: 4vw !important;
+    }
+    .derechos{
+        font-size: 4vw !important;
     }
 
 }
