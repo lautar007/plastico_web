@@ -227,6 +227,7 @@ export default function Footer(){
                       <div className="nombre-edad">
                           <p>Nombre Completo*:</p>
                           <input
+                          className="inputsPasantia"
                           name="nombre"
                           onChange={(e)=>handlePas(e)}
                           />
@@ -241,11 +242,13 @@ export default function Footer(){
                       <div className="nombre-edad">
                           <p>E-mail*:</p>
                           <input
+                          className="inputsPasantia"
                           name="mail"
                           onChange={(e)=>handlePas(e)}
                           />
                           <p>Teléfono:</p>
                           <input
+                          className="inputsPasantia"
                           name="telefono"
                           onChange={(e)=>handlePas(e)}
                           />
