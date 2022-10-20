@@ -14,6 +14,14 @@
     }
 }
 
+@media screen and (max-height: 450px){
+    .filtros-btn{
+        height: 10vh !important;
+        margin-top: 2vh !important;
+    }
+}
+
+
 @media screen and (min-width: 1800px){
     .searchBar1 input{
         height: 6vh !important;

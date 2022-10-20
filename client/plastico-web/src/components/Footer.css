@@ -129,6 +129,24 @@
     #cont-newsletter p{
         margin-bottom: 2vh !important;
     }
+    .vent-pasantia{
+        top: 500vh !important;
+    }
+    .nombre-edad p{
+        font-size: 3vw !important;
+        margin-bottom: 1vh !important;
+    }
+    .nombre-edad input{
+        height: 4vh !important;
+    }
+    .enviar-pas{
+        font-size: 3vw !important;
+        width: 20vw !important;
+    }
+    .volver-pas{
+        font-size: 3vw !important;
+        width: 20vw !important;
+    }
 }
 /* FIN DE RESPONSIVE SMARTPHONE HORIZONTAL */
 
