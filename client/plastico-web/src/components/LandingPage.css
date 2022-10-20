@@ -1,3 +1,4 @@
+/* FUENTES */
 @font-face{
     font-family: 'Slenco-Black';
     src:url('../fonts/Slenco-Black\ demo.otf')
@@ -14,6 +15,7 @@
     src:url('../fonts/Baron\ Neue.otf')
 }
 
+/* RESPONSIVE SMARTPHONE VERTICAL */
 @media screen and (max-width: 900px){
     .estructure{
         flex-direction: column !important;
@@ -42,6 +44,7 @@
 
     .content-menu{
         top: 100px !important;
+        right: 25vw !important;
     }
     .searchBar{
         top: 47vh !important;
@@ -80,7 +83,51 @@
         top: 60vh !important;
     }
 }
+/* FIN DE RESPONSIVE SMARTPHONE VERTICAL */
 
+/* RESPONSIVE SMARTPHONE HORIZONTAL */
+@media screen and (max-height: 450px){
+    .logo1{
+        top: 20px !important;
+        left: 20px !important;
+        width: 50px !important;
+        height: 50px !important;  
+    }
+    .menu{
+        top: 20px !important;
+        right: 20px !important;
+        width: 50px !important;
+        height: 50px !important;  
+    }
+    .content-menu{
+        top: 0px !important;
+        right: 15vw !important;
+    }
+    .estructure{
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        height: 100vh !important;
+    }
+    .artistic{
+        height: 100vh !important;
+    }
+    .artistic-tit{
+        margin-left: 1vh !important;
+    }
+    .comercial{
+        height: 100vh !important;
+    }
+    .searchBar{
+        width: 70vw !important;
+        margin: 10vh 0 0 15vw !important;
+
+    }
+    
+}
+/* FIN DEL RESPONSIVE SMARTPHONE HORIZONTAL */
+
+/* RESPONSIVE PANTALLAS GRANDES */
 @media screen and (min-width: 1800px){
     .artistic-tit{
         width: 20vw !important;
@@ -145,7 +192,10 @@
         width: 10vw !important;
     }
 }
+/* FIN DE RESPONSIVE PANTALLAS GRANDES */
 
+
+/* GENERAL */
 body{
     background-color:  rgb(19, 19, 19);
 }

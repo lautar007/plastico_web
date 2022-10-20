@@ -1,3 +1,4 @@
+/* RESPONSIVE SMARTPHONE VERTICAL */
 @media screen and (max-width: 900px){
     #cont-Footer{
         flex-direction: column !important;
@@ -115,8 +116,23 @@
         font-size: 5vw !important;
     }
 }
+/* FIN DE RESPONSIVE SMARTPHONE VERTICAL */
 
+/* RESPONSIVE SMARTPHONE HORIZONTAL */
+@media screen and (max-height: 450px){
+    .btn-contraseña{
+        height: 12vh !important;
+    }
+    #cont-newsletter input{
+        height: 10vh !important;
+    }
+    #cont-newsletter p{
+        margin-bottom: 2vh !important;
+    }
+}
+/* FIN DE RESPONSIVE SMARTPHONE HORIZONTAL */
 
+/* RESPONSIVE PANTALLAS GRANDES */
 @media screen and (min-width: 1800px){
     h1{
         font-size: 3vw !important;
@@ -144,16 +160,14 @@
         border-radius: 50%;
     }
 }
+/* FIN DE RESPONSIVE PANTALLAS GRANDES */
+
 
 #cont-Footer{
     display: flex;
     flex-direction: row;
     justify-content: start;
 }
-
-
-
-
 
 #cont-redes{
     display: flex;

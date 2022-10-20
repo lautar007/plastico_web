@@ -66,7 +66,7 @@ export default function Home(){
     }
 
     return (
-        <div>
+        <div> 
             {
                 carga === true?
                 <div className="pantallaCarga">
@@ -76,9 +76,9 @@ export default function Home(){
                 :
                 null
             }
-            <div className="estructure">
+            <div className="estructure"> 
                 <div className="artistic" style={{backgroundImage: `url(${portadaArt})`}}>
-                <Link className="logo" to= '/'>
+                <Link className="logo" to= '/'> 
                     <img className="logo1" src={"https://i.pinimg.com/564x/a7/34/46/a73446345a4c441921f6d44eb270bcfd.jpg"}></img>
                 </Link>
                     <Link className="link" to='/artistic'>

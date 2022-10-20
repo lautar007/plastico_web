@@ -1,68 +1,127 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import './LandingPage.css';
+import { useState} from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { getPortada } from "../actions/actions";
+import { useEffect } from "react";
+import Lupa from '../media/Lupa.png';
+import logoCarga from '../media/plasticopng.mp4'
 
-import React from 'react';
-import './Pasantia.css';
-import {useEffect} from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { deletePasante, getMensajes, getPasantes } from '../actions/actions';
-
-export default function Pasantias (){
+export default function Home(){
 
     const dispatch = useDispatch();
-    const pasantes = useSelector((state)=> state.Candidatos);
-    const mensajes = [
-        {
-          "id": 2,
-          "nombre": "Paola Marcela",
-          "mail": "laPaolitaDelBajoFlores@gmail.com",
-          "telefono": "011-152960332",
-          "mensaje": "Por qué estas llorando ahora? TE DIJE QUE NO VOLVÁ Y VO VA Y VOLVÉ, VA Y VOLVÉ"
-        },
-        {
-          "id": 3,
-          "nombre": "La Chelita de Caseros",
-          "mail": "TuChelita-deCaseros@yahoo.com.ar",
-          "telefono": "011-15267266",
-          "mensaje": "Hola mi amooorrr, que pasa acá? Quiero hacer una sesión de fotitos hot pa subir al onlifán. Ahora cobro en dólares mami, preguntale a tu marido...\nLes dejo mi onlifán: /laChelitaSexxx. Effeenmé y faveen con glam pls <3"
-        }
-      ];
+    const [menu, setMenu] = useState(false);
+    const[carga, setCarga] = useState(true)
+    setTimeout(() => {
+        setCarga(false)
+    }, 7000);
+    const [search, setSearch] = useState('');
 
-  
-    
-    return(
+    const portadas = useSelector((state)=> state.Portada);
+
+    useEffect(()=>{
+        dispatch(getPortada()); 
+    }, [dispatch]);
+
+    console.log(portadas);
+    console.log(carga);
+
+
+    function portadaProviderA(){
+        if(portadas.length > 0){
+            let portada = portadas[0]
+            let portadaA = portada.imagenA;
+
+            return portadaA
+        }
+        else return null
+    }
+
+    const portadaArt = 'https://i.pinimg.com/564x/68/59/b2/6859b27cd5668d1f6f5b1b83b36b004e.jpg'
+    console.log(portadaArt);
+
+    function portadaProviderB(){
+        if(portadas.length > 0){
+            let portada = portadas[0]
+            let portadaB = portada.imagenB;
+
+            return portadaB
+        }
+        else return null
+    }
+
+    const portadaCom = 'https://i.pinimg.com/564x/1b/d9/67/1bd9675550ac2b2a71d5557212a9d945.jpg';
+    console.log(portadaCom);
+
+
+    function handleMenu (e){
+        setMenu(!menu);
+    }
+
+    function handleSearchBar(e){
+        e.preventDefault();
+        setSearch(e.target.value);
+        console.log(search);
+    }
+
+    return (
         <div>
-            <h1 className='tit-pas'>Mensajería</h1>
-            <hr/>
-            <div className='cont-newsSub'>
-                <h2>Hay {mensajes.length} mensajes:</h2>
+            {
+                carga === true?
+                <div className="pantallaCarga">
+                    <video src={logoCarga} type="video/mp4" autoPlay muted loop></video>
+                    <h1>Cargando</h1>
+                </div>
+                :
+                null
+            }
+            <div className="estructure">
+                <div className="artistic" style={{backgroundImage: `url(${portadaArt})`}}>
+                <Link className="logo" to= '/'>
+                    <img className="logo1" src={"https://i.pinimg.com/564x/a7/34/46/a73446345a4c441921f6d44eb270bcfd.jpg"}></img>
+                </Link>
+                    <Link className="link" to='/artistic'>
+                    <h1 className="artistic-tit">ART</h1>
+                    </Link>
+                </div>
+                <div className="comercial" style={{backgroundImage: `url(${portadaCom})`}}>
+                    <Link className="link" to='/comercial'>
+                    <h1 className="comercial-tit">Comercial</h1>
+                    </Link>
+                    <img onClick = {(e)=> handleMenu(e)} className="menu" src="https://i.pinimg.com/564x/de/b5/90/deb590f49a8249aedd5cf8b4411250be.jpg"></img>
+                </div>
+                <div  className="searchBar">
+                    <input 
+                    placeholder="Buscar por Nombre o Servicio"
+                    onChange={(e) => {handleSearchBar(e)}}
+                    />
+                    <Link to={'/busqueda/' + search}>
+                        <div className="searchLupa">
+                            <img src={Lupa}/>
+                        </div> 
+                    </Link>
+                </div>
+            </div>
+            <div>
                 {
-                    mensajes && mensajes.map(el=>{
-                        return(
-                            <div>
-                                <div key={Math.random()} className='sub-list2'>
-                                    <div className='item'>
-                                        <h3>Nombre:</h3>
-                                        <p>{el.nombre}</p>
-                                    </div>
-                                    <div className='item'>
-                                        <h3>E-mail:</h3>
-                                        <p>{el.mail}</p>
-                                    </div>
-                                    <div className='item'>
-                                        <h3>Teléfono:</h3>
-                                        <p>{el.telefono}</p>
-                                    </div>
-                                    <button name={el.nombre} >Eliminar</button>
-                                </div>
-                                <div className='item2'>
-                                    <h3>Mensaje:</h3>
-                                    <p>{el.mensaje}</p>
-                                </div>
-                            </div>
-                        )
-                    })
+                    menu === true ?
+                    <div className="content-menu">
+                        <Link to='/blog'>
+                        <button>Blog</button>
+                        </Link>
+                        <Link to='/staff'>
+                        <button>Quienes Somos</button>
+                        </Link>
+                        <Link to='/plastiverso'>
+                        <button>Plastiverso</button>
+                        </Link>
+                    </div>
+                    :
+                    null    
                 }
             </div>
-            
+          
         </div>
     )
 }

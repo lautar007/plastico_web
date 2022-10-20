@@ -46,7 +46,7 @@ function App() {
         <Route exact path = '/busqueda/:search' element = {<div><NavBar/><Busqueda/></div>}/>
         <Route exact path = '/galeria/:id' element = {<div><NavBar/><Galeria/></div>}/>
         <Route exact path = '/plastiverso' element = {<div><NavBar/><Plastiverso/></div>}/>
-        <Route exact path = '/hardcode' element = {<div><NavBar/><Hardcode/></div>}/>
+        <Route exact path = '/hardcode' element = {<div><Hardcode/><Footer/></div>}/>
         
       </Routes>
     </div>
