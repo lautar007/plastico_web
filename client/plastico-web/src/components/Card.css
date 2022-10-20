@@ -16,7 +16,7 @@
 
 @media screen and (max-height: 450px){
   .img-container{
-    margin: 0 !important;
+    margin-right: 0 !important;
   }
 }
 
