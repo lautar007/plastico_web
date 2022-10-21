@@ -123,6 +123,10 @@
         margin: 10vh 0 0 15vw !important;
 
     }
+    .pantallaCarga video{
+        left: 20vw !important;
+        top: 20vh !important;
+    }
     
 }
 /* FIN DEL RESPONSIVE SMARTPHONE HORIZONTAL */
