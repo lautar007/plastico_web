@@ -70,8 +70,8 @@ export default function Home(){
             {
                 carga === true?
                 <div className="pantallaCarga">
-                    <video src={logoCarga} type="video/mp4" autoPlay muted loop></video>
                     <h1>Cargando</h1>
+                    <video src={logoCarga} type="video/mp4" autoPlay muted loop></video>
                 </div>
                 :
                 null
