@@ -125,7 +125,9 @@
     }
     .pantallaCarga video{
         left: 40vw !important;
-        top: 20vh !important;
+        top: 40vh !important;
+        height: 100px !important;
+        width: 120px !important;
     }
     
 }
