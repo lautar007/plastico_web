@@ -7,6 +7,7 @@ import Card from "./Card";
 import './Artistic.css';
 import { Link } from "react-router-dom";
 import Lupa from '../media/Lupa.png';
+const publicaciones = require('../BDT/publics');
 
 export default function Busqueda (){
 
@@ -14,9 +15,14 @@ export default function Busqueda (){
     console.log(search)
 
     const dispatch = useDispatch();
-    const artistic = useSelector((state)=>state.Artistico);
-    const comercial = useSelector((state)=>state.Comercial);
+    // const artistic = useSelector((state)=>state.Artistico);
+    // const comercial = useSelector((state)=>state.Comercial);  //DESBLOQUEAR CUANDO HAYA BACKEND
+    const artistic = publicaciones.filter(el => el.categoria === 'artistico');
+    const comercial = publicaciones.filter(el => el.categoria === 'comercial');
     const [search1, setSearch1] = useState('');
+
+    console.log(artistic);
+    console.log(comercial)
 
     useEffect(()=>{
         dispatch(getPublicaciones()); 

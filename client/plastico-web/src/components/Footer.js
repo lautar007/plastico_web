@@ -1,12 +1,13 @@
 import React from "react";
 import './Footer.css';
+import './FooterSB.css';
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { postCandidatos, postMensajes } from "../actions/actions";
 
 
 export default function Footer(){
-
     const dispatch = useDispatch();
 
     const [input, setInput] = useState({
@@ -18,7 +19,10 @@ export default function Footer(){
         pasantia: false
     })
 
-    const [ventana, setVentana] = useState(false) 
+    const [ventana, setVentana] = useState(false);
+    
+    //CUANDO HAYA BACKEND CAMBIAR ESTA VARIABLE A TRUE
+    let backend = false;
 
     function handleChange(e){
         e.preventDefault();
@@ -124,7 +128,20 @@ export default function Footer(){
             <div className="mensajes">
                 <h2>Dejanos un mensaje o consulta:</h2>
                 <div className="cont-mensajes">
-                    <div>
+                  {
+                    !backend ? (
+                        <div className="SB-mail">
+                            <h2>Mandanos un Email a plasticoestudiocreativo@gmail.com y responderemos a la brevedad.</h2>
+                            <a href="mailto:plasticoestudiocreativo@gmail.com?subject=Consulta%20Desde%20la%20p%C3%A1gina%20web&body=Hola!%20Quisiera%20hacer%20una%20consulta...">
+                                <button 
+                                className="SBbtn-contraseña"
+                                >Enviar Mail de consulta</button>
+                            </a>
+                        </div>
+                    ):
+                    (
+                        <div>
+                        <div>
                         <div className="mensajes-inputs">
                             <p>Nombre:</p>
                             <input
@@ -159,6 +176,9 @@ export default function Footer(){
                         onClick={(e)=> handleSubmitMensajes(e)}
                         >Enviar</button>
                     </div>
+                    </div>
+                    )
+                  }
                     <hr/>
                     <div className="link-wpp">
                         <h2 className="escribinos">Escribinos</h2>
@@ -207,12 +227,27 @@ export default function Footer(){
                   name ='mail'
                   onChange={(e)=> handleChange(e)}
                   />
-                  <button className="btn-contraseña" onClick={(e)=> handleSubmit(e)}>Enviar</button>
+                  { !backend ? (
+                    <button 
+                    className="SBbtn-contraseña"
+                    onClick={(e) => alert('Actualmente no tenemos disponible esta funcionalidad, disculpe las molestias. Por favor, le invitamos a mandar un mail nuestro correo electrónico ante cualquier consulta. Estamos trabajando para mejorar el sitio.')}
+                    >Enviar</button>
+                  ):
+                  (<button className="btn-contraseña" onClick={(e)=> handleSubmit(e)}>Enviar</button>)
+                  }
+                  
               </div>
               <hr/>
               <div id="cont-pasantia">
-                  <button onClick={(e)=> handlePasantia(e)}>Trabaja con nosotrxs.</button>
-                  <p>Dejanos tus datos si te interesa trabajar en nuestras producciones.</p>
+                {!backend ? 
+                (<button
+                    onClick={(e) => alert('Actualmente no tenemos disponible esta funcionalidad, disculpe las molestias. Por favor, le invitamos a mandar un mail nuestro correo electrónico ante cualquier consulta. Estamos trabajando para mejorar el sitio.')}
+                >Trabaja con nosotrxs.</button>)
+                :
+                (<button 
+                    onClick={(e)=> handlePasantia(e)}>Trabaja con nosotrxs.</button>)
+                }
+                <p>Dejanos tus datos si te interesa trabajar en nuestras producciones.</p>
               </div>
           </div>
           <hr/>

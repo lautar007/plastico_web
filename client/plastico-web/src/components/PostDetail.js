@@ -6,13 +6,15 @@ import { getPublicacion} from "../actions/actions";
 import { Link } from "react-router-dom";
 import './PostDetail.css'
 import LOGO from '../media/LOGO.png';
+const publicaciones = require('../BDT/publics')
 
 export default function PostDetail(){
 
     let {id} = useParams();
     
     const dispatch = useDispatch();
-    const publi = useSelector((state)=>state.Publicacion);
+    //const publi = useSelector((state)=>state.Publicacion); //DESBLOQUEAR CUANDO  HAYA BACKEND
+    const publi = publicaciones.filter(el => el.id === parseInt(id))[0]
     console.log(publi);
     
     let parrafos = []

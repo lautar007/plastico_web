@@ -1,0 +1,25 @@
+/* SIN BACKEND */
+
+.SB-mail h2{
+    width: 64.5vw;
+}
+.SBbtn-contraseña{
+    font-family: 'Slenco-Black';
+    font-size: 1.5vw;
+    margin-top: 8px;
+    margin-right: 5px;
+    margin-left: 15px;
+    width: fit-content;
+    height: 6vh;
+    background-color: rgb(233, 35, 35);
+    transition: 250ms;
+    border-color: black;
+    border-radius: 20px;
+}
+.SBbtn-contraseña:hover{
+    background-color: black;
+    border-style: solid;
+    border-color:rgb(202,0,0);
+    border-width: 3px;
+    color:rgb(202,0,0);
+}

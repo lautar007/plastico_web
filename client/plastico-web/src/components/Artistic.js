@@ -6,13 +6,17 @@ import Card from "./Card";
 import './Artistic.css';
 import { Link } from "react-router-dom";
 import Lupa from '../media/Lupa.png';
+const publicaciones = require('../BDT/publics')
 
 export default function Artistic(){
 
     const dispatch = useDispatch();
-    const artistic = useSelector((state)=>state.Artistico);
+    //const artistic = useSelector((state)=>state.Artistico);  //ACTIVAR CUANDO HAYA BACKEND
+    const artistic = publicaciones.filter(el => el.categoria === 'artistico')
     const [search, setSearch] = useState('');
     const [filter, setFilter] = useState(false);
+
+    console.log(artistic)
 
     useEffect(()=>{
         dispatch(getPublicaciones()); 
