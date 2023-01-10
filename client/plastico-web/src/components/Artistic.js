@@ -18,9 +18,9 @@ export default function Artistic(){
 
     console.log(artistic)
 
-    useEffect(()=>{
-        dispatch(getPublicaciones()); 
-    }, [dispatch]);
+    // useEffect(()=>{
+    //     dispatch(getPublicaciones()); 
+    // }, [dispatch]);
 
     console.log(artistic)
 

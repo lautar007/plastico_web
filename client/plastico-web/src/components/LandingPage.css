@@ -242,8 +242,7 @@ html, body {
 
 .artistic-tit{
     margin-left: -10vw;
-    margin-top: 30vh;
-    margin-bottom: 50%;
+    margin-top: 40vh;
     background-color: transparent;
     color: white;
     width: 450px;
@@ -267,7 +266,7 @@ html, body {
 }
 
 .comercial-tit{
-    margin-top: 30vh;
+    margin-top: 40vh;
     margin-bottom: 50%;
     background-color: transparent;
     color: white;

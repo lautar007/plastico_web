@@ -4,29 +4,27 @@ import { useDispatch, useSelector } from "react-redux";
 import { getPublicacion } from "../actions/actions";
 import { useEffect } from "react";
 import logo from '../media/LOGO.png';
+import medios from '../BDT/publics';
 import './Galeria.css';
 
 export default function Galeria () {
     
     let {id} = useParams(); 
+   
+    //const dispatch = useDispatch();
+    // const publi = useSelector((state)=>state.Publicacion);
+    // console.log(publi);
 
-    const dispatch = useDispatch();
-    const publi = useSelector((state)=>state.Publicacion);
-    console.log(publi);
- 
+    let publi = (medios.filter(el => {return el.id == id}))[0]
     const gal = publi.galeria
-    console.log(gal)
-
-    useEffect(()=>{
-        dispatch(getPublicacion(id)); 
-    }, [dispatch]);
+   
+    // useEffect(()=>{
+    //     dispatch(getPublicacion(id)); 
+    // }, [dispatch]);
     
     const pag = window.location.href;
     const cont = pag[pag.length -1];
     const contR = parseInt(cont) + 1;
-
-    console.log(pag);
-    console.log(cont);
   
     return(
         <div>

@@ -14,14 +14,13 @@ export default function PostDetail(){
     
     const dispatch = useDispatch();
     //const publi = useSelector((state)=>state.Publicacion); //DESBLOQUEAR CUANDO  HAYA BACKEND
-    const publi = publicaciones.filter(el => el.id === parseInt(id))[0]
-    console.log(publi);
+    const publi = publicaciones.filter(el => el.id === parseInt(id))[0];
     
     let parrafos = []
     
-    useEffect(()=>{
-        dispatch(getPublicacion(id)); 
-    }, [dispatch]);
+    // useEffect(()=>{
+    //     dispatch(getPublicacion(id)); 
+    // }, [dispatch]);
 
 
     function handleLink (){
@@ -39,7 +38,6 @@ export default function PostDetail(){
     <iframe width="1350" height="480" src="https://www.youtube.com/embed/6r2aucghTUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     function video(){
-        console.log(publi.galeria[6])
         if(publi.galeria[6] && publi.galeria[6].includes('www.youtube.com')){
             let videito = publi.galeria[6].slice(32,43);
             return (
@@ -50,13 +48,13 @@ export default function PostDetail(){
         }
         else return (
             <div>
-                <p>Esta publicación no contiene ningún video</p>
+                <p className="video" key= 'sin-video'>Esta publicación no contiene ningún video</p>
             </div>
         )
     }
 
     function handleParrafos (){
-        parrafos = publi.contenido.split('\n')
+        parrafos = publi.contenido.split('\n');
         return ''
     }
 
@@ -83,10 +81,10 @@ export default function PostDetail(){
                         })
                     }
                     <hr/>
-                    <p1>Fecha de publicación: {publi.fecha}</p1>
-                    <p1>Galería de fotos, abajo ↓</p1>
+                    <p>Fecha de publicación: {publi.fecha}</p>
+                    <p>Galería de fotos, abajo ↓</p>
                     <Link to={handleLink()}>
-                        <button className="B-volver">Volver</button>
+                        <button className="B-volver" key='volver'>Volver</button>
                     </Link>
                 </div>
             </div>
