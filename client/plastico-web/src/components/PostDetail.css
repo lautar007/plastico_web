@@ -6,10 +6,18 @@
         display: block;
         margin: auto;
         border-left: solid black 15px;
+        height: fit-content !important;
+        width: 60vw !important;
     }
     .cont-galeria-post{
         display: flex !important;
         flex-direction: column !important;
+    }
+    .B-volver{
+        width: 20vw !important;
+        height: fit-content !important;
+        font-size: 5vw !important;
+        padding: 5px 0px;
     }
 }
 

@@ -1,5 +1,18 @@
 /* SIN BACKEND */
 
+@media screen and (max-width: 900px){
+    .SBbtn-contraseña{
+        font-size: 5vw !important;
+        height: fit-content !important;
+        padding: 10px !important;
+    }
+    .SB-mail h2{
+        width: 80vw !important;
+        margin: 0 auto 10px auto !important;
+        font-size: 5vw !important;
+    }
+}
+
 .SB-mail h2{
     width: 64.5vw;
 }

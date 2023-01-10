@@ -36,6 +36,8 @@
 
     .cont-mensajes{
         flex-direction: column !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
     .mensajes-inputs{
         height: 30px !important;

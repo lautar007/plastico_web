@@ -29,6 +29,18 @@
     }
 }
 
+@media screen and (max-width: 900px){
+    .logo{
+        margin: 0.5vh 6.5vw 1vh 4vw !important;
+    }
+    .content-menu1{
+        right: 25vw !important;
+    }
+    .content-menu1 button{
+        font-size: 5vw !important;
+    }
+}
+
 .NB-fondo{
     background-color: black;
     padding: 5px 0px;

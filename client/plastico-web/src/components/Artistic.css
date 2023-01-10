@@ -12,6 +12,10 @@
         height: 5vh !important;
         font-size: 4vw !important;
     }
+    .sub-filtro{
+        left: 20vw !important;
+        top: 45vh !important;
+    }
 }
 
 @media screen and (max-height: 450px){

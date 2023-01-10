@@ -11,6 +11,9 @@
         display: flex !important;
         flex-direction: column !important;
     }
+    .manifest p{
+        font-size: 4vw !important;
+    }
 }
 
 .manifest{
