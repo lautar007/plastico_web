@@ -22,7 +22,7 @@ export default function Footer(){
     const [ventana, setVentana] = useState(false);
     
     //CUANDO HAYA BACKEND CAMBIAR ESTA VARIABLE A TRUE
-    let backend = false;
+    let backend = true;
 
     function handleChange(e){
         e.preventDefault();
