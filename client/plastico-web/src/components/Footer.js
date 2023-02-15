@@ -36,6 +36,7 @@ export default function Footer(){
 
     function handleSubmit(e){
         e.preventDefault();
+        console.log('Funciona')
       if(input.nombre.length > 2 && input.mail.length > 5){
         dispatch(postCandidatos(input));
         alert('Gracias por subscribirte, serás informado de las últimas noticias');
