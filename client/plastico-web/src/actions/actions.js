@@ -107,6 +107,10 @@ export function postCandidatos(payload){
     return async function (dispatch){
         const data = await axios({
             method: 'POST',
+            headers: {
+                Origin: "https://lget3.csb.app",
+                "Access-Control-Allow-Origin": "*"
+            },
             data:{
                 nombre: payload.nombre,
                 edad: payload.edad,
