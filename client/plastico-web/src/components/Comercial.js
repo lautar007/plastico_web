@@ -12,8 +12,7 @@ const publicaciones = require('../BDT/publics')
 export default function Comercial(){
 
     const dispatch = useDispatch();
-    //const comercial = useSelector((state)=>state.Comercial); //DESBLOQUEAR CUANDO HAYA BACKEND
-    const comercial = publicaciones.filter(el => el.categoria === 'comercial')
+    const comercial = useSelector((state)=>state.Comercial); //DESBLOQUEAR CUANDO HAYA BACKEND
     const [search, setSearch] = useState('');
     const [filter, setFilter] = useState(false);
 

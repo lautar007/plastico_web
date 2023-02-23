@@ -11,16 +11,15 @@ const publicaciones = require('../BDT/publics')
 export default function Artistic(){
 
     const dispatch = useDispatch();
-    //const artistic = useSelector((state)=>state.Artistico);  //ACTIVAR CUANDO HAYA BACKEND
-    const artistic = publicaciones.filter(el => el.categoria === 'artistico')
+    const artistic = useSelector((state)=>state.Artistico);  //ACTIVAR CUANDO HAYA BACKEND
     const [search, setSearch] = useState('');
     const [filter, setFilter] = useState(false);
 
     console.log(artistic)
 
-    // useEffect(()=>{
-    //     dispatch(getPublicaciones()); 
-    // }, [dispatch]);
+    useEffect(()=>{
+        dispatch(getPublicaciones()); 
+    }, [dispatch]);
 
     console.log(artistic)
 
