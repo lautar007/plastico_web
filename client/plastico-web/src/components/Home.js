@@ -19,39 +19,39 @@ export default function Home(){
     const [search, setSearch] = useState('');
 
     //COMENTADA LA FUNCIONALIDAD DE PORTADAS TEMPORALMENTE!!
-    // const portadas = useSelector((state)=> state.Portada);
+    const portadas = useSelector((state)=> state.Portada);
 
-    // useEffect(()=>{
-    //     dispatch(getPortada()); 
-    // }, [dispatch]);
+    useEffect(()=>{
+        dispatch(getPortada()); 
+    }, [dispatch]);
 
-    // console.log(portadas);
-    // console.log(carga);
+    console.log(portadas);
+    console.log(carga);
 
 
-    // function portadaProviderA(){
-    //     if(portadas.length > 0){
-    //         let portada = portadas[0]
-    //         let portadaA = portada.imagenA;
+    function portadaProviderA(){
+        if(portadas.length > 0){
+            let portada = portadas[0]
+            let portadaA = portada.imagenA;
 
-    //         return portadaA
-    //     }
-    //     else return null
-    // }
+            return portadaA
+        }
+        else return null
+    }
 
-    // const portadaArt = portadaProviderA();
+    const portadaArt = portadaProviderA();
 
-    // function portadaProviderB(){
-    //     if(portadas.length > 0){
-    //         let portada = portadas[0]
-    //         let portadaB = portada.imagenB;
+    function portadaProviderB(){
+        if(portadas.length > 0){
+            let portada = portadas[0]
+            let portadaB = portada.imagenB;
 
-    //         return portadaB
-    //     }
-    //     else return null
-    // }
+            return portadaB
+        }
+        else return null
+    }
 
-    // const portadaCom = portadaProviderB();
+    const portadaCom = portadaProviderB();
 
 
     function handleMenu (e){
@@ -76,7 +76,7 @@ export default function Home(){
                 null
             }
             <div className="estructure"> 
-                <div className="artistic" style={{backgroundImage: `url("https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/66a5c4145803071.62a4cac4b7043.jpg")`}}>
+                <div className="artistic" style={{backgroundImage: `url(${portadaArt})`}}>
                 <Link className="logo" to= '/'> 
                     <img className="logo1" src={"https://i.pinimg.com/564x/a7/34/46/a73446345a4c441921f6d44eb270bcfd.jpg"}></img>
                 </Link>
@@ -84,7 +84,7 @@ export default function Home(){
                     <h1 className="artistic-tit">ART</h1>
                     </Link>
                 </div>
-                <div className="comercial" style={{backgroundImage: `url("https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/83bd6b143506175.627bc148473d6.png")`}}>
+                <div className="comercial" style={{backgroundImage: `url(${portadaCom})`}}>
                     <Link className="link" to='/comercial'>
                     <h1 className="comercial-tit">Comercial</h1>
                     </Link>
