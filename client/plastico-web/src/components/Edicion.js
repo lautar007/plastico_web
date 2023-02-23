@@ -11,7 +11,7 @@ export default function PostDetail(){
     let {id} = useParams();
     
     const dispatch = useDispatch();
-    const publi = useSelector((state)=>state.Publicacion);
+    const publi = useSelector((state)=>state.Publicacion)[0];
     console.log(publi);
 
     useEffect(()=>{
