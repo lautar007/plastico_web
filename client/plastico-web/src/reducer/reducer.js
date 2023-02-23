@@ -41,7 +41,7 @@ function rootReducer(state = initialState, action){
         case 'GET_PUBLICACION':
             return{
                 ...state,
-                Publicacion: action.payload
+                Publicacion: action.payload[0]
             }
         case 'GET_PASANTES':
             return{
