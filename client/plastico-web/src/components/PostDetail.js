@@ -13,14 +13,13 @@ export default function PostDetail(){
     let {id} = useParams();
     
     const dispatch = useDispatch();
-    //const publi = useSelector((state)=>state.Publicacion); //DESBLOQUEAR CUANDO  HAYA BACKEND
-    const publi = publicaciones.filter(el => el.id === parseInt(id))[0];
+    const publi = useSelector((state)=>state.Publicacion); //DESBLOQUEAR CUANDO  HAYA BACKEND
     
     let parrafos = []
     
-    // useEffect(()=>{
-    //     dispatch(getPublicacion(id)); 
-    // }, [dispatch]);
+    useEffect(()=>{
+        dispatch(getPublicacion(id)); 
+    }, [dispatch]);
 
 
     function handleLink (){
