@@ -11,8 +11,8 @@ export default function PostDetail(){
     let {id} = useParams();
     
     const dispatch = useDispatch();
-    const publi = useSelector((state)=>state.Publicacion[0]);
-    console.log(publi);
+    const publi = useSelector((state)=>state.Publicacion);
+    console.log(publi[0]);
 
     useEffect(()=>{
         dispatch(getPublicacion(id)); 
@@ -79,9 +79,9 @@ export default function PostDetail(){
     
     //FUNCION PARA LA VISUALIZACIÓN DE VIDEO ESTABLECIDO
     function videoEstablecido(){
-        console.log(publi.galeria[6])
-        if(publi.galeria[6] && publi.galeria[6].includes('www.youtube.com')){
-            let videito = publi.galeria[6].slice(32,43);
+        console.log(publi[0].galeria[6])
+        if(publi[0].galeria[6] && publi[0].galeria[6].includes('www.youtube.com')){
+            let videito = publi[0].galeria[6].slice(32,43);
             return (
                 <div>
                      <iframe width="484" height="480" src={`https://www.youtube.com/embed/${videito}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -112,43 +112,43 @@ export default function PostDetail(){
     function handleSubmitPost(e){
         e.preventDefault();
        if(input.titulo === ''){
-           input.titulo = publi.titulo
+           input.titulo = publi[0].titulo
        }
        if(input.subtitulo === ''){
-           input.subtitulo = publi.subtitulo
+           input.subtitulo = publi[0].subtitulo
        }
        if(input.fecha ===''){
-           input.fecha = publi.fecha
+           input.fecha = publi[0].fecha
        }
        if(input.imagen === ''){
-           input.imagen = publi.imagen
+           input.imagen = publi[0].imagen
        }
        if(input.contenido === ''){
-           input.contenido = publi.contenido
+           input.contenido = publi[0].contenido
        }
        if(input.categoria === ''){
-           input.categoria = publi.categoria
+           input.categoria = publi[0].categoria
        }
        if(input.galeria[0] === undefined){
-           input.galeria[0] = publi.galeria[0]
+           input.galeria[0] = publi[0].galeria[0]
        }
        if(input.galeria[1] === undefined){
-        input.galeria[1] = publi.galeria[1]
+        input.galeria[1] = publi[0].galeria[1]
     }
     if(input.galeria[2] === undefined){
-        input.galeria[2] = publi.galeria[2]
+        input.galeria[2] = publi[0].galeria[2]
     }
     if(input.galeria[3] === undefined){
-        input.galeria[3] = publi.galeria[3]
+        input.galeria[3] = publi[0].galeria[3]
     }
     if(input.galeria[4] === undefined){
-        input.galeria[4] = publi.galeria[4]
+        input.galeria[4] = publi[0].galeria[4]
     }
     if(input.galeria[5] === undefined){
-        input.galeria[5] = publi.galeria[5]
+        input.galeria[5] = publi[0].galeria[5]
     }
     if(input.galeria[6] === undefined){
-        input.galeria[6] = publi.galeria[6]
+        input.galeria[6] = publi[0].galeria[6]
     }
 
     dispatch(putPublicacion(id, input));
@@ -159,15 +159,15 @@ export default function PostDetail(){
 
     return(
         <div>
-            <h1>Edición de post: {publi.titulo}</h1>
+            <h1>Edición de post: {publi[0].titulo}</h1>
 
             <div className="cont-edPost">
             <form id="form-post">
 
             <label className="ed-label">Título</label>
-            <h4 className="ed-origen">Cambiar '{publi.titulo}' por:</h4>
+            <h4 className="ed-origen">Cambiar '{publi[0].titulo}' por:</h4>
             <input
-            value = {publi.titulo}
+            value = {publi[0].titulo}
             id='input-post'
             name ='titulo'
             type = 'text'
@@ -178,7 +178,7 @@ export default function PostDetail(){
             <p>En caso de cambiar el subtítulo es pertinente volver a colocar las subcategorías.</p>
             <h4 className="ed-origen">Cambiar Subtitulo por:</h4>
             <input
-            value = {publi.subtitulo}
+            value = {publi[0].subtitulo}
             id='input-post'
             name ='subtitulo'
             type = 'text'
@@ -188,7 +188,7 @@ export default function PostDetail(){
             <label className="ed-label">Contenido</label>
             <h4 className="ed-origen">Cambiar Contenido por:</h4>
             <textarea
-            value = {publi.contenido}
+            value = {publi[0].contenido}
             id='input-postC'
             type = 'text'
             name = 'contenido'
@@ -198,7 +198,7 @@ export default function PostDetail(){
             <label className="ed-label">Imágen de portada</label>
             <img 
             id="img-edPost"
-            src={publi.imagen}/>
+            src={publi[0].imagen}/>
             <h4 className="ed-origen">Cambiar por:</h4>
             <div className="inputConImagen">
             <input
@@ -344,10 +344,10 @@ export default function PostDetail(){
                <h4 className="ed-origen">-- Imagen nueva -- </h4>
             </div>
             <div className="div-imagenPortada">
-                {publi.galeria? 
+                {publi[0].galeria? 
                   <img
                   id="img-edGalPost"
-                  src={publi.galeria[0]}
+                  src={publi[0].galeria[0]}
                   />:
                   null
                 }
@@ -365,10 +365,10 @@ export default function PostDetail(){
               </div>
 
               <div className="div-imagenPortada">
-              {publi.galeria? 
+              {publi[0].galeria? 
                   <img
                   id="img-edGalPost"
-                  src={publi.galeria[1]}
+                  src={publi[0].galeria[1]}
                   />:
                   null
                 }
@@ -386,10 +386,10 @@ export default function PostDetail(){
               </div>
 
               <div className="div-imagenPortada">
-              {publi.galeria? 
+              {publi[0].galeria? 
                   <img
                   id="img-edGalPost"
-                  src={publi.galeria[2]}
+                  src={publi[0].galeria[2]}
                   />:
                   null
                 }
@@ -407,10 +407,10 @@ export default function PostDetail(){
               </div>
 
               <div className="div-imagenPortada">
-              {publi.galeria? 
+              {publi[0].galeria? 
                   <img
                   id="img-edGalPost"
-                  src={publi.galeria[3]}
+                  src={publi[0].galeria[3]}
                   />:
                   null
                 }
@@ -428,10 +428,10 @@ export default function PostDetail(){
               </div>
 
               <div className="div-imagenPortada">
-              {publi.galeria? 
+              {publi[0].galeria? 
                   <img
                   id="img-edGalPost"
-                  src={publi.galeria[4]}
+                  src={publi[0].galeria[4]}
                   />:
                   null
                 }
@@ -449,10 +449,10 @@ export default function PostDetail(){
               </div>
 
               <div className="div-imagenPortada">
-              {publi.galeria? 
+              {publi[0].galeria? 
                   <img
                   id="img-edGalPost"
-                  src={publi.galeria[5]}
+                  src={publi[0].galeria[5]}
                   />:
                   null
                 }
@@ -473,7 +473,7 @@ export default function PostDetail(){
               <label className="ed-label">Video</label>
               <h4 className="ed-origen">Video establecido en el post:</h4>
               {
-                  publi.galeria?
+                  publi[0].galeria?
                   videoEstablecido()
                   :
                   null
