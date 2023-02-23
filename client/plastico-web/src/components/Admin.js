@@ -90,12 +90,6 @@ export default function Admin(){
         console.log(input);
     }
 
-    function borrarPortada(e){
-        e.preventDefault();
-        dispatch(deletePortada());
-        alert('Portada borrada, presione CONFIGURAR')
-    }
-
     function handlePortada(e){
         e.preventDefault();
         if(input.imagenA.length > 5 && input.imagenB.length > 5){
@@ -156,7 +150,7 @@ export default function Admin(){
                     </div>  
                     <div className="cont-portada">
                         <h1>Cambiar imágenes de portada</h1>
-                        <h3>Cambie las imágenes de portada para las secciones 'ART' y 'COMERCIAL' en el Home. Primero BORRE LA ENTERIOR y luego configure las nuevas portadas. Puede configurar una sola portada, manteniendo la otra.</h3>
+                        <h3>Cambie las imágenes de portada para las secciones 'ART' y 'COMERCIAL' en el Home. Puede configurar una sola portada, manteniendo la otra.</h3>
                         <div className="input-portada">
                             <p>Tapa de Artsy</p>
                             <input
@@ -173,7 +167,6 @@ export default function Admin(){
                             onChange={(e) => handleChangeB(e)}
                             />
                         </div>
-                        <button className="btn-portada" onClick={(e)=> borrarPortada(e)}>Borrar Portada</button>
                         <button className="btn-portada" onClick={(e)=> handlePortada(e)}>Configurar</button>
                     </div>      
                 </div>
