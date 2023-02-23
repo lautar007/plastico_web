@@ -73,7 +73,7 @@ export function getPublicaciones(){
 
 export function getPublicacion(id){
     return async function(dispatch){
-        var json = await axios.get('/publicaciones/' + id);
+        var json = await axios.get('/public/' + id);
         return dispatch({
             type: 'GET_PUBLICACION',
             payload: json.data
