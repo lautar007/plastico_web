@@ -20,6 +20,7 @@ export default function Admin(){
 
     console.log(portadas);
 
+    //Función codificadora.
     function codificacion (accion, value){
         let cod = [];
         let dec = '';
