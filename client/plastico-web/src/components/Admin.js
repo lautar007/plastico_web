@@ -20,7 +20,7 @@ export default function Admin(){
 
     console.log(portadas);
 
-    //Función codificadora.
+    //Función para codificar las contraseñas
     function codificacion (accion, value){
         let cod = [];
         let dec = '';
@@ -155,7 +155,7 @@ export default function Admin(){
                 null
             }
             {
-                codificacion('dec', sessionStorage.name) === 'lauchita' || codificacion('dec', sessionStorage.name) === 'choripan' || codificacion('dec', sessionStorage.name) === 'simio' ?
+                sessionStorage.name === codificacion('cod', 'lauchita') || sessionStorage.name === codificacion('cod', 'choripan') || sessionStorage.name === codificacion('cod', 'simio') ?
                 <div>
                     <div>
                         {nombres()}
