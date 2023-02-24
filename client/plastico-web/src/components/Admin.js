@@ -144,7 +144,7 @@ export default function Admin(){
                         /> 
                         <button className="btn-contraseña" onClick={(e) => handleSubmit(e)}>Entrar</button>
                         {
-                        entrada !== 'false' && entrada !== codificacion('cod', 'lauchita') && entrada !== codificacion('cod', 'choripan') && entrada !== codificacion('cod', 'simio') ?
+                        entrada !== 'false' && entrada !== '[108,97,117,99,104,105,116,97]' && entrada !== '[115,105,109,105,111]' && entrada !== '[99,104,111,114,105,112,97,110]' ?
                         <h3 className="text-contraseña">Constraseña incorrecta, vuelva a intentar</h3>
                         :
                         null
@@ -155,7 +155,7 @@ export default function Admin(){
                 null
             }
             {
-                sessionStorage.name === codificacion('cod', 'lauchita') || sessionStorage.name === codificacion('cod', 'choripan') || sessionStorage.name === codificacion('cod', 'simio') ?
+                sessionStorage.name == '[108,97,117,99,104,105,116,97]' || sessionStorage.name == '[115,105,109,105,111]' || sessionStorage.name == '[99,104,111,114,105,112,97,110]' ?
                 <div>
                     <div>
                         {nombres()}
