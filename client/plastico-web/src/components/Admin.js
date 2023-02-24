@@ -20,9 +20,31 @@ export default function Admin(){
 
     console.log(portadas);
 
+    function codificacion (accion, value){
+        let cod = [];
+        let dec = '';
+    
+        if(typeof value === 'string' && accion === 'dec'){
+            value = JSON.parse(value)
+        }
+    
+        for(let i = 0; i < value.length; i++){
+            if(accion === 'cod'){
+                cod.push(value.charCodeAt(i));
+            }
+            else{
+                dec += String.fromCharCode(value[i])
+            }
+        }
+    
+        if(accion == 'cod'){
+            return JSON.stringify(cod);
+        } else return dec;
+    }
+
     function handleInputChange(e){
         e.preventDefault();
-        setContraseña(e.target.value);
+        setContraseña(codificacion('cod', e.target.value));
     }
 
     function handleSubmit(e){
@@ -33,13 +55,13 @@ export default function Admin(){
 
     function nombres(){
         let nombre = ''
-        if(sessionStorage.name === 'lauchita'){
+        if(codificacion('dec', sessionStorage.name) === 'lauchita'){
             nombre = 'Lautaro Nuñez'
         }
-        else if(sessionStorage.name === 'choripan'){
+        else if(codificacion('dec', sessionStorage.name) === 'choripan'){
             nombre = 'Natalie Lopez'
         }
-        else if(sessionStorage.name === 'simio'){
+        else if(codificacion('dec', sessionStorage.name) === 'simio'){
             nombre = 'Lautaro Robin'
         }
         return(
@@ -132,7 +154,7 @@ export default function Admin(){
                 null
             }
             {
-                sessionStorage.name === 'lauchita' || sessionStorage.name === 'choripan' || sessionStorage.name === 'simio' ?
+                codificacion('dec', sessionStorage.name) === 'lauchita' || codificacion('dec', sessionStorage.name) === 'choripan' || codificacion('dec', sessionStorage.name) === 'simio' ?
                 <div>
                     <div>
                         {nombres()}
