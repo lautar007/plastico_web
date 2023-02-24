@@ -144,7 +144,7 @@ export default function Admin(){
                         /> 
                         <button className="btn-contraseña" onClick={(e) => handleSubmit(e)}>Entrar</button>
                         {
-                        entrada !== 'false' && entrada !== 'lauchita' && entrada !== 'choripan' && entrada !== 'simio' ?
+                        entrada !== 'false' && entrada !== codificacion('cod', 'lauchita') && entrada !== codificacion('cod', 'choripan') && entrada !== codificacion('cod', 'simio') ?
                         <h3 className="text-contraseña">Constraseña incorrecta, vuelva a intentar</h3>
                         :
                         null
