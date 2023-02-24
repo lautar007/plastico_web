@@ -156,7 +156,7 @@ export default function Admin(){
             }
             {
                 sessionStorage.name == '[108,97,117,99,104,105,116,97]' || sessionStorage.name == '[115,105,109,105,111]' || sessionStorage.name == '[99,104,111,114,105,112,97,110]' ?
-                <div>
+                <div className="acceso">
                     <div>
                         {nombres()}
                     </div>

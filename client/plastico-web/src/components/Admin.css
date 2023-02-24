@@ -86,6 +86,12 @@
     color:rgb(202,0,0);
 }
 
+.acceso{
+    position: absolute;
+    top: 0;
+    left: 0; 
+}
+
 .cont-botonesAdmin{
 display: flex;
 flex-wrap: wrap;
